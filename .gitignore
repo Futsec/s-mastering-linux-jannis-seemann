@@ -1,0 +1,64 @@
+# ================================
+# OS / Editor junk
+# ================================
+*~
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Common desktop environment files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ================================
+# Git / Config safety
+# ================================
+# Ignore personal Git config overrides
+.gitconfig
+.gitignore_global
+
+# ================================
+# Logs
+# ================================
+*.log
+logs/
+*.out
+*.err
+
+# ================================
+# Environment / Secrets
+# ================================
+.env
+*.key
+*.pem
+*.crt
+*.p12
+*.secret
+secrets.yml
+config.json
+
+# ================================
+# Python (if you use it)
+# ================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+
+# ================================
+# Node.js (if you use it)
+# ================================
+node_modules/
+npm-debug.log*
+
+# ================================
+# JetBrains / VSCode / Editors
+# ================================
+.idea/
+.vscode/
+*.kate-swp
+
