@@ -1,7 +1,7 @@
 <div align="center">
-    <h3>Daily Commands</h3>
+    <h3>Command Cheatsheet</h3>
     <p>
-        <em>Practice these commands daily to remember them!</em>
+        <em>A Linux command cheatsheet</em>
     </p>
 </div>
 
@@ -9,6 +9,23 @@
 <br>
 
 #### 📂 File & Folder Management
+
+|#|Command|Description|Example Link|#|Command|Description|Example Link|
+|:---|:---|:---|:---|:---|:---|:---|:---|
+|📂 File & Folder Management||||||||
+|||||||||
+|||||||||
+|||||||||
+|||||||||
+|||||||||
+|||||||||
+|||||||||
+|||||||||
+|||||||||
+|||||||||
+|||||||||
+|||||||||
+
 
 ##### touch
 _We use the touch command to create files, we can can create a signle or multiple amount of files._
