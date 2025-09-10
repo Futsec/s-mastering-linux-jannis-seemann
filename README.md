@@ -13,6 +13,14 @@
         A learning repository for learning Linux, course done though <a href="https://udemy.com">Udemy</a> by
         <a href="https://www.udemy.com/user/jannis-seemann-3/">Jannis Seemann</a>.
     </p>
+    <p>
+        This repository includes key notes from the course, highlights important topics worth remembering, 
+        and serves as a reference for learning Linux effectively. <a href="#quick-references">Quick References</a>
+        will be link to files for easier navigation.
+    </p>
+    <h6>
+        <strong>▪️ Key concepts to remember ▪️ Important topics worth noting ▪️ Resources to aid in learning Linux</strong>
+    </h6>
 </div>
 
 <br>
@@ -23,9 +31,19 @@
 - [Command Cheatsheet](./workspace/cheatsheets/command-cheatsheet.md)
 
 <br>
+
+### Resources
+
+- 
+
+<br>
 <br>
 
 ---
 
-**Author:** Futsec  
-**GitHub:** [github.com/Futsec](https://github.com/Futsec)
+<div align="center">
+    <h6>
+        <strong>Author:</strong> Futsec | 
+        <strong>GitHub:</strong> <a href="https://github.com/Futsec">github.com/Futsec</a>
+    </h6>
+</div>
