@@ -141,7 +141,15 @@
  
 <br>
 
-#### ❓ File Infomation
+<details>
+    <summary>❓ File Information</summary>
+
+|#|Command|Description|Example Link|
+|:---|:---|:---|:---|
+|||||
+|||||
+
+
 ##### wc
 _`wc` returns the amount of either lines, words or chars/bytes within a file._
 
@@ -163,18 +171,25 @@ _Disk Usage shows how much disk usage the file is using, there are specific unit
      ↪ -h       |display in human-readable format
      ↪ -k       |display block size
 ```
+</details>
 
-#### 📈📉 Data Processing & Filtering
+<details>
+    <summary>Data Processing & Filtering</summary>
+    
+|#|Command|Description|Example Link|
+|:---|:---|:---|:---|
+|DPF-01|`tee`|The `tee` command allows to redirect stdin to two places, example to the terminal and to a file.|[View](#tee)|
+|DPF-02|`sort`|`Sort` sorts the contents of a file, by default it sorts aphabettically.|[View](#sort)|
+|DPF-03|`uniq`|The `uniq` command list only the unique values of a file, however, the file needs to be sorted first, as the `uniq` command only checks the lines subsequent to it, or directly under it. This is why people usually run `sort` and then pipes that stdout to `uniq`.|[View](#uniq)|
+|DPF-04|`grep`|`grep` allows us to search for patterns within a file or whatever is parsed to its stdin.|[View](#grep)|
+|DPF-05|`tr`|`tr` which stands for **tr**anslate, translates/changes characters to something else, it works on a character level, meaning 'ab' 'cd', a will be change to c and b will be change d.|[View](#tr)|
+
 ##### tee
-_The `tee` command allows to redirect stdin to two places, example to the terminal and to a file._
-
 ```sh
     ping google.com 2>&1 | tee -a ping_info.txt
 ```
 
 ##### sort
-_`Sort` sorts the contents of a file, by default it sorts aphabettically._
-
 ```sh
     sort file.txt
      ↪ -r       |sorts contents of file in reverse order
@@ -185,18 +200,12 @@ _`Sort` sorts the contents of a file, by default it sorts aphabettically._
 ```
 
 ##### uniq
-_The `uniq` command list only the unique values of a file, however, the file needs to be sorted first, as the `uniq`
-command only checks the lines subsequent to it, or directly under it. This is why people usually run `sort` and then 
-pipes that stdout to `uniq`._
-
 ```sh
     sort file.txt | uniq
      ↪ _sort -u file.txt_
 ```
 
 ##### grep
-_`grep` allows us to search for patterns within a file or whatever is parsed to its stdin._
-
 ```sh
     ls | grep -F "file.txt"
     ip addr show | grep -F "inet"
@@ -205,9 +214,7 @@ _`grep` allows us to search for patterns within a file or whatever is parsed to 
 ```
 
 ##### tr
-_`tr` which stands for **tr**anslate, translates/changes characters to something else, it works on a character level, 
-meaning 'ab' 'cd', a will be change to c and b will be change d._
-
 ```sh
     echo "bash" | tr 'ba' 'di'
 ```
+</details>
