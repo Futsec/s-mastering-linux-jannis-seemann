@@ -65,10 +65,21 @@
 
 <br>
 
-#### 🔍 Searching Folders & Files
-##### ls 
-_The list `ls` command is used to to view the contents of a directory._
+<details>
+    <summary>🔍 Searching Files & Folders</summary>
 
+|#|Command|Description|Example Link|
+|:---|:---|:---|:---|   
+|SFF-01|`ls`|The list `ls` command is used to to view the contents of a directory.|[View](#ls)|
+|SFF-02|`tree`|`tree` is much like the `ls -R` command, however it outputs the folder structure in a nice easy to read tree like format.|[View](#tree)|
+|SFF-03|`globbing & Wildcards`|(\*/\*\*/\?/\[1-9]) are some of the globbing characters and we can using with commands, to perform tailored functions.|[View](#globbing--wildcards)|
+|SFF-04|`find`|Use find to search for files in a specific directory, its a more sophisticated search function.|[View](#find)|
+|SFF-05|`cat`|This concatenates a files, printing its contents to the terminal, we can also use globbing with this command.|[View](#cat)|
+|SFF-06|`head`|This prints out the first 10 lines of a file, unless else specific.|[View](#head)|
+|SFF-07|`tail`|This is the same as the `head` command, but for the end of a fail.|[View](#tail)|
+|SFF-08|`less`|less opens the content of a file into its own program, allowing us to view, search and read files easier.|[View](#less)|
+
+##### ls
 ```sh
     ls 
     ls -a
@@ -78,15 +89,11 @@ _The list `ls` command is used to to view the contents of a directory._
 ```
 
 ##### tree
-_`tree` is much like the `ls -R` command, however it outputs the folder structure in a nice easy to read tree like format._
-
 ```sh
     tree .
 ```
- 
-##### Globbing & Wildcards
-_* | ** | ? | [1-9] are some of the globbing characters and we can using with commands, to perform tailored functions._
 
+##### Globbing & Wildcards
 ```sh
     echo ~/**/0[1-2]*/*.???
      ↪ *        |everything
@@ -96,8 +103,6 @@ _* | ** | ? | [1-9] are some of the globbing characters and we can using with co
 ```
 
 ##### find
-_Use find to search for files in a specific directory, its a more sophisticated search function_
-
 ```sh
     find ~/Desktop -type d -empty -delete
     find . -name "file.txt"
@@ -105,32 +110,24 @@ _Use find to search for files in a specific directory, its a more sophisticated 
 ```
 
 ##### cat
-_This concatenates a files, printing its contents to the terminal, we can also use globbing with this command._
-
 ```sh
     cat ~/file.txt
     cat ~/f* 
 ```
 
 ##### head
-_This prints out the first 10 lines of a file, unless else specific._
-
 ```sh
     head ~/file.txt
     head -n 20 ~/file.txt
 ```
 
 ##### tail
-_This is the same as the `head` command, but for the end of a fail._
-
 ```sh
     tail ~/file.txt
     tail -n 20 ~/file.txt
 ```
 
 ##### less
-_less opens the content of a file into its own program, allowing us to view, search and read files easier._
-
 ```sh
     less file.txt
      ↪ :50p      |move 50% of the file
@@ -140,7 +137,8 @@ _less opens the content of a file into its own program, allowing us to view, sea
      ↪ ?         |backwards search
      ↪ q         |quit
 ```
-
+</details>
+ 
 <br>
 
 #### ❓ File Infomation
