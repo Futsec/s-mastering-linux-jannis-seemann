@@ -143,16 +143,15 @@
 
 <details>
     <summary>❓ File Information</summary>
+<br>
 
 |#|Command|Description|Example Link|
 |:---|:---|:---|:---|
-|||||
-|||||
+|FI-01|`wc`|`wc` returns the amount of either lines, words or chars/bytes within a file.|[View](#wc)|
+|FI-02|`du`|Disk Usage shows how much disk usage the file is using, there are specific units that this is measured in.|[View](#du)|
 
 
 ##### wc
-_`wc` returns the amount of either lines, words or chars/bytes within a file._
-
 ```sh
     wc ~/file.txt
     wc -lwc ~/file.txt 
@@ -162,8 +161,6 @@ _`wc` returns the amount of either lines, words or chars/bytes within a file._
 ```
 
 ##### du
-_Disk Usage shows how much disk usage the file is using, there are specific units that this is measured in._
-
 ```sh
     du ~/file.txt 
     du -h file.txt
@@ -171,10 +168,15 @@ _Disk Usage shows how much disk usage the file is using, there are specific unit
      ↪ -h       |display in human-readable format
      ↪ -k       |display block size
 ```
+
+<br>
 </details>
 
+<br>
+
 <details>
-    <summary>Data Processing & Filtering</summary>
+    <summary>🪟 Data Processing & Filtering</summary>
+<br>
     
 |#|Command|Description|Example Link|
 |:---|:---|:---|:---|
@@ -217,4 +219,6 @@ _Disk Usage shows how much disk usage the file is using, there are specific unit
 ```sh
     echo "bash" | tr 'ba' 'di'
 ```
+
+<br>
 </details>
