@@ -8,28 +8,19 @@
 <br>
 <br>
 
-#### 📂 File & Folder Management
+<details>
+    <summary>📂 File & Folder Management</summary>
 
-|#|Command|Description|Example Link|#|Command|Description|Example Link|
-|:---|:---|:---|:---|:---|:---|:---|:---|
-|📂 File & Folder Management||||||||
-|||||||||
-|||||||||
-|||||||||
-|||||||||
-|||||||||
-|||||||||
-|||||||||
-|||||||||
-|||||||||
-|||||||||
-|||||||||
-|||||||||
-
+|#|Command|Description|Example Link|
+|:---|:---|:---|:---|
+|FFM-01|`touch`|We use the touch command to create files, we can can create single or multiple files.|[View](#touch)|
+|FFM-02|`mkdir`|We can us mkdir to create folders, either single or multiple, as well as entire folder structures.|[View](#mkdir)|
+|FFM-03|`mv`|The move command can both move and rename files.|[View](#mv)|
+|FFM-04|`cp`|This copies files, it can also copy a file with one name, and paste it as another name.|[View](#cp)|
+|FFM-05|`rm`|The remove command, removes files only, however it can remove directories if not careful.|[View](#rm)|
+|FFM-06|`rmdir`|Remove Direcctory is much like the `rm` command but for **empty** directories. If a directory is not empty, it will fail.|[View](#rmdir)|
 
 ##### touch
-_We use the touch command to create files, we can can create a signle or multiple amount of files._
-
 ```sh 
     touch ~/file.txt
     touch ~/file1.txt ~/file2.txt
@@ -37,8 +28,6 @@ _We use the touch command to create files, we can can create a signle or multipl
 ```
 
 ##### mkdir
-_We can us mkdir to create folders, either single or multiple, as well as entire folder structures._
-
 ```sh
     mkdir ~/folder
     mkdir ~/folder1 ~/folder2
@@ -46,8 +35,6 @@ _We can us mkdir to create folders, either single or multiple, as well as entire
 ```
 
 ##### mv
-_The move command can both move and rename files._
-     
 ```sh
     mv ~/file1 ~/Documents/
     mv ~/file1 ~/file2 ~/Document/
@@ -57,8 +44,6 @@ _The move command can both move and rename files._
 ```
 
 ##### cp
-_This copies files, it can also copy a file with one name, and paste it as another name._
-
 ```sh
     cp ~/file ~/Documents/
     cp ~/file1 ~/file2 ~/Documents
@@ -66,8 +51,6 @@ _This copies files, it can also copy a file with one name, and paste it as anoth
 ```
 
 ##### rm
-_The remove command, removes files only, however it can remove directories if not careful._
-
 ```sh
     rm ~/file
     rm ~/file1 ~/file2
@@ -75,12 +58,10 @@ _The remove command, removes files only, however it can remove directories if no
 ```
 
 ##### rmdir
-_Remove Direcctory is much like the `rm` command but for **empty** directories. If a directory is not empty, it will 
-fail._
-
 ```sh    
     rmdir ~/folder
 ```
+</details>
 
 <br>
 
