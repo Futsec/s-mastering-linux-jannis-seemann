@@ -6,6 +6,7 @@
 </div>
 
 <br>
+<br>
 
 ##### DSLT 
 _Document Structure Layout Template_
@@ -17,6 +18,9 @@ _Document Structure Layout Template_
             <em>Section title as seen on site</em>
         </p>
     </div>
+    
+    <br>
+    <br>
 
     ### Task Requirements
     _Add info on what is required for the task. Such as files that need to be downloaded, etc..._
@@ -33,7 +37,7 @@ _Document Structure Layout Template_
 
 ##### Quick Reference
 - section_:
-    - [09]() 
+    - [09](./section_09/) 
     - [10]() 
     - [11]() 
     - [12]() 
