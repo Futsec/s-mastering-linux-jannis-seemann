@@ -23,7 +23,11 @@ For this exercise, you need the log file. In order to download this, please just
 ##### Exercise Material: Webserver Log File Analysis
 
 1. How many requests have downloaded .zip-files?
+    - `grep -F ".zip" < access.log | wc -l`
+        - 4061
 2. How many different .zip-files have been downloaded?
+    - `grep -F ".zip" < access.log | cut -d ' ' -f 7 | tr  '/' ' ' | cut -d ' ' -f 3 | sort | uniq | wc -l`
+        - 14
 
 ###### Tip:
 - You can detect Firefox users by their user agent, it contains "Firefox/".
