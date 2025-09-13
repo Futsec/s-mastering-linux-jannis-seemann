@@ -9,7 +9,9 @@
 <br>
 
 > 💡 **QUICK NOTE**: 
-> _We can set and unset our own custom environment variables using [`export🔍`](#export) and [unset🔍](#unset)._
+> _We can set and unset our own custom environment variables using_ [`export 🔍`](#export) _and_ [`unset 🔍`](#unset).
+
+<br>
 
 |#|Variable|Description|Example|
 |:---|:---|:---|:---|
