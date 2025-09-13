@@ -30,7 +30,7 @@
 
 - [Workspace](./workspace/)
     - [Cheatsheets](./workspace/cheatsheets/)
-    - [Cheatsheets](./workspace/cheatsheets/)
+    - [Exercises](./workspace/exercises/)
 
 <br>
 
