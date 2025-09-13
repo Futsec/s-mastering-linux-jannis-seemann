@@ -38,7 +38,7 @@ _Document Structure Layout Template_
 ##### Quick Reference
 - section_:
     - [09](./section_09/) 
-    - [10]() 
+    - [10](./section_10/) 
     - [11]() 
     - [12]() 
     - [13]() 
