@@ -5,6 +5,9 @@
     </p>
 </div>
 
+<br>
+<br>
+
 ### Task Requirements
 For this exercise, you need the log file. In order to download this, please just click on the following link:
 => https://downloads.codingcoursestv.eu/055%20-%20bash/log/access.log
