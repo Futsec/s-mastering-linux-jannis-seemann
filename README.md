@@ -28,7 +28,9 @@
 
 ### Quick References 
 
-- [Cheatsheets](./workspace/cheatsheets/command-cheatsheet.md)
+- [Workspace](./workspace/)
+    - [Cheatsheets](./workspace/cheatsheets/)
+    - [Cheatsheets](./workspace/cheatsheets/)
 
 <br>
 
