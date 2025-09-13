@@ -1,5 +1,5 @@
 <div align="center">
-    <h3>Section &mdash 9</h3>
+    <h3>Section &mdash; 9</h3>
     <p>
         <em>Pipes & Data Processing through command chaining</em>
     </p>
