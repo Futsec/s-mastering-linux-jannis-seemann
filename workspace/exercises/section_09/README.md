@@ -26,8 +26,8 @@ For this exercise, you need the log file. In order to download this, please just
     - `grep -F ".zip" < access.log | wc -l`
         - 4061
 2. How many different .zip-files have been downloaded?
-    - `grep -F ".zip" < access.log | cut -d ' ' -f 7 | tr  '/' ' ' | cut -d ' ' -f 3 | sort | uniq | wc -l`
-        - 14
+    - `grep -F ".zip" < access.log | cut -d ' ' -f 7 | sort -u | wc -l`
+        - 27
 
 ###### Tip:
 - You can detect Firefox users by their user agent, it contains "Firefox/".
