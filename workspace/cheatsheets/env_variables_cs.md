@@ -10,6 +10,8 @@
 
 > 💡 **QUICK NOTE**: 
 > _We can set and unset our own custom environment variables using_ [`export 🔍`](#export) _and_ [`unset 🔍`](#unset).
+> _To overwrite an existing variable, simply assign a new value to the variable, like so `VAR='New Value'`._
+> _Environment Variables should **ALWAYS** be in uppercase, doesn't need to be but follow best practices._
 
 <br>
 
@@ -56,7 +58,7 @@
 ```sh
     echo "${PWD}"
     echo "${OLDPWD}"
-    cd "${OLDPWD}" # This allow you to navigate back to your old working directory.
+    cd "${OLDPWD}"          #This allow you to navigate back to your old working directory.
 ```
 
 ##### USER
@@ -100,11 +102,12 @@
 ##### export
 
 ```sh
-    
+    export VARNAME='Hello World!'
+    VARNAME='Hello Bash!'           #This modifies the values of the variable.
 ```
 
 ##### unset
 
 ```sh
-
+    unset VARNAME
 ```
