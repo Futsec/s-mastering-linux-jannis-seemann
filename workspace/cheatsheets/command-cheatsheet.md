@@ -10,6 +10,7 @@
 
 <details>
     <summary>📂 File & Folder Management</summary>
+    <br>
 
 |#|Command|Description|Example Link|
 |:---|:---|:---|:---|
@@ -63,10 +64,9 @@
 ```
 </details>
 
-<br>
-
 <details>
     <summary>🔍 Searching Files & Folders</summary>
+    <br>
 
 |#|Command|Description|Example Link|
 |:---|:---|:---|:---|   
@@ -139,11 +139,9 @@
 ```
 </details>
  
-<br>
-
 <details>
     <summary>❓ File Information</summary>
-<br>
+    <br>
 
 |#|Command|Description|Example Link|
 |:---|:---|:---|:---|
@@ -168,15 +166,11 @@
      ↪ -h       |display in human-readable format
      ↪ -k       |display block size
 ```
-
-<br>
 </details>
-
-<br>
 
 <details>
     <summary>🪟 Data Processing & Filtering</summary>
-<br>
+    <br>
     
 |#|Command|Description|Example Link|
 |:---|:---|:---|:---|
@@ -219,6 +213,4 @@
 ```sh
     echo "bash" | tr 'ba' 'di'
 ```
-
-<br>
 </details>
