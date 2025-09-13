@@ -178,7 +178,10 @@
 |DPF-02|`sort`|`Sort` sorts the contents of a file, by default it sorts aphabettically.|[View](#sort)|
 |DPF-03|`uniq`|The `uniq` command list only the unique values of a file, however, the file needs to be sorted first, as the `uniq` command only checks the lines subsequent to it, or directly under it. This is why people usually run `sort` and then pipes that stdout to `uniq`.|[View](#uniq)|
 |DPF-04|`grep`|`grep` allows us to search for patterns within a file or whatever is parsed to its stdin.|[View](#grep)|
-|DPF-05|`tr`|`tr` which stands for **tr**anslate, translates/changes characters to something else, it works on a character level, meaning 'ab' 'cd', a will be change to c and b will be change d.|[View](#tr)|
+|DPF-05|`tr`|`tr` which stands for **tr**anslate, translates/modifies a string of characters to something else, it works on a character level, meaning 'ab' 'cd', a will be change to c and b will be change d. We can also remove characters using `-d`, as well as work with ranges.|[View](#tr)|
+|DPF-06|`rev`|`rev` reverses a string.|[View](#rev)|
+|DPF-07|`cut`|`cut` allows us to modify a string by cutting out byte, characters or fields for a specific range.|[View](#cut)|
+|DPF-08|`sed`|The `sed` tool allows us to quickly execute commands on a file or stdin. Example of how the commands would work is `sed 'command1; command2; ...'` and they allow us to do things such as `delete lines` or `insert lines` or whatever other command is available to us.|[View](#sed)|
 
 ##### tee
 ```sh
@@ -212,5 +215,24 @@
 ##### tr
 ```sh
     echo "bash" | tr 'ba' 'di'
+    echo "awesome" | tr 'a-z' 'A-Z'
+    echo "Try removing the spaces inbetween" | tr -d ' '
+```
+
+##### rev
+```sh
+    echo 'Was it a cat I saw?' | rev
+```
+
+##### cut
+```sh
+    uptime | cut -b '2-9'
+           | cut -c '2-9' # difference between b and c is c allows for more bytes as some character require 2 bytes or more
+           | cut -d ' ' -f 1 
+```
+
+##### sed
+```sh
+    echo 'Hello World!' | sec 's/World/Bash/g'    
 ```
 </details>
