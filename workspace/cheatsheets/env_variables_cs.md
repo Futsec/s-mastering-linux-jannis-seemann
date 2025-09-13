@@ -8,17 +8,15 @@
 <br>
 <br>
 
+> 💡 **QUICK NOTE**: 
+> _We can set and unset our own custom environment variables using [`export🔍`](#export) and [unset🔍](#unset)._
+
 |#|Variable|Description|Example|
 |:---|:---|:---|:---|
 |EV-01|`env`|This command displays your enviroment variables.|[View](#env)<br>`os:~$ env`|
 |EV-02|`HOME`|Stores the currents users home directory path, /home/username or /users/username.|[View](#home)<br>`os:~$ echo "${HOME}"`|
 |EV-03|`PWD`<br>`OLDPWD`|Much like the `pwd` command, it prints the current working directory, but one is a command and the other is a variable, `pwd` uses this variable to print out the path.<br>`OLDPWD`, prints the old working  directory the user was in.|[View](#pwd)<br>`os:~$ echo "${PWD}"`<br>`os:~$ echo "${OLDPWD}"`|
 |EV-04|`USER`|Outputs the current Unix username of the user, which is represented in all lower-case letters.|[View](#user)<br>`os:~$ echo "${USER}"`|
-
-> 💡 **NOTE**: _We can also set and unset variables using `export` and `unset`_
-
-|||||
-|:---|:---|:---|:---|
 |EV-05|`env`||[View](#env)|
 |EV-06|`env`||[View](#env)|
 |EV-07|`env`||[View](#env)|
@@ -45,15 +43,11 @@
     env
 ```
 
-<br>
-
 ##### HOME
 
 ```sh
     echo "${HOME}"
 ```
-
-<br>
 
 ##### PWD
 
@@ -63,77 +57,52 @@
     cd "${OLDPWD}" # This allow you to navigate back to your old working directory.
 ```
 
-<br>
-
 ##### USER
 
 ```sh
     echo "${USER}"
 ```
 
-<br>
+##### 
 
 ##### 
 
-<br>
+##### 
 
 ##### 
 
-<br>
+##### 
 
 ##### 
 
-<br>
+##### 
 
 ##### 
 
-<br>
+##### 
 
 ##### 
 
-<br>
+##### 
 
 ##### 
 
-<br>
+##### 
 
 ##### 
 
-<br>
+##### 
 
 ##### 
 
-<br>
+##### export
 
-##### 
+```sh
+    
+```
 
-<br>
+##### unset
 
-##### 
+```sh
 
-<br>
-
-##### 
-
-<br>
-
-##### 
-
-<br>
-
-##### 
-
-<br>
-
-##### 
-
-<br>
-
-##### 
-
-<br>
-
-##### 
-
-<br>
-
+```
