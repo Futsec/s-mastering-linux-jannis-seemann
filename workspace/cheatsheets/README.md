@@ -9,4 +9,5 @@
 <br>
 
 ##### Quick References
-- [Bash Commands](./command_cheatsheet.md)
+- [Bash Commands](./bash_commands_cs.md)
+- [Enviroment Variables](./env_variables_cs.md)
