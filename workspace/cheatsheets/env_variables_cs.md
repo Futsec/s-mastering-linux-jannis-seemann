@@ -21,22 +21,22 @@
 |EV-02|`HOME`|Stores the currents users home directory path, /home/username or /users/username.|[View](#home)<br>`os:~$ echo "${HOME}"`|
 |EV-03|`PWD`<br>`OLDPWD`|Much like the `pwd` command, it prints the current working directory, but one is a command and the other is a variable, `pwd` uses this variable to print out the path.<br>`OLDPWD`, prints the old working  directory the user was in.|[View](#pwd)<br>`os:~$ echo "${PWD}"`<br>`os:~$ echo "${OLDPWD}"`|
 |EV-04|`USER`|Outputs the current Unix username of the user, which is represented in all lower-case letters.|[View](#user)<br>`os:~$ echo "${USER}"`|
-|EV-05|`env`||[View](#env)|
-|EV-06|`env`||[View](#env)|
-|EV-07|`env`||[View](#env)|
-|EV-08|`env`||[View](#env)|
-|EV-09|`env`||[View](#env)|
-|EV-10|`env`||[View](#env)|
-|EV-11|`env`||[View](#env)|
-|EV-12|`env`||[View](#env)|
-|EV-13|`env`||[View](#env)|
-|EV-14|`env`||[View](#env)|
-|EV-15|`env`||[View](#env)|
-|EV-16|`env`||[View](#env)|
-|EV-17|`env`||[View](#env)|
-|EV-18|`env`||[View](#env)|
-|EV-19|`env`||[View](#env)|
-|EV-20|`env`||[View](#env)|
+|EV-05|`PATH`|This variable stores a list of directories used for executing programs, order matters, as it is searched from left to right. Mutliple directories are seperated by colons ':'.|[View](#path)<br>os:~$ echo "${PATH}"|
+|EV-06|`SHELL`||[View](#shell)<br>os:~$ echo "${SHELL}"|
+|EV-07|``||[View](#)|
+|EV-08|``||[View](#)|
+|EV-09|``||[View](#)|
+|EV-10|``||[View](#)|
+|EV-11|``||[View](#)|
+|EV-12|``||[View](#)|
+|EV-13|``||[View](#)|
+|EV-14|``||[View](#)|
+|EV-15|``||[View](#)|
+|EV-16|``||[View](#)|
+|EV-17|``||[View](#)|
+|EV-18|``||[View](#)|
+|EV-19|``||[View](#)|
+|EV-20|``||[View](#)|
 
 <br>
 <br>
@@ -67,9 +67,18 @@
     echo "${USER}"
 ```
 
-##### 
+##### PATH
 
-##### 
+```sh
+    echo "${PATH}"
+    PATH="${PATH}:/new/path"            #Adding a temporary path to the path variable
+```
+
+##### SHELL
+
+```sh
+    echo "${SHELL}"
+```
 
 ##### 
 
