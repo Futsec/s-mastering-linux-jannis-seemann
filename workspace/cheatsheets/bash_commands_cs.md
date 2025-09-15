@@ -8,18 +8,44 @@
 <br>
 <br>
 
-<details>
-    <summary>📂 File & Folder Management</summary>
-    <br>
-
 |#|Command|Description|Example Link|
 |:---|:---|:---|:---|
+|&middot; File & Folder Management||||
 |FFM-01|`touch`|We use the touch command to create files, we can can create single or multiple files.|[View](#touch)|
 |FFM-02|`mkdir`|We can us mkdir to create folders, either single or multiple, as well as entire folder structures.|[View](#mkdir)|
 |FFM-03|`mv`|The move command can both move and rename files.|[View](#mv)|
 |FFM-04|`cp`|This copies files, it can also copy a file with one name, and paste it as another name.|[View](#cp)|
 |FFM-05|`rm`|The remove command, removes files only, however it can remove directories if not careful.|[View](#rm)|
 |FFM-06|`rmdir`|Remove Direcctory is much like the `rm` command but for **empty** directories. If a directory is not empty, it will fail.|[View](#rmdir)|
+|&middot; Searching Files & Folders||||
+|SFF-01|`ls`|The list `ls` command is used to to view the contents of a directory.|[View](#ls)|
+|SFF-02|`tree`|`tree` is much like the `ls -R` command, however it outputs the folder structure in a nice easy to read tree like format.|[View](#tree)|
+|SFF-03|`globbing & Wildcards`|(\*/\*\*/\?/\[1-9]) are some of the globbing characters and we can using with commands, to perform tailored functions.|[View](#globbing--wildcards)|
+|SFF-04|`find`|Use find to search for files in a specific directory, its a more sophisticated search function.|[View](#find)|
+|SFF-05|`cat`|This concatenates a files, printing its contents to the terminal, we can also use globbing with this command.|[View](#cat)|
+|SFF-06|`head`|This prints out the first 10 lines of a file, unless else specific.|[View](#head)|
+|SFF-07|`tail`|This is the same as the `head` command, but for the end of a fail.|[View](#tail)|
+|SFF-08|`less`|less opens the content of a file into its own program, allowing us to view, search and read files easier.|[View](#less)|
+|&middot; File Information||||
+|FI-01|`wc`|`wc` returns the amount of either lines, words or chars/bytes within a file.|[View](#wc)|
+|FI-02|`du`|Disk Usage shows how much disk usage the file is using, there are specific units that this is measured in.|[View](#du)|
+|&middot; Data Processing & Filtering||||
+|DPF-01|`tee`|The `tee` command allows to redirect stdin to two places, example to the terminal and to a file.|[View](#tee)|
+|DPF-02|`sort`|`Sort` sorts the contents of a file, by default it sorts aphabettically.|[View](#sort)|
+|DPF-03|`uniq`|The `uniq` command list only the unique values of a file, however, the file needs to be sorted first, as the `uniq` command only checks the lines subsequent to it, or directly under it. This is why people usually run `sort` and then pipes that stdout to `uniq`.|[View](#uniq)|
+|DPF-04|`grep`|`grep` allows us to search for patterns within a file or whatever is parsed to its stdin.|[View](#grep)|
+|DPF-05|`tr`|`tr` which stands for **tr**anslate, translates/modifies a string of characters to something else, it works on a character level, meaning 'ab' 'cd', a will be change to c and b will be change d. We can also remove characters using `-d`, as well as work with ranges.|[View](#tr)|
+|DPF-06|`rev`|`rev` reverses a string.|[View](#rev)|
+|DPF-07|`cut`|`cut` allows us to modify a string by cutting out byte, characters or fields for a specific range.|[View](#cut)|
+|DPF-08|`sed`|The `sed` tool allows us to quickly execute commands on a file or stdin. Example of how the commands would work is `sed 'command1; command2; ...'` and they allow us to do things such as `delete lines` or `insert lines` or whatever other command is available to us.|[View](#sed)|
+|&middot; Shell Related Commands||||
+|SRC-01|`alias`|This allows us to shorten or create more abbreviated commands, by setting an alias.|[View](#alias)|
+|SRC-02|`set`|Allows us to control the behaviour of our shell.|[View](#set)|
+|SRC-03|`shopt`|Much like `set`, this also allows us to alter the behaviour of our shell.|[View](#shopt)|
+
+
+<br>
+<br>
 
 ##### touch
 ```sh 
@@ -62,22 +88,6 @@
 ```sh    
     rmdir ~/folder
 ```
-</details>
-
-<details>
-    <summary>🔍 Searching Files & Folders</summary>
-    <br>
-
-|#|Command|Description|Example Link|
-|:---|:---|:---|:---|   
-|SFF-01|`ls`|The list `ls` command is used to to view the contents of a directory.|[View](#ls)|
-|SFF-02|`tree`|`tree` is much like the `ls -R` command, however it outputs the folder structure in a nice easy to read tree like format.|[View](#tree)|
-|SFF-03|`globbing & Wildcards`|(\*/\*\*/\?/\[1-9]) are some of the globbing characters and we can using with commands, to perform tailored functions.|[View](#globbing--wildcards)|
-|SFF-04|`find`|Use find to search for files in a specific directory, its a more sophisticated search function.|[View](#find)|
-|SFF-05|`cat`|This concatenates a files, printing its contents to the terminal, we can also use globbing with this command.|[View](#cat)|
-|SFF-06|`head`|This prints out the first 10 lines of a file, unless else specific.|[View](#head)|
-|SFF-07|`tail`|This is the same as the `head` command, but for the end of a fail.|[View](#tail)|
-|SFF-08|`less`|less opens the content of a file into its own program, allowing us to view, search and read files easier.|[View](#less)|
 
 ##### ls
 ```sh
@@ -137,17 +147,6 @@
      ↪ ?         |backwards search
      ↪ q         |quit
 ```
-</details>
- 
-<details>
-    <summary>❓ File Information</summary>
-    <br>
-
-|#|Command|Description|Example Link|
-|:---|:---|:---|:---|
-|FI-01|`wc`|`wc` returns the amount of either lines, words or chars/bytes within a file.|[View](#wc)|
-|FI-02|`du`|Disk Usage shows how much disk usage the file is using, there are specific units that this is measured in.|[View](#du)|
-
 
 ##### wc
 ```sh
@@ -166,22 +165,6 @@
      ↪ -h       |display in human-readable format
      ↪ -k       |display block size
 ```
-</details>
-
-<details>
-    <summary>🪟 Data Processing & Filtering</summary>
-    <br>
-    
-|#|Command|Description|Example Link|
-|:---|:---|:---|:---|
-|DPF-01|`tee`|The `tee` command allows to redirect stdin to two places, example to the terminal and to a file.|[View](#tee)|
-|DPF-02|`sort`|`Sort` sorts the contents of a file, by default it sorts aphabettically.|[View](#sort)|
-|DPF-03|`uniq`|The `uniq` command list only the unique values of a file, however, the file needs to be sorted first, as the `uniq` command only checks the lines subsequent to it, or directly under it. This is why people usually run `sort` and then pipes that stdout to `uniq`.|[View](#uniq)|
-|DPF-04|`grep`|`grep` allows us to search for patterns within a file or whatever is parsed to its stdin.|[View](#grep)|
-|DPF-05|`tr`|`tr` which stands for **tr**anslate, translates/modifies a string of characters to something else, it works on a character level, meaning 'ab' 'cd', a will be change to c and b will be change d. We can also remove characters using `-d`, as well as work with ranges.|[View](#tr)|
-|DPF-06|`rev`|`rev` reverses a string.|[View](#rev)|
-|DPF-07|`cut`|`cut` allows us to modify a string by cutting out byte, characters or fields for a specific range.|[View](#cut)|
-|DPF-08|`sed`|The `sed` tool allows us to quickly execute commands on a file or stdin. Example of how the commands would work is `sed 'command1; command2; ...'` and they allow us to do things such as `delete lines` or `insert lines` or whatever other command is available to us.|[View](#sed)|
 
 ##### tee
 ```sh
@@ -233,6 +216,26 @@
 
 ##### sed
 ```sh
-    echo 'Hello World!' | sec 's/World/Bash/g'    
+    echo 'Hello Bash' | sed 's/Hello/Bye/g'
+    echo 'Hello Bash' | sed 's/Hello/Bye/g'
 ```
-</details>
+
+##### alias
+```sh
+    alias updateme='sudo apt update && sudo apt upgrade'
+    alias ls ='ls --color=Auto'
+    alias cp='cp -v'
+    alias mv='mv -v'
+    alias mkdir='mkdir -v'
+```
+
+##### set
+```sh
+    set -x          #Sets a function or behaviour
+    set +x          #Unsets a function or behaviour
+```
+
+##### shopt
+```sh
+    shopt -t        #This closes a terminal after a single command has run
+```
