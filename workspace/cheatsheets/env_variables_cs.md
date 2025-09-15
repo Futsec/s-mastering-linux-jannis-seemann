@@ -22,7 +22,7 @@
 |EV-03|`PWD`<br>`OLDPWD`|Much like the `pwd` command, it prints the current working directory, but one is a command and the other is a variable, `pwd` uses this variable to print out the path.<br>`OLDPWD`, prints the old working  directory the user was in.|[View](#pwd)<br>`os:~$ echo "${PWD}"`<br>`os:~$ echo "${OLDPWD}"`|
 |EV-04|`USER`|Outputs the current Unix username of the user, which is represented in all lower-case letters.|[View](#user)<br>`os:~$ echo "${USER}"`|
 |EV-05|`PATH`|This variable stores a list of directories used for executing programs, order matters, as it is searched from left to right. Mutliple directories are seperated by colons ':'.|[View](#path)<br>os:~$ echo "${PATH}"|
-|EV-06|`SHELL`||[View](#shell)<br>os:~$ echo "${SHELL}"|
+|EV-06|`SHELL`|Shows the default shell, and not the current working shell. An example being if your default shell is `/bin/zsh` and you running bash, `SHELL` will still output `/bin/zsh`|[View](#shell)<br>os:~$ echo "${SHELL}"|
 |EV-07|``||[View](#)|
 |EV-08|``||[View](#)|
 |EV-09|``||[View](#)|
@@ -73,6 +73,8 @@
     echo "${PATH}"
     PATH="${PATH}:/new/path"            #Adding a temporary path to the path variable
 ```
+> 💡 **NOTE**: _To make a new path permanent we can edit the `.bashrc` by adding the same syntax as seen above._
+> _PATH="${PATH}:/new/path"
 
 ##### SHELL
 
