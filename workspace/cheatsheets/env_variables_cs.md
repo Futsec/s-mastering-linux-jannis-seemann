@@ -23,7 +23,7 @@
 |EV-04|`USER`|Outputs the current Unix username of the user, which is represented in all lower-case letters.|[View](#user)<br>`os:~$ echo "${USER}"`|
 |EV-05|`PATH`|This variable stores a list of directories used for executing programs, order matters, as it is searched from left to right. Mutliple directories are seperated by colons ':'.|[View](#path)<br>os:~$ echo "${PATH}"|
 |EV-06|`SHELL`|Shows the default shell, and not the current working shell. An example being if your default shell is `/bin/zsh` and you running bash, `SHELL` will still output `/bin/zsh`|[View](#shell)<br>os:~$ echo "${SHELL}"|
-|EV-07|``||[View](#)|
+|EV-07|`PS1`|This is you `Prompt String` variable, basically the text you see in your terminal.|[View](#ps1)|
 |EV-08|``||[View](#)|
 |EV-09|``||[View](#)|
 |EV-10|``||[View](#)|
@@ -82,7 +82,10 @@
     echo "${SHELL}"
 ```
 
-##### 
+##### PS1
+```sh
+    echo "${PS1}"
+```
 
 ##### 
 
