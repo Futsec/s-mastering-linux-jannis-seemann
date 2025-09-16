@@ -109,7 +109,9 @@
 
 ##### Globbing & Wildcards
 ```sh
-    echo ~/**/0[1-2]*/*.???
+    # IMG_7789.png IMG_7789.mov
+    
+    echo IMG?7789.*
      ↪ *        |everything
      ↪ **       |recursive everything, includes folders
      ↪ ?        |any single char
