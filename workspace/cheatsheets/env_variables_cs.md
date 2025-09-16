@@ -1,5 +1,5 @@
 <div align="center">
-    <h3>Environment Variables</h3>
+    <h3>Environment & Shell Variables</h3>
     <p>
         <em>A Linux Environment & Shell Variable Cheatsheet</em>
     </p>
@@ -17,15 +17,15 @@
 
 |#|Variable|Description|Example|
 |:---|:---|:---|:---|
-|## &middot; Environment Variables||||
+|**&#9679; Environment Variables**||||
 |EV-01|`env`|This command displays your environment variables.|[View](#env)<br>`os:~$ env`|
 |EV-02|`HOME`|Stores the currents users home directory path, /home/username or /users/username.|[View](#home)<br>`os:~$ echo "${HOME}"`|
 |EV-03|`PWD`<br>`OLDPWD`|Much like the `pwd` command, it prints the current working directory, but one is a command and the other is a variable, `pwd` uses this variable to print out the path.<br>`OLDPWD`, prints the old working  directory the user was in.|[View](#pwd)<br>`os:~$ echo "${PWD}"`<br>`os:~$ echo "${OLDPWD}"`|
 |EV-04|`USER`|Outputs the current Unix username of the user, which is represented in all lower-case letters.|[View](#user)<br>`os:~$ echo "${USER}"`|
 |EV-05|`PATH`|This variable stores a list of directories used for executing programs, order matters, as it is searched from left to right. Mutliple directories are seperated by colons ':'.|[View](#path)<br>os:~$ echo "${PATH}"|
 |EV-06|`SHELL`|Shows the default shell, and not the current working shell. An example being if your default shell is `/bin/zsh` and you running bash, `SHELL` will still output `/bin/zsh`|[View](#shell)<br>os:~$ echo "${SHELL}"|
-|## &middot; Shell Variables||||
-|SV-01|`PS1`|This is your `Prompt String` shell variable, basically the text you see in your terminal before you start typing.|[View](#ps1)<br>`username@host:directory\$ ...`|
+|**&#9679; Shell Variables**||||
+|SV-01|`PS1`|This is your `Prompt String` shell variable, basically the text you see in your terminal before you start typing.<br>You would use commands such as `infocmp`_escape sequences_, `tput` inorder to customize your prompt.|[View](#ps1)<br>`username@host:directory\$ ...`|
 
 <br>
 <br>
