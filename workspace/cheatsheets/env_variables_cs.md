@@ -8,13 +8,13 @@
 <br>
 <br>
 
-> ⁉️  **Notes on `export` & `unset`**: 
+> 💡 **Notes on `export` & `unset`**: 
 > - _We can set and unset our own custom environment variables using_ [`export 🔍`](#export) _and_ [`unset 🔍`](#unset).
 > - _To overwrite an existing variable, simply assign a new value to the variable, like so `VAR='New Value'`._
 > - _Environment Variables should **ALWAYS** be in uppercase, doesn't need to be but follow best practices._
 
 
-> ‼️ **Notes on Bash Expansions: `${...}` vs `$(...)`**:
+> 💡 **Notes on Bash Expansions: `${...}` vs `$(...)`**:
 > - _For now we know of two expressions syntaxes, Variable Expansion denoted by "${...}" & Command Substitution denoted by "$(...)"._
 > - _Variable Expansion, is used to expand variables or parameters such as "${PATH}"._
 > - _Command Substitution, is used to run commands and substitute its output, such "$(tput setaf 5)Hello"_

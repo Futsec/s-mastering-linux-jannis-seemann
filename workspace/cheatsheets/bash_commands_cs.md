@@ -39,12 +39,13 @@
 |DPF-07|`cut`|`cut` allows us to modify a string by cutting out byte, characters or fields for a specific range.|[View](#cut)|
 |DPF-08|`sed`|The `sed` tool allows us to quickly execute commands on a file or stdin. Example of how the commands would work is `sed 'command1; command2; ...'` and they allow us to do things such as `delete lines` or `insert lines` or whatever other command is available to us.|[View](#sed)|
 |**&#8226; Shell Related Commands**||||
-|SRC-01|'chsh'|Allows us to change our default shell. [Read More](./env_variables_cs.md) on the **Environment & Shell Variables** page.|[View](#chsh)|
-|SRC-02|`alias`|This allows us to shorten or create more abbreviated commands, by setting an alias.|[View](#alias)|
-|SRC-03|`set`|Allows us to control the behaviour of our shell.|[View](#set)|
-|SRC-04|`shopt`|Much like `set`, this also allows us to alter the behaviour of our shell.|[View](#shopt)|
-|SRC-05|`infocmp`|Shows the escape sequences for our terminal|[View](#infocmp)|
-|SRC-06|`tput`|Allows us to use the easier form of `infocmp`_escape sequences_, example `setaf` instead of `\E[%?%p1%{8}%<%t3%p1%d%e%p1%{16}%<%t9%p1%{8}%-%d%e38;5;%p1%d%;m,`.|[View](#tput)|
+|SRC-01|`export`<br>`unset`|`export` allows us to set environment variables, while unset removes these variables.|[View](#export--unset)|
+|SRC-02|'chsh'|Allows us to change our default shell. [Read More](./env_variables_cs.md) on the **Environment & Shell Variables** page.|[View](#chsh)|
+|SRC-03|`alias`|This allows us to shorten or create more abbreviated commands, by setting an alias.|[View](#alias)|
+|SRC-04|`set`|Allows us to control the behaviour of our shell.|[View](#set)|
+|SRC-05|`shopt`|Much like `set`, this also allows us to alter the behaviour of our shell.|[View](#shopt)|
+|SRC-06|`infocmp`|Shows the escape sequences for our terminal|[View](#infocmp)|
+|SRC-07|`tput`|Allows us to use the easier form of `infocmp`_escape sequences_, example `setaf` instead of `\E[%?%p1%{8}%<%t3%p1%d%e%p1%{16}%<%t9%p1%{8}%-%d%e38;5;%p1%d%;m,`.|[View](#tput)|
 
 
 <br>
@@ -221,6 +222,13 @@
 ```sh
     echo 'Hello Bash' | sed 's/Hello/Bye/g'
     echo 'Hello Bash' | sed 's/Hello/Bye/g'
+```
+
+##### export & unset
+```sh
+    export VARNAME='Hello, thiis has a typo'
+    VARNAME="Hello, World!"
+    unset VARNAME
 ```
 
 ##### chsh
