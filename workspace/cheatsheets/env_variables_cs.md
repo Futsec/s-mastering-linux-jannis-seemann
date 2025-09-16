@@ -62,7 +62,7 @@
     echo "${PATH}"
     PATH="${PATH}:/new/path"            #Adding a temporary path to the path variable
 ```
-> 💡 **NOTE**: _To make a new path permanent we can edit the `.bashrc` by adding the same syntax as seen above._<br>_PATH="${PATH}:/new/path"_
+> 💡 **NOTE**: _To make a new path permanent we can edit the `.bashrc` by adding the same syntax as seen above._"_PATH="${PATH}:/new/path"_"
 
 ##### SHELL
 
