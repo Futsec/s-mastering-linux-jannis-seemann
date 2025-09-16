@@ -10,14 +10,14 @@
 
 |#|Command|Description|Example Link|
 |:---|:---|:---|:---|
-|&middot; File & Folder Management||||
+|**&#8226; File & Folder Management**||||
 |FFM-01|`touch`|We use the touch command to create files, we can can create single or multiple files.|[View](#touch)|
 |FFM-02|`mkdir`|We can us mkdir to create folders, either single or multiple, as well as entire folder structures.|[View](#mkdir)|
 |FFM-03|`mv`|The move command can both move and rename files.|[View](#mv)|
 |FFM-04|`cp`|This copies files, it can also copy a file with one name, and paste it as another name.|[View](#cp)|
 |FFM-05|`rm`|The remove command, removes files only, however it can remove directories if not careful.|[View](#rm)|
 |FFM-06|`rmdir`|Remove Direcctory is much like the `rm` command but for **empty** directories. If a directory is not empty, it will fail.|[View](#rmdir)|
-|&middot; Searching Files & Folders||||
+|**&#8226; Searching Files & Folders**||||
 |SFF-01|`ls`|The list `ls` command is used to to view the contents of a directory.|[View](#ls)|
 |SFF-02|`tree`|`tree` is much like the `ls -R` command, however it outputs the folder structure in a nice easy to read tree like format.|[View](#tree)|
 |SFF-03|`globbing & Wildcards`|(\*/\*\*/\?/\[1-9]) are some of the globbing characters and we can using with commands, to perform tailored functions.|[View](#globbing--wildcards)|
@@ -26,10 +26,10 @@
 |SFF-06|`head`|This prints out the first 10 lines of a file, unless else specific.|[View](#head)|
 |SFF-07|`tail`|This is the same as the `head` command, but for the end of a fail.|[View](#tail)|
 |SFF-08|`less`|less opens the content of a file into its own program, allowing us to view, search and read files easier.|[View](#less)|
-|&middot; File Information||||
+|**&#8226; File Information**||||
 |FI-01|`wc`|`wc` returns the amount of either lines, words or chars/bytes within a file.|[View](#wc)|
 |FI-02|`du`|Disk Usage shows how much disk usage the file is using, there are specific units that this is measured in.|[View](#du)|
-|&middot; Data Processing & Filtering||||
+|**&#8226; Data Processing & Filtering**||||
 |DPF-01|`tee`|The `tee` command allows to redirect stdin to two places, example to the terminal and to a file.|[View](#tee)|
 |DPF-02|`sort`|`Sort` sorts the contents of a file, by default it sorts aphabettically.|[View](#sort)|
 |DPF-03|`uniq`|The `uniq` command list only the unique values of a file, however, the file needs to be sorted first, as the `uniq` command only checks the lines subsequent to it, or directly under it. This is why people usually run `sort` and then pipes that stdout to `uniq`.|[View](#uniq)|
@@ -38,10 +38,13 @@
 |DPF-06|`rev`|`rev` reverses a string.|[View](#rev)|
 |DPF-07|`cut`|`cut` allows us to modify a string by cutting out byte, characters or fields for a specific range.|[View](#cut)|
 |DPF-08|`sed`|The `sed` tool allows us to quickly execute commands on a file or stdin. Example of how the commands would work is `sed 'command1; command2; ...'` and they allow us to do things such as `delete lines` or `insert lines` or whatever other command is available to us.|[View](#sed)|
-|&middot; Shell Related Commands||||
-|SRC-01|`alias`|This allows us to shorten or create more abbreviated commands, by setting an alias.|[View](#alias)|
-|SRC-02|`set`|Allows us to control the behaviour of our shell.|[View](#set)|
-|SRC-03|`shopt`|Much like `set`, this also allows us to alter the behaviour of our shell.|[View](#shopt)|
+|**&#8226; Shell Related Commands**||||
+|SRC-01|'chsh'|Allows us to change our default shell. [Read More](./env_variables_cs.md) on the **Environment & Shell Variables** page.|[View](#chsh)|
+|SRC-02|`alias`|This allows us to shorten or create more abbreviated commands, by setting an alias.|[View](#alias)|
+|SRC-03|`set`|Allows us to control the behaviour of our shell.|[View](#set)|
+|SRC-04|`shopt`|Much like `set`, this also allows us to alter the behaviour of our shell.|[View](#shopt)|
+|SRC-05|`infocmp`|Shows the escape sequences for our terminal|[View](#infocmp)|
+|SRC-06|`tput`|Allows us to use the easier form of `infocmp`_escape sequences_, example `setaf` instead of `\E[%?%p1%{8}%<%t3%p1%d%e%p1%{16}%<%t9%p1%{8}%-%d%e38;5;%p1%d%;m,`.|[View](#tput)|
 
 
 <br>
@@ -220,6 +223,12 @@
     echo 'Hello Bash' | sed 's/Hello/Bye/g'
 ```
 
+##### chsh
+```sh
+    chsh -s /bin/bash
+```
+
+
 ##### alias
 ```sh
     alias updateme='sudo apt update && sudo apt upgrade'
@@ -238,4 +247,14 @@
 ##### shopt
 ```sh
     shopt -t        #This closes a terminal after a single command has run
+```
+
+##### infocmp
+```sh
+    infocmp
+```
+
+##### tput
+```sh
+    echo "$(tput setaf 4)$(tput setab 5)Hello, World!$(tput sgr0)"
 ```
