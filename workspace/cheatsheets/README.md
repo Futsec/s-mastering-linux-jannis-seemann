@@ -11,6 +11,6 @@
 ##### Quick References
 
 - [Bash Commands](./bash_commands_cs.md)
-- [Bash Expansions](./bash_expansions_cs.md)
 - [Enviroment Variables](./env_variables_cs.md)
 - [Linux File System](./file_system_cs.md)
+- [Shell Expansions](./shell_expansions_cs.md)
