@@ -29,7 +29,8 @@
 |EP-02|**Tilde** Expansion|This expands the home path directory, when adding a plus to it is can expand to you current working path.|[View](#tilde-expansion)|
 |EP-03|**Variable** & **Parameter** Expansion|These expand variables such as PATH or HOME|[View](#variable--parameter-expansion)|
 |EP-04|**Brace** Expansion|Expands strings, it does not work in quotes.|[View](#brace-expansion)|
-|EP-05|**Command Substitution**|Allow for commands to to be run and expands its output as a replacement.|[View](#command-substitution)|
+|EP-05|**Command** Substitution|Allows for commands to to be run and expands its output as a replacement.|[View](#command-substitution)|
+|EP-06|**Process** Substituion|Allows us to use the _input_ or _output_ of a process as a temporary file.|[View](#process-substitution)|
 
 <br>
 <br>
@@ -72,4 +73,11 @@
     echo "$(tput setaf 7)$(tput setab 3)$Hello, World!(tput sgr0)"
     echo "My current working directory is $(pwd)"
     echo "My current working directory is `pwd`"            #Using back ticks is another sort of syntax for doing command substitution 
+```
+
+##### Process Substitution
+```sh
+    diff <(ls ./folder1) <(ls ./folder2)
+    wc -l < <(ls)
+    echo "Test" > >(cat)
 ```
