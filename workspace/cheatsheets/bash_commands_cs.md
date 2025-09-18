@@ -20,7 +20,7 @@
 <br>
 
 ##### File & Folder Management
-|Command|Description|Example Link|
+|Command|Description|Link|
 |:---|:---|:---|
 |`touch`|We use the touch command to create files, we can can create single or multiple files.|[View](#touch)|
 |`mkdir`|We can us mkdir to create folders, either single or multiple, as well as entire folder structures.|[View](#mkdir)|
@@ -82,7 +82,7 @@
 <br>
 
 ##### Searching Files & Folders
-|Command|Description|Example Link|
+|Command|Description|Link|
 |:---|:---|:---|
 |`ls`|The list `ls` command is used to to view the contents of a directory.|[View](#ls)|
 |`tree`|`tree` is much like the `ls -R` command, however it outputs the folder structure in a nice easy to read tree like format.|[View](#tree)|
@@ -157,7 +157,7 @@
 <br>
 
 ##### File Information
-|Command|Description|Example Link|
+|Command|Description|Link|
 |:---|:---|:---|
 |`wc`|`wc` returns the amount of either lines, words or chars/bytes within a file.|[View](#wc)|
 |`du`|Disk Usage shows how much disk usage the file is using, there are specific units that this is measured in.|[View](#du)|
@@ -195,7 +195,7 @@
 <br>
 
 ##### Data Processing & Filtering
-|Command|Description|Example Link|
+|Command|Description|Link|
 |:---|:---|:---|
 |`tee`|The `tee` command allows to redirect stdin to two places, example to the terminal and to a file.|[View](#tee)|
 |`sort`|`Sort` sorts the contents of a file, by default it sorts aphabettically.|[View](#sort)|
@@ -263,7 +263,7 @@
 <br>
 
 ##### Shell Related Commands
-|Command|Description|Example Link|
+|Command|Description|Link|
 |:---|:---|:---|
 |`export`<br>`unset`|`export` allows us to set environment variables, while unset removes these variables.|[View](#export--unset)|
 |'chsh'|Allows us to change our default shell. [Read More](./env_variables_cs.md) on the **Environment & Shell Variables** page.|[View](#chsh)|
@@ -319,7 +319,7 @@
 <br>
 
 ##### User Management
-|Command|Description|Example Link|
+|Command|Description|Link|
 |:---|:---|:---|
 ||||
 
