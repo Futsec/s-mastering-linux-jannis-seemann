@@ -12,13 +12,12 @@
 
 <br>
 
-
-|#|Symbol|Used For|
-|:---|:---|:---|
-|<abbr title="File Operations & Utilities">FOU-01</abbr>|`-`|Ordinary file|
-|<abbr title="File Operations & Utilities">FOU-02</abbr>|`d`|Directory|
-|<abbr title="File Operations & Utilities">FOU-03</abbr>|`l`|Symbolic Links|
-|<abbr title="File Operations & Utilities">FOU-04</abbr>|`c`|Character Device|
-|<abbr title="File Operations & Utilities">FOU-05</abbr>|`b`|Block Device|
-|<abbr title="File Operations & Utilities">FOU-06</abbr>|`p`|Named Pipes|
-|<abbr title="File Operations & Utilities">FOU-07</abbr>|`s`|Sockets|
+|#|Symbol|Used For|Example|
+|:---|:---|:---|:----|
+|FOU-01|`-`|Ordinary file|`-rwxr--r--`|
+|FOU-02|`d`|Directory|`drwxr-xr-x`|
+|FOU-03|`l`|Symbolic Links|`lrwxrwxrwx`|
+|FOU-04|`c`|Character Device|`crw-------`|
+|FOU-05|`b`|Block Device|`brw-rw----`|
+|FOU-06|`p`|Named Pipes|`prw-r--r--`|
+|FOU-07|`s`|Sockets|`srwxr-xr-x`|
