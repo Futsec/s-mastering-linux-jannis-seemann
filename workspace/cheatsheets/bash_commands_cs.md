@@ -31,6 +31,7 @@
 |FI-01|`wc`|`wc` returns the amount of either lines, words or chars/bytes within a file.|[View](#wc)|
 |FI-02|`du`|Disk Usage shows how much disk usage the file is using, there are specific units that this is measured in.|[View](#du)|
 |FI-03|`diff`|This is a lot like when using `git diff` as an example, allowing us view differences within a file.|[View](#diff)|
+|FI-04|`df`|Disk free, reports file system space usage, we can use this for example to view our _inodes_ information.|[View](#df)|
 |**&#8226; Data Processing & Filtering**||||
 |DPF-01|`tee`|The `tee` command allows to redirect stdin to two places, example to the terminal and to a file.|[View](#tee)|
 |DPF-02|`sort`|`Sort` sorts the contents of a file, by default it sorts aphabettically.|[View](#sort)|
@@ -185,6 +186,10 @@
 ```sh
     diff file1.txt file2.txt
     diff < <(ls ./folder1) < <(ls ./folder2) 
+```
+##### df
+```sh
+    df -ih  #Displays the inode usage on our system
 ```
 
 ##### tee
