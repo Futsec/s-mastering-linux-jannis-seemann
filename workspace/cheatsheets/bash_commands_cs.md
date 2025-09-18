@@ -8,7 +8,7 @@
 <br>
 <br>
 
-### Table of Content
+### Table of Contents
 - [File & Folder Management](#file-folder-management)
 - [Searching Files & Folders](#searching-files-folders)
 - [File Information](#file-information)
