@@ -9,10 +9,10 @@
 <br>
 
 ### Table of Content
-- [File & Folder Management](#file--folder-management)
-- [Searching Files & Folders](#searching-files--folders)
+- [File & Folder Management](#file-folder-management)
+- [Searching Files & Folders](#searching-files-folders)
 - [File Information](#file-information)
-- [Data Processing & Filtering](#data-processing--filtering)
+- [Data Processing & Filtering](#data-processing-filtering)
 - [Shell Related Commands](#shell-related-commands)
 - [User Management](#user-management)
 
