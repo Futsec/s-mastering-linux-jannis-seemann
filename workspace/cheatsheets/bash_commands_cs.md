@@ -17,6 +17,7 @@
 |FFM-04|`cp`|This copies files, it can also copy a file with one name, and paste it as another name.|[View](#cp)|
 |FFM-05|`rm`|The remove command, removes files only, however it can remove directories if not careful.|[View](#rm)|
 |FFM-06|`rmdir`|Remove Direcctory is much like the `rm` command but for **empty** directories. If a directory is not empty, it will fail.|[View](#rmdir)|
+|FFM-07|`ln` _Hardlink_<br>`ln -s` _Softlink_|These allow us to both create hard & softlinks, Hardlinks cannot point to a directory, while softlinks can point to files and directories.<br>Hard & softlinks point to the same inode, difference being when removing the original file, hardlink will retain the data as its pointing to the same inode, while softlinks will not as its just a reference to the path.<br>Think of hardlinks as a way making copies, as it points to the inode its basically another file on disk, pointing to the same inode as the original file, while softlinks are a type of shortcut that reference the path to an inode.|[View](#ln)|
 |**&#8226; Searching Files & Folders**||||
 |SFF-01|`ls`|The list `ls` command is used to to view the contents of a directory.|[View](#ls)|
 |SFF-02|`tree`|`tree` is much like the `ls -R` command, however it outputs the folder structure in a nice easy to read tree like format.|[View](#tree)|
@@ -29,6 +30,7 @@
 |**&#8226; File Information**||||
 |FI-01|`wc`|`wc` returns the amount of either lines, words or chars/bytes within a file.|[View](#wc)|
 |FI-02|`du`|Disk Usage shows how much disk usage the file is using, there are specific units that this is measured in.|[View](#du)|
+|FI-03|`diff`|This is a lot like when using `git diff` as an example, allowing us view differences within a file.|[View](#diff)|
 |**&#8226; Data Processing & Filtering**||||
 |DPF-01|`tee`|The `tee` command allows to redirect stdin to two places, example to the terminal and to a file.|[View](#tee)|
 |DPF-02|`sort`|`Sort` sorts the contents of a file, by default it sorts aphabettically.|[View](#sort)|
@@ -91,6 +93,13 @@
 ##### rmdir
 ```sh    
     rmdir ~/folder
+```
+
+##### ln
+```sh
+    ln <Target> <Link>
+    ln ~/workspace/project/data.csv data.csv
+    ln -s ~/Downloads/images images
 ```
 
 ##### ls
@@ -170,6 +179,12 @@
      ↪ -s       |display only a total for each argument
      ↪ -h       |display in human-readable format
      ↪ -k       |display block size
+```
+
+##### diff
+```sh
+    diff file1.txt file2.txt
+    diff < <(ls ./folder1) < <(ls ./folder2) 
 ```
 
 ##### tee
