@@ -8,6 +8,16 @@
 <br>                                                                                                                    
 <br>
 
+### Table of Contents
+- [Essential User & System Binaries](#essential-user--system-binaries)
+- [Device & Virtual Filesystems](#device--virtual-filesystems)
+- [Boot & Configuration](#boot--configuration)
+- [User & Variable Data](#user--variable-data)
+- [Mount Points & Runtime](#mount-points--runtime)
+
+<br>
+<br>
+
 ##### Essential User & System Binaries
 |Path|Name|Description|
 |:---|:---|:---|

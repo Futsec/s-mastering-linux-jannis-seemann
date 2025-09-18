@@ -23,17 +23,14 @@
 
 <br>
 
-|#|Type of Expansion|Description|Example|
-|:---|:---|:---|:---|
-|EP-01|**Filename** Expansion|This is a file name.|[View](#filename-expansion)|
-|EP-02|**Tilde** Expansion|This expands the home path directory, when adding a plus to it is can expand to you current working path.|[View](#tilde-expansion)|
-|EP-03|**Variable** & **Parameter** Expansion|These expand variables such as PATH or HOME|[View](#variable--parameter-expansion)|
-|EP-04|**Brace** Expansion|Expands strings, it does not work in quotes.|[View](#brace-expansion)|
-|EP-05|**Command** Substitution|Allows for commands to to be run and expands its output as a replacement.|[View](#command-substitution)|
-|EP-06|**Process** Substituion|Allows us to use the _input_ or _output_ of a process as a temporary file.|[View](#process-substitution)|
-
-<br>
-<br>
+|Type of Expansion|Description|Example|
+|:---|:---|:---|
+|**Filename** Expansion|This is a file name.|[View](#filename-expansion)|
+|**Tilde** Expansion|This expands the home path directory, when adding a plus to it is can expand to you current working path.|[View](#tilde-expansion)|
+|**Variable** & **Parameter** Expansion|These expand variables such as PATH or HOME|[View](#variable--parameter-expansion)|
+|**Brace** Expansion|Expands strings, it does not work in quotes.|[View](#brace-expansion)|
+|**Command** Substitution|Allows for commands to to be run and expands its output as a replacement.|[View](#command-substitution)|
+|**Process** Substituion|Allows us to use the _input_ or _output_ of a process as a temporary file.|[View](#process-substitution)|
 
 ##### Filename Expansions
 ```sh
