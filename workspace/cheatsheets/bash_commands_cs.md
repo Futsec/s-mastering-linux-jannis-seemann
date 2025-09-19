@@ -377,14 +377,16 @@ The encryption used on passwords here are known as `bcrypt`.
 |:---|:---|:---|
 |`useradd`|We can create users using `useradd`.|[View](#useradd)|
 |`passwd`|We can set the user password using `passwd`.|[View](#passwd)|
-|`usermod`||[View](#)|
-|`userdel`||[View](#)|
-|`adduser`||[View](#)|
-|`deluser`||[View](#)|
-|`su`||[View](#)|
+|`usermod`|We can modify another users details, including ourselves, but its best we logout to do  that.|[View](#usermod)|
+|`userdel`|We can delete users from the system using the userdel command.|[View](#userdel)|
+|`adduser`||[View](#adduser)|
+|`deluser`||[View](#deluser)|
+|`su`||[View](#su)|
 
 #### useradd
 ```sh
+    "useradd [options] username"
+
     sudo useradd -m -d /home/lauren lauren
      ↪ -m           |Create home directory.
      ↪ -d           |Set custom directory.
@@ -397,6 +399,8 @@ The encryption used on passwords here are known as `bcrypt`.
 
 #### passwd
 ```sh
+    "passwd [options] username"
+
     passwd -S
     sudo passwd -S lauren
      ↪ -S           |Display password status.
@@ -406,6 +410,47 @@ The encryption used on passwords here are known as `bcrypt`.
      ↪ -l           |Lock the user account.
      ↪ -u           |Unlock the user account.
     sudo passwd lauren
+```
+
+#### usermod
+```sh
+    "usermod [options] username"    
+
+    sudo usermod -s /bin/bash -c "Lauren J." lauren
+     ↪ -c            |Change users descition (full name).
+     ↪ -s            |Change default shell.
+     ↪ -d            |Change home directory (coupled with -m, we can also move the location of the home directory).
+     ↪ -l            |Change the username.
+     ↪ -g            |Change the primary group.
+     ↪ -G            |Change secondary groups.
+     ↪ -aG           |Add secondary groups.
+```
+
+#### userdel
+```sh
+    userdel [options] username
+
+    userdel steve
+     ↪ -r            |Removes the users home directory & emails if any.
+     ↪ -f            |Basically the same as -r, however forces the removal even if the user is still logged in.
+                     |Might also delete a group with the same name as this user (depending on system configuration).
+    
+    userdel -r steve 
+```
+
+#### adduser
+```sh
+
+```
+
+#### deluser
+```sh
+
+```
+
+#### su
+```sh
+
 ```
 
 <br>
