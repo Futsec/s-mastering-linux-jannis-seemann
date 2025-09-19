@@ -20,7 +20,7 @@
 <br>
 
 ### File & Folder Management
-|Command|Description|Link|
+|Command|Description|Example|
 |:---|:---|:---|
 |`touch`|We use the touch command to create files, we can can create single or multiple files.|[View](#touch)|
 |`mkdir`|We can us mkdir to create folders, either single or multiple, as well as entire folder structures.|[View](#mkdir)|
@@ -82,7 +82,7 @@
 <br>
 
 ### Searching Files & Folders
-|Command|Description|Link|
+|Command|Description|Example|
 |:---|:---|:---|
 |`ls`|The list `ls` command is used to to view the contents of a directory.|[View](#ls)|
 |`tree`|`tree` is much like the `ls -R` command, however it outputs the folder structure in a nice easy to read tree like format.|[View](#tree)|
@@ -157,7 +157,7 @@
 <br>
 
 ### File Information
-|Command|Description|Link|
+|Command|Description|Example|
 |:---|:---|:---|
 |`wc`|`wc` returns the amount of either lines, words or chars/bytes within a file.|[View](#wc)|
 |`du`|Disk Usage shows how much disk usage the file is using, there are specific units that this is measured in.|[View](#du)|
@@ -195,7 +195,7 @@
 <br>
 
 ### Data Processing & Filtering
-|Command|Description|Link|
+|Command|Description|Example|
 |:---|:---|:---|
 |`tee`|The `tee` command allows to redirect stdin to two places, example to the terminal and to a file.|[View](#tee)|
 |`sort`|`Sort` sorts the contents of a file, by default it sorts aphabettically.|[View](#sort)|
@@ -263,7 +263,7 @@
 <br>
 
 ### Shell Related Commands
-|Command|Description|Link|
+|Command|Description|Example|
 |:---|:---|:---|
 |`export`<br>`unset`|`export` allows us to set environment variables, while unset removes these variables.|[View](#export--unset)|
 |'chsh'|Allows us to change our default shell. [Read More](./env_variables_cs.md) on the **Environment & Shell Variables** page.|[View](#chsh)|
@@ -326,9 +326,10 @@ As well as, looking at the three main groups of users, there can be more dependi
 - Root user &rarr; _The Root User has the Highest priviledges, indicated by the UID of 0. There can only be one root user._
 - Standard User &rarr; _Limited Priviledges, Can temporarily gain administrative priviledges._
 - Service User &rarr; _Limited Priviledges, users for specfic tasks, often not needing a GUI, e.g maintaining a Web Server._
-- Groups &rarr; 
+- Groups &rarr; _All users must have a primary group, and can be assigned zero to unlimited additional groups._
 
 #### /etc/passwd 
+Contains basic user account information.
 ```md
     cat /etc/passwd
     user:x:1000:1000:User:/home/user:/bin/bash
@@ -343,6 +344,9 @@ As well as, looking at the three main groups of users, there can be more dependi
 ``` 
 
 #### /etc/shadow
+Stores encrypted user passwords and password aging information.The file is only readable for the root user or users with elevated priviledges.
+The encryption used on passwords here are known as `bcrypt`.
+
 ```md
     cat /etc/shadow
     user:$6$hD...:20346:0:99999:7: : :
@@ -369,9 +373,40 @@ As well as, looking at the three main groups of users, there can be more dependi
       Group Name.
 ```
 
-|Command|Description|Link|
+|Command|Description|Example|
 |:---|:---|:---|
-||||
+|`useradd`|We can create users using `useradd`.|[View](#useradd)|
+|`passwd`|We can set the user password using `passwd`.|[View](#passwd)|
+|`usermod`||[View](#)|
+|`userdel`||[View](#)|
+|`adduser`||[View](#)|
+|`deluser`||[View](#)|
+|`su`||[View](#)|
+
+#### useradd
+```sh
+    sudo useradd -m -d /home/lauren lauren
+     ↪ -m           |Create home directory.
+     ↪ -d           |Set custom directory.
+     ↪ -s           |Set the default shell.
+     ↪ -g           |Specify a primary group, instead of the default configuration.
+     ↪ -G           |Add user to secondary groups.
+
+    useradd -m -d /home/lauren lauren
+```
+
+#### passwd
+```sh
+    passwd -S
+    sudo passwd -S lauren
+     ↪ -S           |Display password status.
+     ↪ -d           |Delete  password.
+     ↪ -n           |Set Minimum password age (Minimum wait time before changing password).
+     ↪ -x           |Set Maximum password age (How  long the password last until it expires).
+     ↪ -l           |Lock the user account.
+     ↪ -u           |Unlock the user account.
+    sudo passwd lauren
+```
 
 <br>
 
