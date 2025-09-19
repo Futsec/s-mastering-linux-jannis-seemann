@@ -1,5 +1,5 @@
 <div align="center">
-    <h3>Command Cheatsheet</h3>
+    <h1>Command Cheatsheet</h1>
     <p>
         <em>A Linux command cheatsheet</em>
     </p>
@@ -8,7 +8,7 @@
 <br>
 <br>
 
-### Table of Contents
+## Table of Contents
 - [File & Folder Management](#file--folder-management)
 - [Searching Files & Folders](#searching-files--folders)
 - [File Information](#file-information)
@@ -19,7 +19,7 @@
 <br>
 <br>
 
-#### File & Folder Management
+### File & Folder Management
 |Command|Description|Link|
 |:---|:---|:---|
 |`touch`|We use the touch command to create files, we can can create single or multiple files.|[View](#touch)|
@@ -30,21 +30,21 @@
 |`rmdir`|Remove Direcctory is much like the `rm` command but for **empty** directories. If a directory is not empty, it will fail.|[View](#rmdir)|
 |`ln` _Hardlink_<br>`ln -s` _Softlink_|These allow us to both create hard & softlinks, Hardlinks cannot point to a directory, while softlinks can point to files and directories.<br>Hard & softlinks point to the same inode, difference being when removing the original file, hardlink will retain the data as its pointing to the same inode, while softlinks will not as its just a reference to the path.<br>Think of hardlinks as a way making copies, as it points to the inode its basically another file on disk, pointing to the same inode as the original file, while softlinks are a type of shortcut that reference the path to an inode.|[View](#ln)|
 
-##### touch
+#### touch
 ```sh 
     touch ~/file.txt
     touch ~/file1.txt ~/file2.txt
     touch ~/file{1..9}.txt
 ```
 
-##### mkdir
+#### mkdir
 ```sh
     mkdir ~/folder
     mkdir ~/folder1 ~/folder2
     mkdir -p ~/folder/subfolder
 ```
 
-##### mv
+#### mv
 ```sh
     mv ~/file1 ~/Documents/
     mv ~/file1 ~/file2 ~/Document/
@@ -53,26 +53,26 @@
        ↪ <command> <old-name> <new-name>
 ```
 
-##### cp
+#### cp
 ```sh
     cp ~/file ~/Documents/
     cp ~/file1 ~/file2 ~/Documents
        ↪ <command> <location> <destination></destination>
 ```
 
-##### rm
+#### rm
 ```sh
     rm ~/file
     rm ~/file1 ~/file2
     rm -r ~/folder/file
 ```
 
-##### rmdir
+#### rmdir
 ```sh    
     rmdir ~/folder
 ```
 
-##### ln
+#### ln
 ```sh
     ln <Target> <Link>
     ln ~/workspace/project/data.csv data.csv
@@ -81,7 +81,7 @@
 
 <br>
 
-#### Searching Files & Folders
+### Searching Files & Folders
 |Command|Description|Link|
 |:---|:---|:---|
 |`ls`|The list `ls` command is used to to view the contents of a directory.|[View](#ls)|
@@ -93,7 +93,7 @@
 |`tail`|This is the same as the `head` command, but for the end of a fail.|[View](#tail)|
 |`less`|less opens the content of a file into its own program, allowing us to view, search and read files easier.|[View](#less)|
 
-##### ls
+#### ls
 ```sh
     ls 
     ls -a
@@ -102,12 +102,12 @@
     ls -lah
 ```
 
-##### tree
+#### tree
 ```sh
     tree .
 ```
 
-##### Globbing & Wildcards
+#### Globbing & Wildcards
 ```sh
     # IMG_7789.png IMG_7789.mov
     
@@ -118,32 +118,32 @@
      ↪ [1-9]    |range
 ```
 
-##### find
+#### find
 ```sh
     find ~/Desktop -type d -empty -delete
     find . -name "file.txt"
     find /var/log/ -type f -size 1M
 ```
 
-##### cat
+#### cat
 ```sh
     cat ~/file.txt
     cat ~/f* 
 ```
 
-##### head
+#### head
 ```sh
     head ~/file.txt
     head -n 20 ~/file.txt
 ```
 
-##### tail
+#### tail
 ```sh
     tail ~/file.txt
     tail -n 20 ~/file.txt
 ```
 
-##### less
+#### less
 ```sh
     less file.txt
      ↪ :50p      |move 50% of the file
@@ -156,7 +156,7 @@
 
 <br>
 
-#### File Information
+### File Information
 |Command|Description|Link|
 |:---|:---|:---|
 |`wc`|`wc` returns the amount of either lines, words or chars/bytes within a file.|[View](#wc)|
@@ -164,7 +164,7 @@
 |`diff`|This is a lot like when using `git diff` as an example, allowing us view differences within a file.|[View](#diff)|
 |`df`|Disk free, reports file system space usage, we can use this for example to view our _inodes_ information.|[View](#df)|
 
-##### wc
+#### wc
 ```sh
     wc ~/file.txt
     wc -lwc ~/file.txt 
@@ -173,7 +173,7 @@
      ↪ -c       |lists the amount of chars, or bytes of the file
 ```
 
-##### du
+#### du
 ```sh
     du ~/file.txt 
     du -h file.txt
@@ -182,19 +182,19 @@
      ↪ -k       |display block size
 ```
 
-##### diff
+#### diff
 ```sh
     diff file1.txt file2.txt
     diff < <(ls ./folder1) < <(ls ./folder2) 
 ```
-##### df
+#### df
 ```sh
     df -ih  #Displays the inode usage on our system
 ```
 
 <br>
 
-#### Data Processing & Filtering
+### Data Processing & Filtering
 |Command|Description|Link|
 |:---|:---|:---|
 |`tee`|The `tee` command allows to redirect stdin to two places, example to the terminal and to a file.|[View](#tee)|
@@ -206,12 +206,12 @@
 |`cut`|`cut` allows us to modify a string by cutting out byte, characters or fields for a specific range.|[View](#cut)|
 |`sed`|The `sed` tool allows us to quickly execute commands on a file or stdin. Example of how the commands would work is `sed 'command1; command2; ...'` and they allow us to do things such as `delete lines` or `insert lines` or whatever other command is available to us.|[View](#sed)|
 
-##### tee
+#### tee
 ```sh
     ping google.com 2>&1 | tee -a ping_info.txt
 ```
 
-##### sort
+#### sort
 ```sh
     sort file.txt
      ↪ -r       |sorts contents of file in reverse order
@@ -221,13 +221,13 @@
      ↪ -u       |checks unique values only
 ```
 
-##### uniq
+#### uniq
 ```sh
     sort file.txt | uniq
      ↪ _sort -u file.txt_
 ```
 
-##### grep
+#### grep
 ```sh
     ls | grep -F "file.txt"
     ip addr show | grep -F "inet"
@@ -235,26 +235,26 @@
                     ↪ egrep "[a-z][A-Z][1-9]" 
 ```
 
-##### tr
+#### tr
 ```sh
     echo "bash" | tr 'ba' 'di'
     echo "awesome" | tr 'a-z' 'A-Z'
     echo "Try removing the spaces inbetween" | tr -d ' '
 ```
 
-##### rev
+#### rev
 ```sh
     echo 'Was it a cat I saw?' | rev
 ```
 
-##### cut
+#### cut
 ```sh
     uptime | cut -b '2-9'
            | cut -c '2-9' # difference between b and c is c allows for more bytes as some character require 2 bytes or more
            | cut -d ' ' -f 1 
 ```
 
-##### sed
+#### sed
 ```sh
     echo 'Hello Bash' | sed 's/Hello/Bye/g'
     echo 'Hello Bash' | sed 's/Hello/Bye/g'
@@ -262,7 +262,7 @@
 
 <br>
 
-#### Shell Related Commands
+### Shell Related Commands
 |Command|Description|Link|
 |:---|:---|:---|
 |`export`<br>`unset`|`export` allows us to set environment variables, while unset removes these variables.|[View](#export--unset)|
@@ -273,20 +273,20 @@
 |`infocmp`|Shows the escape sequences for our terminal|[View](#infocmp)|
 |`tput`|Allows us to use the easier form of `infocmp`_escape sequences_, example `setaf` instead of `\E[%?%p1%{8}%<%t3%p1%d%e%p1%{16}%<%t9%p1%{8}%-%d%e38;5;%p1%d%;m,`.|[View](#tput)|
 
-##### export & unset
+#### export & unset
 ```sh
     export VARNAME='Hello, thiis has a typo'
     VARNAME="Hello, World!"
     unset VARNAME
 ```
 
-##### chsh
+#### chsh
 ```sh
     chsh -s /bin/bash
 ```
 
 
-##### alias
+#### alias
 ```sh
     alias updateme='sudo apt update && sudo apt upgrade'
     alias ls ='ls --color=Auto'
@@ -295,40 +295,40 @@
     alias mkdir='mkdir -v'
 ```
 
-##### set
+#### set
 ```sh
     set -x          #Sets a function or behaviour
     set +x          #Unsets a function or behaviour
 ```
 
-##### shopt
+#### shopt
 ```sh
     shopt -t        #This closes a terminal after a single command has run
 ```
 
-##### infocmp
+#### infocmp
 ```sh
     infocmp
 ```
 
-##### tput
+#### tput
 ```sh
     echo "$(tput setaf 4)$(tput setab 5)Hello, World!$(tput sgr0)"
 ```
 
 <br>
 
-#### User Management
+### User Management
 These next few commands will require some knowledge on what roles `/etc/passwd`, `/etc/shadow` & `/etc/group` play. 
 As well as, looking at the three main groups of users, there can be more depending on your system. 
 
-##### Users on Linux 
+#### Users on Linux 
 - Root user &rarr; _The Root User has the Highest priviledges, indicated by the UID of 0. There can only be one root user._
 - Standard User &rarr; _Limited Priviledges, Can temporarily gain administrative priviledges._
 - Service User &rarr; _Limited Priviledges, users for specfic tasks, often not needing a GUI, e.g maintaining a Web Server._
 - Groups &rarr; 
 
-##### /etc/passwd 
+#### /etc/passwd 
 ```md
     cat /etc/passwd
     user:x:1000:1000:User:/home/user:/bin/bash
@@ -342,8 +342,8 @@ As well as, looking at the three main groups of users, there can be more dependi
       Username (Login name)    
 ``` 
 
-##### /etc/shadow
-```sh
+#### /etc/shadow
+```md
     cat /etc/shadow
     user:$6$hD...:20346:0:99999:7: : :
       |       |       |  |   |   | | | |
@@ -358,8 +358,8 @@ As well as, looking at the three main groups of users, there can be more dependi
       Username.
 ``` 
 
-##### /etc/group
-```sh
+#### /etc/group
+```md
     cat /etc/group
     user:x:1000:
       |   |   |  |
