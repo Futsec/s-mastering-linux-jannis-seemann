@@ -19,7 +19,7 @@
 <br>
 <br>
 
-##### File & Folder Management
+#### File & Folder Management
 |Command|Description|Link|
 |:---|:---|:---|
 |`touch`|We use the touch command to create files, we can can create single or multiple files.|[View](#touch)|
@@ -81,7 +81,7 @@
 
 <br>
 
-##### Searching Files & Folders
+#### Searching Files & Folders
 |Command|Description|Link|
 |:---|:---|:---|
 |`ls`|The list `ls` command is used to to view the contents of a directory.|[View](#ls)|
@@ -156,7 +156,7 @@
 
 <br>
 
-##### File Information
+#### File Information
 |Command|Description|Link|
 |:---|:---|:---|
 |`wc`|`wc` returns the amount of either lines, words or chars/bytes within a file.|[View](#wc)|
@@ -194,7 +194,7 @@
 
 <br>
 
-##### Data Processing & Filtering
+#### Data Processing & Filtering
 |Command|Description|Link|
 |:---|:---|:---|
 |`tee`|The `tee` command allows to redirect stdin to two places, example to the terminal and to a file.|[View](#tee)|
@@ -262,7 +262,7 @@
 
 <br>
 
-##### Shell Related Commands
+#### Shell Related Commands
 |Command|Description|Link|
 |:---|:---|:---|
 |`export`<br>`unset`|`export` allows us to set environment variables, while unset removes these variables.|[View](#export--unset)|
@@ -318,7 +318,57 @@
 
 <br>
 
-##### User Management
+#### User Management
+These next few commands will require some knowledge on what roles `/etc/passwd`, `/etc/shadow` & `/etc/group` play. 
+As well as, looking at the three main groups of users, there can be more depending on your system. 
+
+##### Users on Linux 
+- Root user &rarr; _The Root User has the Highest priviledges, indicated by the UID of 0. There can only be one root user._
+- Standard User &rarr; _Limited Priviledges, Can temporarily gain administrative priviledges._
+- Service User &rarr; _Limited Priviledges, users for specfic tasks, often not needing a GUI, e.g maintaining a Web Server._
+- Groups &rarr; 
+
+##### /etc/passwd 
+```md
+    cat /etc/passwd
+    user:x:1000:1000:User:/home/user:/bin/bash
+      |  |   |    |    |       |         |
+      |  |   |    |    |       |         Login Shell (Users default shell)
+      |  |   |    |    |       Home Directory
+      |  |   |    |    GECOS (Comment - usually full name or description)
+      |  |   |    Group ID (GID)
+      |  |   User ID (UID)
+      |  Password Placeholder (Real password stored in /etc/shadow)   
+      Username (Login name)    
+``` 
+
+##### /etc/shadow
+```sh
+    cat /etc/shadow
+    user:$6$hD...:20346:0:99999:7: : :
+      |       |       |  |   |   | | | |
+      |       |       |  |   |   | | | Reserved for future use.
+      |       |       |  |   |   | | Account expiration date (blank - no expiration).
+      |       |       |  |   |   | Inactive days after expiration (blank = disabled).
+      |       |       |  |   |   Warning days before password expires.
+      |       |       |  |   Maximum days password is valid.
+      |       |       |  Minimum days before password can be changed again.
+      |       |       Last password change.
+      |       Password hash.
+      Username.
+``` 
+
+##### /etc/group
+```sh
+    cat /etc/group
+    user:x:1000:
+      |   |   |  |
+      |   |   |  Group Members.
+      |   |   Group ID (GID).
+      |   Password placeholder (group passwaords are rarely used, stored in /etc/gshadow).
+      Group Name.
+```
+
 |Command|Description|Link|
 |:---|:---|:---|
 ||||
