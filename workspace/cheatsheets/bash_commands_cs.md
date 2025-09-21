@@ -508,6 +508,7 @@ The encryption used on passwords here are known as `bcrypt`.
     su lauren
     su -l lauren
      ↪ -l           |Start a login shell as if the user has just logged in. This loads the users environment path, so '/home/lauren'
+```
 
 <br>
 
