@@ -320,13 +320,7 @@
 
 ### User Management
 These next few commands will require some knowledge on what roles `/etc/passwd`, `/etc/shadow` & `/etc/group` play. 
-As well as, looking at the three main groups of users, there can be more depending on your system. 
-
-#### Users on Linux 
-- Root user &rarr; _The Root User has the Highest priviledges, indicated by the UID of 0. There can only be one root user._
-- Standard User &rarr; _Limited Priviledges, Can temporarily gain administrative priviledges._
-- Service User &rarr; _Limited Priviledges, users for specfic tasks, often not needing a GUI, e.g maintaining a Web Server._
-- Groups &rarr; _All users must have a primary group, and can be assigned zero to unlimited additional groups._
+As well as, looking at the three main groups of users and groups, there can be more depending on your system or OS. 
 
 #### /etc/passwd 
 Contains basic user account information.
@@ -373,15 +367,32 @@ The encryption used on passwords here are known as `bcrypt`.
       Group Name.
 ```
 
+#### Users on Linux 
+- Root user &rarr; _The Root User has the Highest priviledges, indicated by the UID of 0. There can only be one root user._
+- Standard User &rarr; _Limited Priviledges, Can temporarily gain administrative priviledges._
+- Service User &rarr; _Limited Priviledges, users for specfic tasks, often not needing a GUI, e.g maintaining a Web Server._
+- Groups &rarr; _All users must have a primary group, and can be assigned zero to unlimited additional groups._
+
+#### Groups on Linux
+- root &rarr; _The superuser group with administrative priviledges, allowing complete control over the system._
+- sudo / wheel &rarr; _Members can use `sudo`. May also be called wheel on other unix operating systems._
+- adm (admin) &rarr; _Members are allowed to read log files._
+- lpadmin / lp &rarr; _Members can manage printers & print queues (CUPS). May also be called "lp"._
+- www-data &rarr; _A group for web server processes (such as Apache or Nginx), gives access to web content._
+- plugdev &rarr; _Allows users to manage pluggable devices (USB Sticks, External HHDs...)._
+
 |Command|Description|Example|
 |:---|:---|:---|
 |`useradd`|We can create users using `useradd`.|[View](#useradd)|
 |`passwd`|We can set the user password using `passwd`.|[View](#passwd)|
 |`usermod`|We can modify another users details, including ourselves, but its best we logout to do  that.|[View](#usermod)|
 |`userdel`|We can delete users from the system using the userdel command.|[View](#userdel)|
-|`adduser`||[View](#adduser)|
-|`deluser`||[View](#deluser)|
-|`su`||[View](#su)|
+|`groups`|We can view ours or other users groups using this command.|[View](#groups)|
+|`adduser`<br>`deluser`|These are some additional commands for debian users, this is another way of handling the operations of adding and removing users from groups.|[View](#adduser)<br>[View](#deluser)|
+|`groupadd`|Can add our own groups, incase we want to define our own permissions.|[View](#groupadd)|
+|`groupmod`|We can change or edit group information|[View](#groupmod)|
+|`groupdel`|We can remove our custom groups using this command|[View](#groupdel)|
+|`su`|Allows us to switch the user, su stands for 'Switch User'.|[View](#su)|
 
 #### useradd
 ```sh
@@ -424,6 +435,10 @@ The encryption used on passwords here are known as `bcrypt`.
      ↪ -g            |Change the primary group.
      ↪ -G            |Change secondary groups.
      ↪ -aG           |Add secondary groups.
+
+    sudo usermod -G adm,lpadmin,sudo,plugdev lauren     |Adding secondary groups to a user
+    sudo usermod -G adm,lpadmin,plugdev lauren          |Removing a group, you will need to specify all groups again, leaving out the group you dont want.  
+    sudo usermod -aG www-data lauren                    |Adding a secondary group without having to re-write all existing groups.
 ```
 
 #### userdel
@@ -438,20 +453,61 @@ The encryption used on passwords here are known as `bcrypt`.
     userdel -r steve 
 ```
 
+#### groups
+```sh
+    groups [username/s]
+    
+    groups                      |Will print out the currents users groups.
+    groups autumn               |Will print out a specific users groups.
+    groups autumn bob lauren    |Can print out multiple users groups as well.
+```
+
 #### adduser
 ```sh
-
+    adduser [user] [group]
+    
+    adduser lauren adm
 ```
 
 #### deluser
 ```sh
+    deluser [user] [group]
 
+    deluser lauren adm
+```
+
+##### groupadd
+```sh
+    groupadd [options] groupname
+
+    sudo groupadd -g 2500 myapp
+     ↪ -g           |Set custom GID (usually a custom GID should be above 1000, but some companies can set a rule be above 5000 or 6000).
+```
+
+#### groupmod
+```sh
+    groupmod [options] groupname
+
+    sudo groupmod -n myapps -g 5000 myapp
+     ↪ -n            |Change the group name.
+     ↪ -g            |Change the group ID (GID).
+```
+
+#### groupdel
+```sh
+    groupdel [options] groupname
+
+    sudo groupdel groupname
 ```
 
 #### su
 ```sh
-
-```
+    su [other-user]
+   
+    su              |Just using su, switches to the root user. 
+    su lauren
+    su -l lauren
+     ↪ -l           |Start a login shell as if the user has just logged in. This loads the users environment path, so '/home/lauren'
 
 <br>
 
