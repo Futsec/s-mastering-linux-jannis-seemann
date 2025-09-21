@@ -393,6 +393,7 @@ The encryption used on passwords here are known as `bcrypt`.
 |`groupmod`|We can change or edit group information|[View](#groupmod)|
 |`groupdel`|We can remove our custom groups using this command|[View](#groupdel)|
 |`su`|Allows us to switch the user, su stands for 'Switch User'.|[View](#su)|
+|`sudo`|Superuser do, gives temporary elevated priviledges of the root user to a standard user, however there is more to sudo when it comes to its options. Take a look at the `/etc/sudoers` file using the command `visudo`, as there is more configurations one can do within the file, it is also the reason why %sudo has the ability to elevate priviledges for certain users that are part of %sudo.|[View](#sudo)|
 
 #### useradd
 ```sh
@@ -508,6 +509,20 @@ The encryption used on passwords here are known as `bcrypt`.
     su lauren
     su -l lauren
      ↪ -l           |Start a login shell as if the user has just logged in. This loads the users environment path, so '/home/lauren'
+```
+
+#### sudo
+```sh
+    sudo [options] 
+     ↪ -k           |Invalidates the users cached credentials
+     ↪ -s           |Will start a shell with elevated rights
+    
+    sudo -u [user] -g [group] bash
+    sudo -u lauren bash
+     ↪ -u           |Start a program as a different user
+     ↪ -g           |Start a program as a specific group
+    
+    sudo -u lauren touch /home/lauren/hello_world.txt
 ```
 
 <br>
