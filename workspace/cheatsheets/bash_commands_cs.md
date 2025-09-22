@@ -15,6 +15,7 @@
 - [Data Processing & Filtering](#data-processing--filtering)
 - [Shell Related Commands](#shell-related-commands)
 - [User Management](#user-management)
+- [File Permissions & Access Control](#file-permissions--access-control)
 
 <br>
 <br>
@@ -527,3 +528,81 @@ The encryption used on passwords here are known as `bcrypt`.
 
 <br>
 
+### File Permissions & Access Control
+
+In Linux, file permissions are divided into 3 categories, Owner(u), Group(g) and Other(o). 
+We can see this when listing files, for example this file.
+
+```sh
+    -rw-rw-r-- 1 owner group  18K Sep 21 17:53 bash_commands_cs.md
+
+    -(rw-)(rw-)(r--)
+    |  |    |    |
+    |  |    |    Other(o)
+    |  |    Group(g)
+    |  Owner(u) 
+    File type
+```
+
+#### Types of permissions
+You can set file permissions symbolically or numerically.
+
+- Read (r / 4) &rarr; The ability to read a file or list a directory.
+- Write (w / 2) &rarr; The Ability to modify a file or creating or deleting files in a directory. _This also needs the execute permission enabled._
+- Execute (x / 1) &rarr; Allows running the file as a program or changing into & traverse this directory.
+
+```sh
+      Read
+      |Write
+      ||Execute
+      |||   
+    -(rwx)(rw-)(r--)
+      |||  ||   |
+      421  42   4 
+       7    6    4
+```
+
+
+
+|Command|Description|Example|
+|:---|:---|:---|
+|`chmod`|Sets the permissions on files or directories.|[View](#chmod)|
+|`chown`|Sets the owner and group of a file.|[View](#chown)|
+|`umask`|Sets the baseline security for files and directories. You can configure this umask value within your `login.defs` file, dor system wide rules, or use umask for the current session, or you can configure it in `.bashrc` file.|[View](#umask)|
+|||[View](#)|
+|||[View](#)|
+|||[View](#)|
+
+#### chmod
+```sh
+    chmod u+rwx file.txt            |rwx    = 7
+    chmod g+rw file.txt             |rw     = 6
+    chmod o+r file.txt              |r      = 4
+     ↪ chmod 764 file.txt
+             |||
+             ||Other(o)
+             |Group(g)
+             Owner(u)
+
+    chmod 777 -R ./directory
+```
+
+#### chown
+```sh
+    chown user:group file.txt
+     ↪ chown root:root file.txt
+
+    chown user:group -R ./directory
+```
+
+#### umask
+```sh
+    umask
+    umask 0002          |664 > -rw-rw-r--
+    umask 0022          |644 > -rw-r--r--
+    
+    chmod +t ./folder/
+     ↪ This sets the sticky (0)002 value for directories only, giving further permissions, for the owner to be the only person that can remove files or directories. 
+```
+
+<br>
