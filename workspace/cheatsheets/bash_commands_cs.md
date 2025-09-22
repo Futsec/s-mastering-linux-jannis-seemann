@@ -562,7 +562,8 @@ You can set file permissions symbolically or numerically.
        7    6    4
 ```
 
-
+#### Understanding umask in Linux
+Umask is a Linux setting that defines the default permissions removed from new files and directories. New files start with 666 and directories with 777; the umask “masks out” bits to make them more restrictive. For example, a umask of 022 produces files with 644 and directories with 755.
 
 |Command|Description|Example|
 |:---|:---|:---|
