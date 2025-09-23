@@ -570,9 +570,6 @@ Umask is a Linux setting that defines the default permissions removed from new f
 |`chmod`|Sets the permissions on files or directories.|[View](#chmod)|
 |`chown`|Sets the owner and group of a file.|[View](#chown)|
 |`umask`|Sets the baseline security for files and directories. You can configure this umask value within your `login.defs` file, dor system wide rules, or use umask for the current session, or you can configure it in `.bashrc` file.|[View](#umask)|
-|||[View](#)|
-|||[View](#)|
-|||[View](#)|
 
 #### chmod
 ```sh
@@ -604,6 +601,16 @@ Umask is a Linux setting that defines the default permissions removed from new f
     
     chmod +t ./folder/
      ↪ This sets the sticky (0)002 value for directories only, giving further permissions, for the owner to be the only person that can remove files or directories. 
+    
+    chmod u+s ./python3
+    chmod u+S ./python3
+     ↪ -rwsr-xr-x           |(SUID) Set User ID + executable
+     ↪ -rwSr-xr-x           |(SUID) Set User ID + Not executable
+
+    chmod g+s ./python3
+    chmod g+S ./python3
+     ↪ -rwxr-s-r-x          |(SGID) Set Group ID + executable
+     ↪ -rwxr-S-r-x          |(SGID) Set Group ID + Not executable
 ```
 
 <br>
