@@ -9,6 +9,7 @@
 <br>
 
 ## Table of Contents
+- [Command Information & Help](#command-information--help)
 - [File & Folder Management](#file--folder-management)
 - [Searching Files & Folders](#searching-files--folders)
 - [File Information](#file-information)
@@ -18,6 +19,41 @@
 - [File Permissions & Access Control](#file-permissions--access-control)
 
 <br>
+<br>
+
+### Command Information & Help
+To find more information about a command, we can use various other commands such as `man`, `help`, or even `--help`. However, how do you know which to use for which command?
+For that we use `type` and we will see that some commands are either _shell built-in_ or its a _/usr/bin_ command. _Shell Built-in_ commands do not have man pages, so using `help` or `--help` is the only way of getting more info on a command.
+
+|Command|Description|Example|
+|:---|:---|:---|
+|`type`|Displays information about a command type.|[View](#type)|
+|`man`|an interface to the system reference manuals.|[View](#man)|
+|`help`<br>`--help`|Display information about builtin commands.|[View](#help)|
+|`apropos`|search the manual page names and descriptions.|[View](#apropos)|
+
+#### type
+```sh
+    type cd
+    type mkdir
+```
+
+#### man
+```sh
+    man mkdir
+    man -k "execute command"
+```
+
+#### help
+```sh
+    help cd
+```
+
+#### apropos
+```sh
+    apropos "execute command"
+```
+
 <br>
 
 ### File & Folder Management
