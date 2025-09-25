@@ -63,8 +63,10 @@ For that we use `type` and we will see that some commands are either _shell buil
 |`mkdir`|We can us mkdir to create folders, either single or multiple, as well as entire folder structures.|[View](#mkdir)|
 |`mv`|The move command can both move and rename files.|[View](#mv)|
 |`cp`|This copies files, it can also copy a file with one name, and paste it as another name.|[View](#cp)|
-|`rm`|The remove command, removes files only, however it can remove directories if not careful.|[View](#rm)|
+|`rm`|The remove command, removes files only, however it can remove directories if not careful.<br>_This command doesnt completely remove the file from disk, it might not be in your trash, but it is still recoverable using some apps._|[View](#rm)|
 |`rmdir`|Remove Direcctory is much like the `rm` command but for **empty** directories. If a directory is not empty, it will fail.|[View](#rmdir)|
+|`shred`|Overwrites a file to hide its contents, and optionally delete it.|[View](#shred)|
+|`gpg`|OpenPGP encryption and signing tool. Allows for encrypting your files.|[View](#gpg)|
 |`ln` _Hardlink_<br>`ln -s` _Softlink_|These allow us to both create hard & softlinks, Hardlinks cannot point to a directory, while softlinks can point to files and directories.<br>Hard & softlinks point to the same inode, difference being when removing the original file, hardlink will retain the data as its pointing to the same inode, while softlinks will not as its just a reference to the path.<br>Think of hardlinks as a way making copies, as it points to the inode its basically another file on disk, pointing to the same inode as the original file, while softlinks are a type of shortcut that reference the path to an inode.|[View](#ln)|
 
 #### touch
@@ -108,6 +110,23 @@ For that we use `type` and we will see that some commands are either _shell buil
 ```sh    
     rmdir ~/folder
 ```
+
+#### shred
+```sh
+    shred -vuz -n 100 file.txt
+     ↪ -v           |Verbose the actions of the command.
+     ↪ -u           |Remove the file after each overwrite.
+     ↪ -z           |On the final overwrite, add zeros to hide shredding.
+     ↪ -n           |Specify the amount of time to overwrite the file.
+```
+
+#### gpg
+```sh
+    gpg -c file.txt
+     ↪ -c           |Encrypt with a symmetric cipher using a passphrase.
+```
+
+
 
 #### ln
 ```sh
