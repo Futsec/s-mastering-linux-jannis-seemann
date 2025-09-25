@@ -129,6 +129,7 @@ For that we use `type` and we will see that some commands are either _shell buil
 |`head`|This prints out the first 10 lines of a file, unless else specific.|[View](#head)|
 |`tail`|This is the same as the `head` command, but for the end of a fail.|[View](#tail)|
 |`less`|less opens the content of a file into its own program, allowing us to view, search and read files easier.|[View](#less)|
+|`watch`|Executes a program periodically.|[View](#watch)|
 
 #### ls
 ```sh
@@ -189,6 +190,16 @@ For that we use `type` and we will see that some commands are either _shell buil
      ↪ /         |forward search
      ↪ ?         |backwards search
      ↪ q         |quit
+```
+
+```sh
+    watch [options] [command]
+
+    watch ipconfig
+     ↪ -n           |Sets the intervals for when something should be re-run, or refreshed.
+     ↪ -d           |Highlights the differences between updates.
+
+    watch -n 3 -d ipconfig
 ```
 
 <br>
