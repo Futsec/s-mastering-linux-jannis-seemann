@@ -192,6 +192,7 @@ For that we use `type` and we will see that some commands are either _shell buil
      ↪ q         |quit
 ```
 
+#### watch
 ```sh
     watch [options] [command]
 
