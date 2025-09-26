@@ -269,6 +269,7 @@ For that we use `type` and we will see that some commands are either _shell buil
 |`sort`|`Sort` sorts the contents of a file, by default it sorts aphabettically.|[View](#sort)|
 |`uniq`|The `uniq` command list only the unique values of a file, however, the file needs to be sorted first, as the `uniq` command only checks the lines subsequent to it, or directly under it. This is why people usually run `sort` and then pipes that stdout to `uniq`.|[View](#uniq)|
 |`grep`|`grep` allows us to search for patterns within a file or whatever is parsed to its stdin.|[View](#grep)|
+|`strings`|Prints the sequences of printable characters in files such as binary files.|[View](#strings)|
 |`tr`|`tr` which stands for **tr**anslate, translates/modifies a string of characters to something else, it works on a character level, meaning 'ab' 'cd', a will be change to c and b will be change d. We can also remove characters using `-d`, as well as work with ranges.|[View](#tr)|
 |`rev`|`rev` reverses a string.|[View](#rev)|
 |`cut`|`cut` allows us to modify a string by cutting out byte, characters or fields for a specific range.|[View](#cut)|
@@ -301,6 +302,13 @@ For that we use `type` and we will see that some commands are either _shell buil
     ip addr show | grep -F "inet"
                  | grep -E "[a-z][A-Z][1-9]"
                     ↪ egrep "[a-z][A-Z][1-9]" 
+```
+
+#### strings
+```sh
+    strings /usr/bin/ls
+    sudo strings /dev/nvme1n1p2 | less
+    sudo strings /dev/mem | less
 ```
 
 #### tr
