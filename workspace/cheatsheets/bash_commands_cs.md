@@ -705,4 +705,9 @@ Umask is a Linux setting that defines the default permissions removed from new f
      ↪ -p               |Show processes with process ID.
      ↪ --forest         |Shows process and parent processes in the form of an ASCII tree. (can be coupled with `-ef`)
      ↪ -l               |Shows entries in long format, basically adds some additional info. (can be coupled with `-ef`)
+    
+    ps aux
+     ↪ -a               |Shows all processes of all users.
+     ↪ -u               |Display the information in a more user-orientated manner.
+     ↪ -x               |Shows processes without a tty.
 ```
