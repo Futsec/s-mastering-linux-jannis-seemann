@@ -17,6 +17,8 @@
 - [Shell Related Commands](#shell-related-commands)
 - [User Management](#user-management)
 - [File Permissions & Access Control](#file-permissions--access-control)
+- [Linux Processes](#linux-processes)
+
 
 <br>
 <br>
