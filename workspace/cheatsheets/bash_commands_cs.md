@@ -697,7 +697,7 @@ Umask is a Linux setting that defines the default permissions removed from new f
 |Command|Description|Example|
 |:---|:---|:---|
 |`ps`|Stands for **Process Status**, Displays information about running processes.|[View](#)|
-|``||[View](#)|
+|`nice`<br>`renice`|You can change the scheduling priority of a program by setting its "niceness". The range of niceness is from -20 to +19, with the default being 0. The lower the niceness e.g -20, the more priority a program takes, while a higher niceness e.g +19, the less priority it takes.<br>With renice, we can change the priority of a program that is already running.|[View](#nice)<br>[View](#renice)|
 
 #### ps
 ```sh
@@ -712,4 +712,21 @@ Umask is a Linux setting that defines the default permissions removed from new f
      ↪ -a               |Shows all processes of all users.
      ↪ -u               |Display the information in a more user-orientated manner.
      ↪ -x               |Shows processes without a tty.
+```
+
+#### nice
+```sh
+    nice -n [niceness] [program]
+
+    nice -n +19 gedit
+    sudo nice -n -20 gedit
+```
+
+#### renice
+```sh
+    renice -n [niceness] [process id]
+
+    gedit           |Process ID of 23456
+    renice -n 10 23456
+    sudo renice -n -19 23456
 ```
