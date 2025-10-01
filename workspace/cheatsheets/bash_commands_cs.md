@@ -698,7 +698,7 @@ Umask is a Linux setting that defines the default permissions removed from new f
 |:---|:---|:---|
 |`ps`|Stands for **Process Status**, Displays information about running processes.|[View](#)|
 |`nice`<br>`renice`|You can change the scheduling priority of a program by setting its "niceness". The range of niceness is from -20 to +19, with the default being 0. The lower the niceness e.g -20, the more priority a program takes, while a higher niceness e.g +19, the less priority it takes.<br>With renice, we can change the priority of a program that is already running.|[View](#nice)<br>[View](#renice)|
-|`kill`<br>**Different Types of Signals**:<br>_Terminating a Process, Soft & Hard_:<br>&#8226; SIGINT<br>&#8226; SIGTERM<br>&#8226; SIGKILL<br>_Controlling Processes_<br>&#8826; SIGHUP<br>&#8226; SIGSTOP<br>&#8226; SIGCONT|Used to send signals to a process, this is usually done using the `kill` command.<br>Use the link provided to practice this comamnd: `https://downloads.codingcoursestv.eu/055%20-%20bash/wget/download-slow`. _Link provided from the course._|[View](#kill)|
+|`kill`|Used to send signals to a process, this is usually done using the `kill` command.<br>Use the link provided to practice this comamnd: `https://downloads.codingcoursestv.eu/055%20-%20bash/wget/download-slow`. _Link provided from the course._<br>The are various different signals one can use with the `kill` command:<br>- SIGINT<br>- SIGTERM<br>- SIGKILL<br>- SIGHUP<br>- SIGSTOP<br>- SIGCONT|[View](#kill)|
 |``||[View](#)|
 |``||[View](#)|
 |``||[View](#)|
