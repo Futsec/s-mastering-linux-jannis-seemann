@@ -19,7 +19,6 @@
 - [File Permissions & Access Control](#file-permissions--access-control)
 - [Linux Processes](#linux-processes)
 
-
 <br>
 <br>
 
@@ -698,7 +697,7 @@ Umask is a Linux setting that defines the default permissions removed from new f
 |:---|:---|:---|
 |`ps`|Stands for **Process Status**, Displays information about running processes.|[View](#)|
 |`nice`<br>`renice`|You can change the scheduling priority of a program by setting its "niceness". The range of niceness is from -20 to +19, with the default being 0. The lower the niceness e.g -20, the more priority a program takes, while a higher niceness e.g +19, the less priority it takes.<br>With renice, we can change the priority of a program that is already running.|[View](#nice)<br>[View](#renice)|
-|`kill`|Used to send signals to a process, this is usually done using the `kill` command.<br>Use the link provided to practice this comamnd: `https://downloads.codingcoursestv.eu/055%20-%20bash/wget/download-slow`. _Link provided from the course._<br>The are various different signals one can use with the `kill` command:<br>- SIGINT<br>- SIGTERM<br>- SIGKILL<br>- SIGHUP<br>- SIGSTOP<br>- SIGCONT|[View](#kill)|
+|`kill`|&#8226; Used to send signals to a process, this is usually done using the `kill` command. Use the link provided to practice this comamnd: `https://downloads.codingcoursestv.eu/055%20-%20bash/wget/download-slow`. _Link provided from the course._<br><br>The are various different signals one can use with the `kill` command:<br>- SIGINT<br>- SIGTERM _As the default for the kill command, it's used to tell the process to terminate. Think of it as asking the process nicely_<br>- SIGKILL<br>- SIGHUP<br>- SIGSTOP<br>- SIGCONT|[View](#kill)|
 |``||[View](#)|
 |``||[View](#)|
 |``||[View](#)|
@@ -738,11 +737,14 @@ Umask is a Linux setting that defines the default permissions removed from new f
 
 #### kill
 ```sh
-    `https://downloads.codingcoursestv.eu/055%20-%20bash/wget/download-slow`            |Use this for practice
+    `https://downloads.codingcoursestv.eu/055%20-%20bash/wget/download-slow`            
+    
+    kill    
+     ↪ -l                           |List available signals.
+     ↪ -s                           |Specifiy the signal to be sent.
     
     kill -s [SIGNAL] [process-ID]
     kill -s SIGINT 12345
      ↪ kill -SIGINT 12345           |Another way of writing this without the flag.
-    
-    kill -s SINGINT $(pgrep wget)
+    kill -s SINGINT $(pgrep wget)   |Using command subst... with pgrep to kill the process.
 ```
