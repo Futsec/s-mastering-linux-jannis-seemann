@@ -698,7 +698,7 @@ Umask is a Linux setting that defines the default permissions removed from new f
 |:---|:---|:---|
 |`ps`|Stands for **Process Status**, Displays information about running processes.|[View](#)|
 |`nice`<br>`renice`|You can change the scheduling priority of a program by setting its "niceness". The range of niceness is from -20 to +19, with the default being 0. The lower the niceness e.g -20, the more priority a program takes, while a higher niceness e.g +19, the less priority it takes.<br>With renice, we can change the priority of a program that is already running.|[View](#nice)<br>[View](#renice)|
-|``||[View](#)|
+|`kill`<br>**Different Types of Signals**:<br>_Terminating a Process, Soft & Hard_:<br>&#8226; SIGINT<br>&#8226; SIGTERM<br>&#8226; SIGKILL<br>_Controlling Processes_<br>&#8826; SIGHUP<br>&#8226; SIGSTOP<br>&#8226; SIGCONT|Used to send signals to a process, this is usually done using the `kill` command.<br>Use the link provided to practice this comamnd: `https://downloads.codingcoursestv.eu/055%20-%20bash/wget/download-slow`. _Link provided from the course._|[View](#kill)|
 |``||[View](#)|
 |``||[View](#)|
 |``||[View](#)|
@@ -728,10 +728,21 @@ Umask is a Linux setting that defines the default permissions removed from new f
 
 #### renice
 ```sh
-    renice -n [niceness] [process id]
+    renice -n [niceness] [process-ID]
 
     gedit           |Process ID of 23456
     renice -n 10 23456
     sudo renice -n -19 23456
     renice -n 19 $(pgrep -f firefox)
+```
+
+#### kill
+```sh
+    `https://downloads.codingcoursestv.eu/055%20-%20bash/wget/download-slow`            |Use this for practice
+    
+    kill -s [SIGNAL] [process-ID]
+    kill -s SIGINT 12345
+     ↪ kill -SIGINT 12345           |Another way of writing this without the flag.
+    
+    kill -s SINGINT $(pgrep wget)
 ```
