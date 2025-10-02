@@ -693,14 +693,20 @@ Umask is a Linux setting that defines the default permissions removed from new f
 
 ### Linux Processes
 
+#### Process states
+- R &rarr; _Running State._
+- S &rarr; _Sleeping (An Interruptable State)._
+- D &rarr; _Uninterruptible Sleep State._
+- T &rarr; _Traced or Stopped State._
+- Z &rarr; _Zombie Process State_
+
 |Command|Description|Example|
 |:---|:---|:---|
 |`ps`|Stands for **Process Status**, Displays information about running processes.|[View](#)|
 |`nice`<br>`renice`|You can change the scheduling priority of a program by setting its "niceness". The range of niceness is from -20 to +19, with the default being 0. The lower the niceness e.g -20, the more priority a program takes, while a higher niceness e.g +19, the less priority it takes.<br>With renice, we can change the priority of a program that is already running.|[View](#nice)<br>[View](#renice)|
 |`kill`|&#8226; Used to send signals to a process, this is usually done using the `kill` command. Use the link provided to practice this comamnd: `https://downloads.codingcoursestv.eu/055%20-%20bash/wget/download-slow`.<br>_Link provided from the course._|[View](#kill)|
-|``||[View](#)|
-|``||[View](#)|
-|``||[View](#)|
+|`killall`|kills the all the processes with a given name, e.g firefox. killall default signal is also SIGTERM.<br>Very similar to `kill -s SIGTERM $(pgrep -f firefox)`.|[View](#killall)|
+|`$?`<br>_Exit Code_|We can use this to see the **exit code**.|[View](#exit-code)|
 
 #### ps
 ```sh
@@ -750,7 +756,56 @@ Umask is a Linux setting that defines the default permissions removed from new f
              ↪ SIGTERM              |Is the default signal for the kill command, asks the process nicely if it can terminat the process, if it cant, no problem.
              ↪ SIGINT               |Much like SIGTERM, however, tell the process to terminate so we can gain back control of our terminal.
              ↪ SIGKILL              |SIGINT & SIGTERM can be ignored by the process, the SIGKILL forces a termination.
-             ↪ SIGHUP               |
-             ↪ SIGSTOP              |
-             ↪ SIGCONT              |
+             ↪ SIGHUP               |Signals that the terminal has closed, the program usually then exits.
+             ↪ SIGSTOP              |Places a process into a stopped state, meaning a process has been paused.
+             ↪ SIGCONT              |If we want to resume a process after its been stopped or paused, we can then continue it.
 ```
+
+#### killall
+```sh
+    killall [process-ID]
+    killall [SIGNAL] [process-ID]
+    
+    killall firefox
+     ↪ kill -s SIGTERM $(pgrep -f firefox)
+```
+
+#### Exit Code
+```sh
+    echo $?
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
