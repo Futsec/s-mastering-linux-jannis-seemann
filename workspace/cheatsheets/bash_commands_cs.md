@@ -775,15 +775,48 @@ Umask is a Linux setting that defines the default permissions removed from new f
     echo $?
 ```
 
+<br>
 
+### Job Control
 
+||Command|Description|Example|
+|:---|:---|:---|
+|`&`||[View](#)|
+|`jobs`||[View](#)|
+|`fg`||[View](#)|
+|`stty`||[View](#)|
+|`wait`||[View](#)|
+|`nohup`||[View](#)|
 
+#### Background a Job
+```sh
 
+```
 
+#### jobs
+```sh
 
+```
 
+#### fg
+```sh
 
+```
 
+#### stty
+```sh
+
+```
+
+#### wait
+```sh
+
+```
+
+#### nohup
+```sh
+
+```
 
 
 
