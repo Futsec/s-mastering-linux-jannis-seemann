@@ -9,6 +9,10 @@
 <br>
 
 ## Command Overview
+_This is an overview of the commands found on this page._
+
+<br>
+
 |Row    |A                  |B        |C              |D                  |E                |F            |G                    |H            |I                  |J            |K                  |L            |M              |N              |O      |P                |Q      |R                |S                  |T              |U                  |V      |W            |X      |Y      |Z      |
 |:---:  |:---:              |:---:    |:---:          |:---:              |:---:            |:---:        |:---:                |:---:        |:---:              |:---:        |:---:              |:---:        |:---:          |:---:          |:---:  |:---:            |:---:  |:---:            |:---:              |:---:          |:---:              |:---:  |:---:        |:---:  |:---:  |:---:  |      
 |1      |[adduser](#adduser)|[bg](#bg)|[cat](#cat)    |[deluser](#deluser)|[$?](#exit-code) |[fg](#fg)    |[gpg](#gpg)          |[head](#head)|[infocmp](#infocmp)|[jobs](#jobs)|[kill](#kill)      |[less](#less)|[man](#man)    |[nice](#nice)  |[](#)  |[passwd](#passwd)|[](#)  |[renice](#renice)|[sed](#sed)        |[tail](#tail)  |[umask](#umask)    |[](#)  |[wait](#wait)|[](#)  |[](#)  |[](#)  |
