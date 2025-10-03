@@ -376,7 +376,7 @@ For that we use `type` and we will see that some commands are either _shell buil
 |Command|Description|Example|
 |:---|:---|:---|
 |`export`<br>`unset`|`export` allows us to set environment variables, while unset removes these variables.|[View](#export--unset)|
-|'chsh'|Allows us to change our default shell. [Read More](./env_variables_cs.md) on the **Environment & Shell Variables** page.|[View](#chsh)|
+|`chsh`|Allows us to change our default shell. [Read More](./env_variables_cs.md) on the **Environment & Shell Variables** page.|[View](#chsh)|
 |`alias`|This allows us to shorten or create more abbreviated commands, by setting an alias.|[View](#alias)|
 |`set`|Allows us to control the behaviour of our shell.|[View](#set)|
 |`shopt`|Much like `set`, this also allows us to alter the behaviour of our shell.|[View](#shopt)|
