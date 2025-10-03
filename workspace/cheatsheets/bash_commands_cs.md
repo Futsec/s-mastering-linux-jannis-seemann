@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>A<br>Bash Command-Line<br>Cheatsheet</h1>
+    <h1>Bash Command-Line<br>Cheatsheet</h1>
     <p>
         <em>A practical cheatsheet I maintain while learning Linux, mixing standard commands with my own explanations.</em>
     </p>
