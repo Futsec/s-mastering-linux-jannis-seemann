@@ -781,41 +781,59 @@ Umask is a Linux setting that defines the default permissions removed from new f
 
 |Command|Description|Example|
 |:---|:---|:---|
-|`&`|xxx|[View](#)|
-|`jobs`|xxx|[View](#)|
-|`fg`|xxx|[View](#)|
-|`stty`|xxx|[View](#)|
-|`wait`|xxx|[View](#)|
-|`nohup`|xxx|[View](#)|
+|`&`|Using the ampersand symbol at the end of a command, we can background a running process. This allows us to have or regain control of our terminal while a process is running, especially if it takes a long time.|[View](#ampersand)|
+|`jobs`|This is how we can list the active jobs in our terminal.|[View](#jobs)|
+|`fg`|Used to bring a background job to the foreground.|[View](#fg)|
+|`bg`|Used to send foreground jobs to the background. This in combination with `Ctrl + Z`, to suspend or stop the process in the fg and we can then use `bg %[job-ID]` to continue the job in the background, same with `fg %[job-ID] &`.|[View](#bg)|
+|`kill`|We can also kill a job, using the `kill` command, followed by the job number.|[View](#kill-job)|
+|`stty`|Is a tool to change / print the terminal line settings, we can use the option `tostop` & `-tostop` to activate or disable having commands suspended if its output is being printed to the terminal.|[View](#stty)|
+|`wait`|Waits for a background job to complete before doing _xyz_ for example.|[View](#wait)|
+|`nohup`|We can use `nohup` to launch a program that will remain open|[View](#)|
 
-#### Background a Job
+#### Ampersand
 ```sh
-
+    cmatrix &
+    ping -c 100 localhost > /dev/null & 
 ```
 
 #### jobs
 ```sh
-
+    jobs
 ```
 
 #### fg
 ```sh
+    fg %[job-ID]
+```
 
+#### bg
+```sh
+    bg %[job-ID]
+```
+
+#### kill Job
+```sh
+    kill %[job-ID]
+    kill -s SIGKILL %[job-ID]
 ```
 
 #### stty
 ```sh
-
+    stty tostop             |To enable the feature.
+     ↪ stty -tostop         |To disable the feature.
 ```
 
 #### wait
 ```sh
-
+    wait                    |waits until all currently running jobs have changed their state.
+    wait 123                |waits for a process of the ID of 123.
+    wait %[job-ID]          |waits for a job number.
+    wait -n                 |waits until anything has completed.
 ```
 
 #### nohup
 ```sh
-
+    nohup ping -c 100 localhost &
 ```
 
 
