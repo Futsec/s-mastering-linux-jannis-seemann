@@ -8,21 +8,6 @@
 <br>
 <br>
 
-## Table of Contents
-1. [Command Information & Help](#command-information--help)
-2. [File & Folder Management](#file--folder-management)
-3. [Searching Files & Folders](#searching-files--folders)
-4. [File Information](#file-information)
-5. [Data Processing & Filtering](#data-processing--filtering)
-6. [Shell Related Commands](#shell-related-commands)
-7. [User Management](#user-management)
-8. [File Permissions & Access Control](#file-permissions--access-control)
-9. [Linux Processes](#linux-processes)
-10. [Job Control](#job-control)
-
-<br>
-<br>
-
 ## Command Overview
 |Row    |A                  |B        |C              |D                  |E                |F            |G                    |H            |I                  |J            |K                  |L            |M              |N              |O      |P                |Q      |R                |S                  |T              |U                  |V      |W            |X      |Y      |Z      |
 |:---:  |:---:              |:---:    |:---:          |:---:              |:---:            |:---:        |:---:                |:---:        |:---:              |:---:        |:---:              |:---:        |:---:          |:---:          |:---:  |:---:            |:---:  |:---:            |:---:              |:---:          |:---:              |:---:  |:---:        |:---:  |:---:  |:---:  |      
@@ -35,6 +20,21 @@
 |7      |[](#)              |[](#)    |[](#)          |[](#)              |[](#)            |[](#)        |[](#)                |[](#)        |[](#)              |[](#)        |[](#)              |[](#)        |[](#)          |[](#)          |[](#)  |[](#)            |[](#)  |[](#)            |[stty](#stty)      |[type](#type)  |[](#)              |[](#)  |[](#)        |[](#)  |[](#)  |[](#)  |
 |8      |[](#)              |[](#)    |[](#)          |[](#)              |[](#)            |[](#)        |[](#)                |[](#)        |[](#)              |[](#)        |[](#)              |[](#)        |[](#)          |[](#)          |[](#)  |[](#)            |[](#)  |[](#)            |[su](#su)          |[](#)          |[](#)              |[](#)  |[](#)        |[](#)  |[](#)  |[](#)  |
 |9      |[](#)              |[](#)    |[](#)          |[](#)              |[](#)            |[](#)        |[](#)                |[](#)        |[](#)              |[](#)        |[](#)              |[](#)        |[](#)          |[](#)          |[](#)  |[](#)            |[](#)  |[](#)            |[sudo](#sudo)      |[](#)          |[](#)              |[](#)  |[](#)        |[](#)  |[](#)  |[](#)  |
+
+<br>
+<br>
+
+## Table of Contents
+1. [Command Information & Help](#command-information--help)
+2. [File & Folder Management](#file--folder-management)
+3. [Searching Files & Folders](#searching-files--folders)
+4. [File Information](#file-information)
+5. [Data Processing & Filtering](#data-processing--filtering)
+6. [Shell Related Commands](#shell-related-commands)
+7. [User Management](#user-management)
+8. [File Permissions & Access Control](#file-permissions--access-control)
+9. [Linux Processes](#linux-processes)
+10. [Job Control](#job-control)
 
 <br>
 <br>
