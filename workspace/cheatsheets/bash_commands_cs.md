@@ -1,7 +1,7 @@
 <div align="center">
     <h1>Command Cheatsheet</h1>
     <p>
-        <em>A Linux command cheatsheet</em>
+        <em>A Linux command-line cheatsheet</em>
     </p>
 </div>
 
@@ -9,15 +9,33 @@
 <br>
 
 ## Table of Contents
-- [Command Information & Help](#command-information--help)
-- [File & Folder Management](#file--folder-management)
-- [Searching Files & Folders](#searching-files--folders)
-- [File Information](#file-information)
-- [Data Processing & Filtering](#data-processing--filtering)
-- [Shell Related Commands](#shell-related-commands)
-- [User Management](#user-management)
-- [File Permissions & Access Control](#file-permissions--access-control)
-- [Linux Processes](#linux-processes)
+1. [Command Information & Help](#command-information--help)
+2. [File & Folder Management](#file--folder-management)
+3. [Searching Files & Folders](#searching-files--folders)
+4. [File Information](#file-information)
+5. [Data Processing & Filtering](#data-processing--filtering)
+6. [Shell Related Commands](#shell-related-commands)
+7. [User Management](#user-management)
+8. [File Permissions & Access Control](#file-permissions--access-control)
+9. [Linux Processes](#linux-processes)
+10. [Job Control](#job-control)
+
+<br>
+<br>
+
+## Command Overview
+|Commands|||||||||||||||
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|`[adduser](#adduser)`  |`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|
+|`[alias](#alias)`      |`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|
+|`[&](#ampersand)`      |`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|
+|`[apropos](#apropos)`  |`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|
+|`[bg](#bg)`            |`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|
+|`[cat](#cat)`          |`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|
+|`[chmod](#chmod)`      |`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|
+|`[chown](#chown)`      |`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|
+|`[chsh](#chsh)`        |`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|
+|`[cp](#cp)`            |`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|`[](#)`|
 
 <br>
 <br>
