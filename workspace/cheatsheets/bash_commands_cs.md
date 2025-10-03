@@ -44,6 +44,8 @@ _This is an overview of the commands found on this page._
 <br>
 
 ### Command Information & Help
+---
+
 To find more information about a command, we can use various other commands such as `man`, `help`, or even `--help`. However, how do you know which to use for which command?
 For that we use `type` and we will see that some commands are either _shell built-in_ or its a _/usr/bin_ command. _Shell Built-in_ commands do not have man pages, so using `help` or `--help` is the only way of getting more info on a command.
 
@@ -79,6 +81,8 @@ For that we use `type` and we will see that some commands are either _shell buil
 <br>
 
 ### File & Folder Management
+---
+
 |Command|Description|Example|
 |:---|:---|:---|
 |`touch`|We use the touch command to create files, we can can create single or multiple files.|[View](#touch)|
@@ -160,6 +164,8 @@ For that we use `type` and we will see that some commands are either _shell buil
 <br>
 
 ### Searching Files & Folders
+---
+
 |Command|Description|Example|
 |:---|:---|:---|
 |`ls`|The list `ls` command is used to to view the contents of a directory.|[View](#ls)|
@@ -247,6 +253,8 @@ For that we use `type` and we will see that some commands are either _shell buil
 <br>
 
 ### File Information
+---
+
 |Command|Description|Example|
 |:---|:---|:---|
 |`wc`|`wc` returns the amount of either lines, words or chars/bytes within a file.|[View](#wc)|
@@ -285,6 +293,8 @@ For that we use `type` and we will see that some commands are either _shell buil
 <br>
 
 ### Data Processing & Filtering
+---
+
 |Command|Description|Example|
 |:---|:---|:---|
 |`tee`|The `tee` command allows to redirect stdin to two places, example to the terminal and to a file.|[View](#tee)|
@@ -361,6 +371,8 @@ For that we use `type` and we will see that some commands are either _shell buil
 <br>
 
 ### Shell Related Commands
+---
+
 |Command|Description|Example|
 |:---|:---|:---|
 |`export`<br>`unset`|`export` allows us to set environment variables, while unset removes these variables.|[View](#export--unset)|
@@ -630,6 +642,7 @@ The encryption used on passwords here are known as `bcrypt`.
 <br>
 
 ### File Permissions & Access Control
+---
 
 In Linux, file permissions are divided into 3 categories, Owner(u), Group(g) and Other(o). 
 We can see this when listing files, for example this file.
@@ -717,6 +730,7 @@ Umask is a Linux setting that defines the default permissions removed from new f
 <br>
 
 ### Linux Processes
+---
 
 #### Process states
 - R &rarr; _Running State._
@@ -803,6 +817,7 @@ Umask is a Linux setting that defines the default permissions removed from new f
 <br>
 
 ### Job Control
+---
 
 |Command|Description|Example|
 |:---|:---|:---|
