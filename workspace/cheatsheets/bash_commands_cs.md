@@ -876,9 +876,19 @@ Umask is a Linux setting that defines the default permissions removed from new f
     nohup ping -c 100 localhost &
 ```
 
+<br>
 
+### Package Management
+---
 
+|Command|Description|Example|
+|:---|:---|:---|
+|``||[View](#)|
+|``||[View](#)|
+|``||[View](#)|
+|``||[View](#)|
 
+#### 
 
 
 
