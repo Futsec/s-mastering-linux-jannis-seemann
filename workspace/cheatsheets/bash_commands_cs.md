@@ -9,6 +9,7 @@
 <br>
 
 ## Command Overview
+###### _Last update of the command overview stops at Job Control on the table of contents list._
 _This is an overview of the commands found on this page._
 
 <br>
@@ -39,6 +40,7 @@ _This is an overview of the commands found on this page._
 8. [File Permissions & Access Control](#file-permissions--access-control)
 9. [Linux Processes](#linux-processes)
 10. [Job Control](#job-control)
+11. [Package Management](#package-management)
 
 <br>
 <br>
@@ -140,16 +142,16 @@ For that we use `type` and we will see that some commands are either _shell buil
 #### shred
 ```sh
     shred -vuz -n 100 file.txt
-     ↪ -v           |Verbose the actions of the command.
-     ↪ -u           |Remove the file after each overwrite.
-     ↪ -z           |On the final overwrite, add zeros to hide shredding.
-     ↪ -n           |Specify the amount of time to overwrite the file.
+     ↪ -v                                        # Verbose the actions of the command.
+     ↪ -u                                        # Remove the file after each overwrite.
+     ↪ -z                                        # On the final overwrite, add zeros to hide shredding.
+     ↪ -n                                        # Specify the amount of time to overwrite the file.
 ```
 
 #### gpg
 ```sh
     gpg -c file.txt
-     ↪ -c           |Encrypt with a symmetric cipher using a passphrase.
+     ↪ -c                                        # Encrypt with a symmetric cipher using a passphrase.
 ```
 
 
@@ -197,10 +199,10 @@ For that we use `type` and we will see that some commands are either _shell buil
     # IMG_7789.png IMG_7789.mov
     
     echo IMG?7789.*
-     ↪ *        |everything
-     ↪ **       |recursive everything, includes folders
-     ↪ ?        |any single char
-     ↪ [1-9]    |range
+     ↪ *                                         # everything
+     ↪ **                                        # recursive everything, includes folders
+     ↪ ?                                         # any single char
+     ↪ [1-9]                                     # range
 ```
 
 #### find
@@ -231,12 +233,12 @@ For that we use `type` and we will see that some commands are either _shell buil
 #### less
 ```sh
     less file.txt
-     ↪ :50p      |move 50% of the file
-     ↪ -N        |shows line numbers
-     ↪ =         |show info on the page, including percentages
-     ↪ /         |forward search
-     ↪ ?         |backwards search
-     ↪ q         |quit
+     ↪ :50p                                      # move 50% of the file
+     ↪ -N                                        # shows line numbers
+     ↪ =                                         # show info on the page, including percentages
+     ↪ /                                         # forward search
+     ↪ ?                                         # backwards search
+     ↪ q                                         # quit
 ```
 
 #### watch
@@ -244,8 +246,8 @@ For that we use `type` and we will see that some commands are either _shell buil
     watch [options] [command]
 
     watch ipconfig
-     ↪ -n           |Sets the intervals for when something should be re-run, or refreshed.
-     ↪ -d           |Highlights the differences between updates.
+     ↪ -n                                        # Sets the intervals for when something should be re-run, or refreshed.
+     ↪ -d                                        # Highlights the differences between updates.
 
     watch -n 3 -d ipconfig
 ```
@@ -266,18 +268,18 @@ For that we use `type` and we will see that some commands are either _shell buil
 ```sh
     wc ~/file.txt
     wc -lwc ~/file.txt 
-     ↪ -l       |lists the amount of lines
-     ↪ -w       |list the amount of words
-     ↪ -c       |lists the amount of chars, or bytes of the file
+     ↪ -l                                        # lists the amount of lines
+     ↪ -w                                        # list the amount of words
+     ↪ -c                                        # lists the amount of chars, or bytes of the file
 ```
 
 #### du
 ```sh
     du ~/file.txt 
     du -h file.txt
-     ↪ -s       |display only a total for each argument
-     ↪ -h       |display in human-readable format
-     ↪ -k       |display block size
+     ↪ -s                                        # display only a total for each argument
+     ↪ -h                                        # display in human-readable format
+     ↪ -k                                        # display block size
 ```
 
 #### diff
@@ -315,11 +317,11 @@ For that we use `type` and we will see that some commands are either _shell buil
 #### sort
 ```sh
     sort file.txt
-     ↪ -r       |sorts contents of file in reverse order
-     ↪ -n       |sorts contents in reverse order
-     ↪ -c       |check whether contents of file is sorted & find unsorted elements
-     ↪ -k       |column number sort data by a specific column
-     ↪ -u       |checks unique values only
+     ↪ -r                                        # sorts contents of file in reverse order
+     ↪ -n                                        # sorts contents in reverse order
+     ↪ -c                                        # check whether contents of file is sorted & find unsorted elements
+     ↪ -k                                        # column number sort data by a specific column
+     ↪ -u                                        # checks unique values only
 ```
 
 #### uniq
@@ -358,7 +360,7 @@ For that we use `type` and we will see that some commands are either _shell buil
 #### cut
 ```sh
     uptime | cut -b '2-9'
-           | cut -c '2-9' # difference between b and c is c allows for more bytes as some character require 2 bytes or more
+           | cut -c '2-9'                        # difference between b and c is c allows for more bytes as some character require 2 bytes or more
            | cut -d ' ' -f 1 
 ```
 
@@ -411,13 +413,13 @@ For that we use `type` and we will see that some commands are either _shell buil
 
 #### set
 ```sh
-    set -x          #Sets a function or behaviour
-    set +x          #Unsets a function or behaviour
+    set -x                                       # Sets a function or behaviour
+    set +x                                       # Unsets a function or behaviour
 ```
 
 #### shopt
 ```sh
-    shopt -t        #This closes a terminal after a single command has run
+    shopt -t                                     # This closes a terminal after a single command has run
 ```
 
 #### infocmp
@@ -514,11 +516,11 @@ The encryption used on passwords here are known as `bcrypt`.
     "useradd [options] username"
 
     sudo useradd -m -d /home/lauren lauren
-     ↪ -m           |Create home directory.
-     ↪ -d           |Set custom directory.
-     ↪ -s           |Set the default shell.
-     ↪ -g           |Specify a primary group, instead of the default configuration.
-     ↪ -G           |Add user to secondary groups.
+     ↪ -m                                        # Create home directory.
+     ↪ -d                                        # Set custom directory.
+     ↪ -s                                        # Set the default shell.
+     ↪ -g                                        # Specify a primary group, instead of the default configuration.
+     ↪ -G                                        # Add user to secondary groups.
 
     useradd -m -d /home/lauren lauren
 ```
@@ -529,12 +531,12 @@ The encryption used on passwords here are known as `bcrypt`.
 
     passwd -S
     sudo passwd -S lauren
-     ↪ -S           |Display password status.
-     ↪ -d           |Delete  password.
-     ↪ -n           |Set Minimum password age (Minimum wait time before changing password).
-     ↪ -x           |Set Maximum password age (How  long the password last until it expires).
-     ↪ -l           |Lock the user account.
-     ↪ -u           |Unlock the user account.
+     ↪ -S                                        # Display password status.
+     ↪ -d                                        # Delete  password.
+     ↪ -n                                        # Set Minimum password age (Minimum wait time before changing password).
+     ↪ -x                                        # Set Maximum password age (How  long the password last until it expires).
+     ↪ -l                                        # Lock the user account.
+     ↪ -u                                        # Unlock the user account.
     sudo passwd lauren
 ```
 
@@ -543,17 +545,17 @@ The encryption used on passwords here are known as `bcrypt`.
     "usermod [options] username"    
 
     sudo usermod -s /bin/bash -c "Lauren J." lauren
-     ↪ -c            |Change users descition (full name).
-     ↪ -s            |Change default shell.
-     ↪ -d            |Change home directory (coupled with -m, we can also move the location of the home directory).
-     ↪ -l            |Change the username.
-     ↪ -g            |Change the primary group.
-     ↪ -G            |Change secondary groups.
-     ↪ -aG           |Add secondary groups.
+     ↪ -c                                        # Change users descition (full name).
+     ↪ -s                                        # Change default shell.
+     ↪ -d                                        # Change home directory (coupled with -m, we can also move the location of the home directory).
+     ↪ -l                                        # Change the username.
+     ↪ -g                                        # Change the primary group.
+     ↪ -G                                        # Change secondary groups.
+     ↪ -aG                                       # Add secondary groups.
 
-    sudo usermod -G adm,lpadmin,sudo,plugdev lauren     |Adding secondary groups to a user
-    sudo usermod -G adm,lpadmin,plugdev lauren          |Removing a group, you will need to specify all groups again, leaving out the group you dont want.  
-    sudo usermod -aG www-data lauren                    |Adding a secondary group without having to re-write all existing groups.
+    sudo usermod -G adm,lpadmin,sudo,plugdev lauren # Adding secondary groups to a user
+    sudo usermod -G adm,lpadmin,plugdev lauren   # Removing a group, you will need to specify all groups again, leaving out the group you dont want.  
+    sudo usermod -aG www-data lauren             # Adding a secondary group without having to re-write all existing groups.
 ```
 
 #### userdel
@@ -561,9 +563,9 @@ The encryption used on passwords here are known as `bcrypt`.
     userdel [options] username
 
     userdel steve
-     ↪ -r            |Removes the users home directory & emails if any.
-     ↪ -f            |Basically the same as -r, however forces the removal even if the user is still logged in.
-                     |Might also delete a group with the same name as this user (depending on system configuration).
+     ↪ -r                                        # Removes the users home directory & emails if any.
+     ↪ -f                                        # Basically the same as -r, however forces the removal even if the user is still logged in.
+                                                 # Might also delete a group with the same name as this user (depending on system configuration).
     
     userdel -r steve 
 ```
@@ -572,9 +574,9 @@ The encryption used on passwords here are known as `bcrypt`.
 ```sh
     groups [username/s]
     
-    groups                      |Will print out the currents users groups.
-    groups autumn               |Will print out a specific users groups.
-    groups autumn bob lauren    |Can print out multiple users groups as well.
+    groups                                       # Will print out the currents users groups.
+    groups autumn                                # Will print out a specific users groups.
+    groups autumn bob lauren                     # Can print out multiple users groups as well.
 ```
 
 #### adduser
@@ -596,7 +598,7 @@ The encryption used on passwords here are known as `bcrypt`.
     groupadd [options] groupname
 
     sudo groupadd -g 2500 myapp
-     ↪ -g           |Set custom GID (usually a custom GID should be above 1000, but some companies can set a rule be above 5000 or 6000).
+     ↪ -g                                        # Set custom GID (usually a custom GID should be above 1000, but some companies can set a rule be above 5000 or 6000).
 ```
 
 #### groupmod
@@ -604,8 +606,8 @@ The encryption used on passwords here are known as `bcrypt`.
     groupmod [options] groupname
 
     sudo groupmod -n myapps -g 5000 myapp
-     ↪ -n            |Change the group name.
-     ↪ -g            |Change the group ID (GID).
+     ↪ -n                                        # Change the group name.
+     ↪ -g                                        # Change the group ID (GID).
 ```
 
 #### groupdel
@@ -619,22 +621,22 @@ The encryption used on passwords here are known as `bcrypt`.
 ```sh
     su [other-user]
    
-    su              |Just using su, switches to the root user. 
+    su                                           # Just using su, switches to the root user. 
     su lauren
     su -l lauren
-     ↪ -l           |Start a login shell as if the user has just logged in. This loads the users environment path, so '/home/lauren'
+     ↪ -l                                        # Start a login shell as if the user has just logged in. This loads the users environment path, so '/home/lauren'
 ```
 
 #### sudo
 ```sh
     sudo [options] 
-     ↪ -k           |Invalidates the users cached credentials
-     ↪ -s           |Will start a shell with elevated rights
+     ↪ -k                                        # Invalidates the users cached credentials
+     ↪ -s                                        # Will start a shell with elevated rights
     
     sudo -u [user] -g [group] bash
     sudo -u lauren bash
-     ↪ -u           |Start a program as a different user
-     ↪ -g           |Start a program as a specific group
+     ↪ -u                                        # Start a program as a different user
+     ↪ -g                                        # Start a program as a specific group
     
     sudo -u lauren touch /home/lauren/hello_world.txt
 ```
@@ -687,9 +689,9 @@ Umask is a Linux setting that defines the default permissions removed from new f
 
 #### chmod
 ```sh
-    chmod u+rwx file.txt            |rwx    = 7
-    chmod g+rw file.txt             |rw     = 6
-    chmod o+r file.txt              |r      = 4
+    chmod u+rwx file.txt                         # rwx    = 7
+    chmod g+rw file.txt                          # rw     = 6
+    chmod o+r file.txt                           # r      = 4
      ↪ chmod 764 file.txt
              |||
              ||Other(o)
@@ -710,21 +712,21 @@ Umask is a Linux setting that defines the default permissions removed from new f
 #### umask
 ```sh
     umask
-    umask 0002          |664 > -rw-rw-r--
-    umask 0022          |644 > -rw-r--r--
+    umask 0002                                   # 664 > -rw-rw-r--
+    umask 0022                                   # 644 > -rw-r--r--
     
     chmod +t ./folder/
      ↪ This sets the sticky (0)002 value for directories only, giving further permissions, for the owner to be the only person that can remove files or directories. 
     
     chmod u+s ./python3
     chmod u+S ./python3
-     ↪ -rwsr-xr-x           |(SUID) Set User ID + executable
-     ↪ -rwSr-xr-x           |(SUID) Set User ID + Not executable
+     ↪ -rwsr-xr-x                                # (SUID) Set User ID + executable
+     ↪ -rwSr-xr-x                                # (SUID) Set User ID + Not executable
 
     chmod g+s ./python3
     chmod g+S ./python3
-     ↪ -rwxr-s-r-x          |(SGID) Set Group ID + executable
-     ↪ -rwxr-S-r-x          |(SGID) Set Group ID + Not executable
+     ↪ -rwxr-s-r-x                               # (SGID) Set Group ID + executable
+     ↪ -rwxr-S-r-x                               # (SGID) Set Group ID + Not executable
 ```
 
 <br>
@@ -750,16 +752,16 @@ Umask is a Linux setting that defines the default permissions removed from new f
 #### ps
 ```sh
     ps
-     ↪ -A/e             |Shows all processes, from all users and sessions. (Can use either `-A` or `-e`)
-     ↪ -f               |Full format listing, shows extended information such as , User, PPID and terminal.
-     ↪ -p               |Show processes with process ID.
-     ↪ --forest         |Shows process and parent processes in the form of an ASCII tree. (can be coupled with `-ef`)
-     ↪ -l               |Shows entries in long format, basically adds some additional info. (can be coupled with `-ef`)
+     ↪ -A/e                                      # Shows all processes, from all users and sessions. (Can use either `-A` or `-e`)
+     ↪ -f                                        # Full format listing, shows extended information such as , User, PPID and terminal.
+     ↪ -p                                        # Show processes with process ID.
+     ↪ --forest                                  # Shows process and parent processes in the form of an ASCII tree. (can be coupled with `-ef`)
+     ↪ -l                                        # Shows entries in long format, basically adds some additional info. (can be coupled with `-ef`)
     
     ps aux
-     ↪ -a               |Shows all processes of all users.
-     ↪ -u               |Display the information in a more user-orientated manner.
-     ↪ -x               |Shows processes without a tty.
+     ↪ -a                                        # Shows all processes of all users.
+     ↪ -u                                        # Display the information in a more user-orientated manner.
+     ↪ -x                                        # Shows processes without a tty.
 ```
 
 #### nice
@@ -785,19 +787,19 @@ Umask is a Linux setting that defines the default permissions removed from new f
     `https://downloads.codingcoursestv.eu/055%20-%20bash/wget/download-slow`            
     
     kill    
-     ↪ -l                           |List available signals.
-     ↪ -s                           |Specifiy the signal to be sent.
+     ↪ -l                                        # List available signals.
+     ↪ -s                                        # Specifiy the signal to be sent.
     
     kill -s [SIGNAL] [process-ID]
     kill -s SIGINT 12345
-     ↪ kill -SIGINT 12345           |Another way of writing this without the flag.
-    kill -s SINGINT $(pgrep wget)   |Using command subst... with pgrep to kill the process.
-             ↪ SIGTERM              |Is the default signal for the kill command, asks the process nicely if it can terminat the process, if it cant, no problem.
-             ↪ SIGINT               |Much like SIGTERM, however, tell the process to terminate so we can gain back control of our terminal.
-             ↪ SIGKILL              |SIGINT & SIGTERM can be ignored by the process, the SIGKILL forces a termination.
-             ↪ SIGHUP               |Signals that the terminal has closed, the program usually then exits.
-             ↪ SIGSTOP              |Places a process into a stopped state, meaning a process has been paused.
-             ↪ SIGCONT              |If we want to resume a process after its been stopped or paused, we can then continue it.
+     ↪ kill -SIGINT 12345                        # Another way of writing this without the flag.
+    kill -s SINGINT $(pgrep wget)                # Using command subst... with pgrep to kill the process.
+             ↪ SIGTERM                           # Is the default signal for the kill command, asks the process nicely if it can terminat the process, if it cant, no problem.
+             ↪ SIGINT                            # Much like SIGTERM, however, tell the process to terminate so we can gain back control of our terminal.
+             ↪ SIGKILL                           # SIGINT & SIGTERM can be ignored by the process, the SIGKILL forces a termination.
+             ↪ SIGHUP                            # Signals that the terminal has closed, the program usually then exits.
+             ↪ SIGSTOP                           # Places a process into a stopped state, meaning a process has been paused.
+             ↪ SIGCONT                           # If we want to resume a process after its been stopped or paused, we can then continue it.
 ```
 
 #### killall
@@ -859,16 +861,16 @@ Umask is a Linux setting that defines the default permissions removed from new f
 
 #### stty
 ```sh
-    stty tostop             |To enable the feature.
-     ↪ stty -tostop         |To disable the feature.
+    stty tostop                                  # To enable the feature.
+     ↪ stty -tostop                              # To disable the feature.
 ```
 
 #### wait
 ```sh
-    wait                    |waits until all currently running jobs have changed their state.
-    wait 123                |waits for a process of the ID of 123.
-    wait %[job-ID]          |waits for a job number.
-    wait -n                 |waits until anything has completed.
+    wait                                         # waits until all currently running jobs have changed their state.
+    wait 123                                     # waits for a process of the ID of 123.
+    wait %[job-ID]                               # waits for a job number.
+    wait -n                                      # waits until anything has completed.
 ```
 
 #### nohup
@@ -881,14 +883,62 @@ Umask is a Linux setting that defines the default permissions removed from new f
 ### Package Management
 ---
 
+#### Adding custom repositories
+- /etc/apt/sources.list 
+- /etc/apt/sources.list.d/ubuntu.sources
+- add-apt-repository [/remove] PPA:.../...
+
+These are the locations where you will add custom repositories for third party software. When adding repositories, you 
+usually add a gpg key alongside it, given by the developer. Adding third party repositories can be a serious security risk, 
+as the gpg key gives that source the ability to push malicious code unto your system.
+
+_Usually you dont have to worry about entering this manually or making a file manually, as most third party places 
+provide a piece of code that does this for you._
+
+#### Types of repositories
+|<domain>:|Free Software|Non Free Software|
+|:---:|:---:|:---:|
+|Officially supported by Cononical|main|restricted|
+|Community Supported/<br>Third Party Software|universe|multiverse|
+
 |Command|Description|Example|
 |:---|:---|:---|
-|``||[View](#)|
-|``||[View](#)|
-|``||[View](#)|
+|`lsb_release`|Linux System Base commands helps us to identify which distrobution we have. Prints distrobution specific information.|[View](#lsb-release)|
+|`dpkg`|The Debian package manager is responsible for handling the install of software, the packages are distributed as `.deb` files. It does not install the dependencies for the software.<br>Packages may be found at [here](packages.ubuntu.com)|[View](#dpkg)|
+|`apt`<br>`apt-get`|`apt` & `apt-get` builds upon dpkg allowing us to install dependencies. Both use repositories also known as package sources. `apt-get` checks more stable repositories, and therefor its best  practice to use within scripts. `apt` API & parameters change on the fly if necessary.|[View](#apt--apt-get)|
+|`debsums`|Check the md5 sums of installed packages against verified sources. Helps to identify if specific software has been changed.|[View](#debsums)|
 |``||[View](#)|
 
-#### 
+#### lsb release
+```sh
+    lsb_releases -a
+```
+
+#### dpkg
+```sh
+    dpkg -i [package]
+     ↪ -r                                        # Removes a package
+```
+
+#### apt & apt-get
+```sh
+    apt                                          # General in terminal use.
+    apt-get                                      # For use when scripting.
+
+    apt update
+     ↪ apt-get update                            # This updates the information on your local machine to be up to date with its repositories.
+      ↪ upgrade                                  # Upgrades packages and system if need be.
+      ↪ apt full-upgrade                       
+       ↪ apt-get dist-upgrade                    # Different for apt & apt-get, but they do essentially the same thing.
+      ↪ apt autoremove                           # Removes binary package dependencies that are no longer required. Otherwise known as orphaned dependencies.
+      ↪ apt remove                               # Removes the binary package but leaves the configuration files behind.
+       ↪ apt remove --purge                      # Removes the binary package as well as the configuration files.
+```
+
+#### debsums
+```sh
+    
+```
 
 
 
