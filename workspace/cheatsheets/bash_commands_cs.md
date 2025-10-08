@@ -933,11 +933,17 @@ provide a piece of code that does this for you._
       ↪ apt autoremove                           # Removes binary package dependencies that are no longer required. Otherwise known as orphaned dependencies.
       ↪ apt remove                               # Removes the binary package but leaves the configuration files behind.
        ↪ apt remove --purge                      # Removes the binary package as well as the configuration files.
+     ↪ apt show                                  
+      ↪ apt-cahce show                           # Both show  information such as dependencies for an application. Just apt show is for apt, while apt-cahce is for apt-get.
+     ↪ apt install -f                            # Fixes a package that might have been installed incorrectly.
 ```
 
 #### debsums
 ```sh
-    
+    debsums
+     ↪ -a                                        # Lists all files.
+     ↪ -s                                        # Silent, only lists errors.
+     ↪ -l                                        # list packages that dont have an md5 sum.
 ```
 
 
