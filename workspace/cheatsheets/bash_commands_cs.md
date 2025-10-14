@@ -896,7 +896,7 @@ _Usually you dont have to worry about entering this manually or making a file ma
 provide a piece of code that does this for you._
 
 #### Types of repositories
-|<domain>:|Free Software|Non Free Software|
+|domain:|Free Software|Non Free Software|
 |:---:|:---:|:---:|
 |Officially supported by Cononical|main|restricted|
 |Community Supported/<br>Third Party Software|universe|multiverse|
@@ -907,7 +907,6 @@ provide a piece of code that does this for you._
 |`dpkg`|The Debian package manager is responsible for handling the install of software, the packages are distributed as `.deb` files. It does not install the dependencies for the software.<br>Packages may be found at [here](packages.ubuntu.com)|[View](#dpkg)|
 |`apt`<br>`apt-get`|`apt` & `apt-get` builds upon dpkg allowing us to install dependencies. Both use repositories also known as package sources. `apt-get` checks more stable repositories, and therefor its best  practice to use within scripts. `apt` API & parameters change on the fly if necessary.|[View](#apt--apt-get)|
 |`debsums`|Check the md5 sums of installed packages against verified sources. Helps to identify if specific software has been changed.|[View](#debsums)|
-|``||[View](#)|
 
 #### lsb release
 ```sh
@@ -917,7 +916,8 @@ provide a piece of code that does this for you._
 #### dpkg
 ```sh
     dpkg -i [package]
-     ↪ -r                                        # Removes a package
+     ↪ -r                                        # Removes a package.
+     ↪ - dpkg-reconfigure                        # Re-runs the configuration script of a package.
 ```
 
 #### apt & apt-get
@@ -929,7 +929,7 @@ provide a piece of code that does this for you._
      ↪ apt-get update                            # This updates the information on your local machine to be up to date with its repositories.
       ↪ upgrade                                  # Upgrades packages and system if need be.
       ↪ apt full-upgrade                       
-       ↪ apt-get dist-upgrade                    # Different for apt & apt-get, but they do essentially the same thing.
+       ↪ apt-get dist-upgrade                    # Different for apt & apt-get, but they do essentially the same thing, which a more asserted version of upgrade, whereby it forces the change of dependencies and software by either installing them or removing them.
       ↪ apt autoremove                           # Removes binary package dependencies that are no longer required. Otherwise known as orphaned dependencies.
       ↪ apt remove                               # Removes the binary package but leaves the configuration files behind.
        ↪ apt remove --purge                      # Removes the binary package as well as the configuration files.
