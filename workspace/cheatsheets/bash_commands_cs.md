@@ -30,6 +30,9 @@ _This is an overview of the commands found on this page._
 <br>
 
 ## Table of Contents
+
+> ❗ &rarr; _Review Again After Course_.
+
 1. [Command Information & Help](#command-information--help)
 2. [File & Folder Management](#file--folder-management)
 3. [Searching Files & Folders](#searching-files--folders)
@@ -40,7 +43,8 @@ _This is an overview of the commands found on this page._
 8. [File Permissions & Access Control](#file-permissions--access-control)
 9. [Linux Processes](#linux-processes)
 10. [Job Control](#job-control)
-11. [Package Management](#package-management)
+11. [❗ Package Management](#package-management)
+12. [❗ System Boot Process & Systemd](#system-boot-process--systemd)
 
 <br>
 <br>
@@ -946,23 +950,66 @@ provide a piece of code that does this for you._
      ↪ -l                                        # list packages that dont have an md5 sum.
 ```
 
+<br>
 
+### System Boot Process & Systemd
 
+> ❗**IMPORTANT** _Come back to this section after course is complete to gain a better understanding of systemd._
 
+#### The Bootloader _GRUB2_
+This comes after the BIOS/UEFI, the bootloader is the first software to run with the goal of loading the operating system.
+It loads the **kernel** into memory and hands over control. The bootloader is active for a very short time.
 
+We can change the configuration of GRUB in `/etc/default/grub`, once changes are made, we need to then update the grub for changes to take affect using `sudp update-grub`.
 
+#### The Kernel
+The kernel controls the scheduling, resource allocation, as well as inter process communication or **(IPC)**. Handles memory management, filesystem management, the networking stack and hardware abstration layer.
 
+In the most basic terms, the kernel is a bridge between hardware and software. We can use `lsmod` to list the currently loaded modules within the kernal.
 
+#### Systemd
+Systemd is a system and service manager that provides features for managing and controlling the state of the system and its components.
 
+|Command|Description|Example|
+|:---|:---|:---|
+|`lsmod`|Shows the status of modules in the Linux Kernel.|[View](#lsmod)|
+|`systemctl`|Control the systemd system and service manager|[View](#systemctl)|
+|`systemd-cgtop`|Show top control groups by their resource usage|[View](#systemd-cgtop)|
+|`journald`<br>`journalctl`|Print log entries from the systemd journal, this is a replacement for syslog.|[View](#journald)|
 
+#### lsmod
+```sh
+   lsmod
+```
 
+#### systemctl
+```sh
+    systemctl                                     
+     ↪ systemctl list-units                      # List the units under systemctl
+    systemctl {status, start, stop, restart, reload} [UNIT] # Basic use of starting and stopping a unit, such as an apache2.service
+    
+                                                 # There is a lot more to systemctl, such as making your own service, having timers and schedulers.
+                                                 # However, complete the course and come back to this because right now, it serves no purpose.
+```
 
+#### systemd-cgtop
+```sh
+    systemd-cgtop                                # This shows the cgroups or control groups for a unit.
+```
 
+#### journald
+```sh
+    journalctl                                   # Shows all the logs.
+    journalctl -b                                # Shows the current boot log.
+    journalctl --list-boots                      # Shows all the available boots, each having their own ID, which will increment after every boot.
+     ↪ journalctl -b -34                         # Shows the boot log for said boot ID.
+    journal -u [UNIT]                            # Filter logs by Units.
+     ↪ journalctl -u apache2.service
+     ↪ journalctl -u apache2.service --since '2023-04-18' --until '2023-04-23' # Filter by date range.
+    journalctl -r                                # Reverse the output order, where latest entry is first.
+    journalctl -f                                # Follow the log in realtime, outputs only the most recent entries.
 
-
-
-
-
-
-
+    echo 'journald is amazing' | systemd-cat     # You can log a message to the logs.
+     ↪ echo 'journald is amazing' | systemd-cat -t 'me' # You can log a message to the logs while adding an identifier for your service or application.
+```
 
