@@ -45,6 +45,8 @@ _This is an overview of the commands found on this page._
 10. [Job Control](#job-control)
 11. [❗ Package Management](#package-management)
 12. [❗ System Boot Process & Systemd](#system-boot-process--systemd)
+13. [Integrate and Manage Filesystems on Linux](#integrate-and-manage-filesystems-on-linux)
+
 
 <br>
 <br>
@@ -1013,3 +1015,78 @@ Systemd is a system and service manager that provides features for managing and 
      ↪ echo 'journald is amazing' | systemd-cat -t 'me' # You can log a message to the logs while adding an identifier for your service or application.
 ```
 
+<br>
+
+### Integrate and Manage Filesystems on Linux
+#### _Volumes, Partitions & Mounts_
+
+#### Partition Tables
+
+|Label|Name|Description|
+|:---|:---|:---|
+|MBR|Master Boot Record|Older partitioning scheme, which is limited to 4 primary partitions & limited to 2 TiB disk space.|
+|GPT|GUID Partition Table|Modern partitioning scheme, supports up to 128 primary partitions as well as larger disk space.|
+
+#### Most Common Filesystem (_Linux_)
+|Filesystem|Operating System|Description|
+|:---|:---|:---|
+|**ext3**|Linux|Older journaling filesystem, mostly replaced by ext4.|
+|**ext4**|Linux|Default filesystem for most modern Linux distributions.|
+|**XFS**|Linux|High-performance filesystem for large files and scalability.|
+|**Btrfs**|Linux|Advanced filesystem with snapshots, checksums, and volume management.|
+|**FAT32**|Windows, Linux, macOS|Legacy filesystem; great compatibility but limited to 4 GB file sizes.|
+|**exFAT**|Windows, Linux, macOS|Designed for flash drives; handles large files and cross-platform use.|
+|**NTFS**|Windows|Default Windows filesystem; supports permissions, encryption, journaling.|
+|**ReFS**|Windows|“Resilient File System,” designed for data integrity and high reliability (Windows Server).|
+|**APFS**|macOS, iOS|Apple File System; default for modern Apple devices, supports encryption and snapshots.|
+
+#### Partitioning Drives
+We can use both graphical software such as gparted or a CLI version named parted to partition or manage our creation of our drives.
+
+#### Mounting a Drive
+To find the device we want to mount we can use the `lsblk -f`, once found, we need to make a folder for the device to mounted to in `/mnt/name-of-folder`
+and then mount it using `mount [device] [mount_point]`. We can unmount the same device using `unmount [Device] or [Mount_Point]`, example, `unmount /dev/sdb` or `unmount /mnt/backups`. 
+
+When mounting there are a few options we can use when specifying the  `-o` option, they are `ro, rw(_default_), noexec, nosuid, noatime`.
+
+
+|Options|Description|
+|:---|:---|
+|**ro**|Read Only.|
+|**rw**|Read + Write. (_Default_)|
+|**noexec**|Disables execution of executable files.|
+|**nosuid**|Disables the set-user identifier and the set-group identifier.(_Can be a security issue_)|
+|**noatime**|Does not update the access time when a file is accessed.|
+
+|Command|Description|Example|
+|:---|:---|:---|
+|`gparted`<br>`parted`||[View](#parted)|
+|`mkfs`||[View](#mkfs)|
+|`lsblk`||[View](#lsblk)|
+|`mount`||[View](#mount)|
+|`unmount`||[View](#unmount)|
+
+#### Parted
+```sh
+
+```
+
+#### mkfs
+```sh
+
+```
+
+#### lsblk
+
+
+```
+
+#### mounted
+```sh
+
+```
+
+#### unmounted
+```sh
+
+```
