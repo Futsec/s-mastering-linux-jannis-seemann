@@ -1045,7 +1045,7 @@ We can use both graphical software such as gparted or a CLI version named parted
 
 #### Mounting a Drive
 To find the device we want to mount we can use the `lsblk -f`, once found, we need to make a folder for the device to mounted to in `/mnt/name-of-folder`
-and then mount it using `mount [device] [mount_point]`. We can unmount the same device using `unmount [Device] or [Mount_Point]`, example, `unmount /dev/sdb` or `unmount /mnt/backups`. 
+and then mount it using `mount [device] [mount_point]`. We can unmount the same device using `umount [Device] or [Mount_Point]`, example, `umount /dev/sdb` or `umount /mnt/backups`. 
 
 When mounting there are a few options we can use when specifying the  `-o` option, they are `ro, rw(_default_), noexec, nosuid, noatime`.
 
@@ -1060,33 +1060,42 @@ When mounting there are a few options we can use when specifying the  `-o` optio
 
 |Command|Description|Example|
 |:---|:---|:---|
-|`gparted`<br>`parted`||[View](#parted)|
-|`mkfs`||[View](#mkfs)|
-|`lsblk`||[View](#lsblk)|
-|`mount`||[View](#mount)|
-|`unmount`||[View](#unmount)|
+|`gparted`<br>`parted`|A partition manipulation program, either graphically or within the terminal.|[View](#parted)|
+|`mkfs`|Builds a Linux filesystem, This mkfs frontend is deprecated in favour of filesystem specific mkfs.type utils.|[View](#mkfs)|
+|`lsblk`|Lists block devices.|[View](#lsblk)|
+|`mount`|Mount a filesystem.|[View](#mount)|
+|`umount`|Unmount a filesystem.|[View](#unmount)|
 
 #### Parted
 ```sh
-
+    sudo parted                                  # You enter the parted application without referring to a device.
+    sudo parted [device]                         # You can enter parted with a specific device or drive selected.
+     ↪ sudo parted /dev/sdb
 ```
 
 #### mkfs
 ```sh
-
+    sudo mkfs.ext4 /dev/sdb1                     # Creates a filesystem for the partition if one was not made already during parted.
 ```
 
 #### lsblk
-
-
+```sh
+    lsblk -f                                     # List Block Devices With -f shows the filesystems.
 ```
 
-#### mounted
-```sh
+#### mount
 
+```sh
+    sudo mkdir /mnt/mount_point_name             # First you need to make place for where to mount the drive.
+    sudo mount [device] [mount_point]            # Basic command format.
+     ↪ sudo mount /dev/sdb1 /mnt/backups         # Example of mounting a partition to a mount point named backups.
+
+    sudo mount -o {ro,rw,noexec,nosuid,noatime}  # Mounting with options.
+     ↪ sudo mount -o ro,noexec,noatime /dev/sdb1 /mnt/backups
 ```
 
-#### unmounted
+#### umount
 ```sh
-
+    sudo umount [device]                         # You can unmount a drive either by using the device path or...
+     ↪ sudo umount [mount_point]                 # You can unmount a device by its mount point.
 ```
