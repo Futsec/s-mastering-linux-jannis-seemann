@@ -46,6 +46,7 @@ _This is an overview of the commands found on this page._
 11. [❗ Package Management](#package-management)
 12. [❗ System Boot Process & Systemd](#system-boot-process--systemd)
 13. [Integrate and Manage Filesystems on Linux](#integrate-and-manage-filesystems-on-linux)
+14. [❗ Logical Volume Manager](#logical-volume-manager)
 
 
 <br>
@@ -1058,7 +1059,7 @@ When mounting there are a few options we can use when specifying the  `-o` optio
 |**nosuid**|Disables the set-user identifier and the set-group identifier.(_Can be a security issue_)|
 |**noatime**|Does not update the access time when a file is accessed.|
 
-> ❗ **Note**: _When mounting like this, when your system reboots, the mount will no longer be mounted, therefor we will look at a more efficient way mounting a drive that remains even after boot._
+> ❗ **Note**: _When mounting like this, when your system reboots, the mount will no longer be mounted, therefor we will look at a more efficient way mounting a drive that remains even after boot, if defaults are within the options._
 
 #### Efficient Mounting with /etc/fstab
 We can edit the `/etc/fstab` to have a more permanent mount based on the UUID of the partition. The UUID should always remain the same as that is specific to the drives partition.
@@ -1119,3 +1120,17 @@ We can edit the `/etc/fstab` to have a more permanent mount based on the UUID of
     sudo umount [device]                         # You can unmount a drive either by using the device path or...
      ↪ sudo umount [mount_point]                 # You can unmount a device by its mount point.
 ```
+
+<br>
+
+### Logical Volume Manager
+> ❗ **Note**: _Come back to this section after course completion, as this requires multiple drives._
+
+|Command|Description|Example|
+|:---|:---|:---|
+|``||[View](#)|
+|``||[View](#)|
+
+<br>
+
+
