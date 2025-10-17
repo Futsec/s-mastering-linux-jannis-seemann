@@ -1049,7 +1049,7 @@ and then mount it using `mount [device] [mount_point]`. We can unmount the same 
 
 When mounting there are a few options we can use when specifying the  `-o` option, they are `ro, rw(_default_), noexec, nosuid, noatime`.
 
-
+##### Mounting Options
 |Options|Description|
 |:---|:---|
 |**ro**|Read Only.|
@@ -1057,6 +1057,24 @@ When mounting there are a few options we can use when specifying the  `-o` optio
 |**noexec**|Disables execution of executable files.|
 |**nosuid**|Disables the set-user identifier and the set-group identifier.(_Can be a security issue_)|
 |**noatime**|Does not update the access time when a file is accessed.|
+
+> ❗ **Note**: _When mounting like this, when your system reboots, the mount will no longer be mounted, therefor we will look at a more efficient way mounting a drive that remains even after boot._
+
+#### Efficient Mounting with /etc/fstab
+We can edit the `/etc/fstab` to have a more permanent mount based on the UUID of the partition. The UUID should always remain the same as that is specific to the drives partition.
+
+```ascii
+    /dev/disk/by-uuid/82cdf42e-55bc-42f4-5d38-9ae69119f894 / ext4 defaults 0 1
+                            |                              |  |       |    | |
+                            |                              |  |       |    | Pass
+                            |                              |  |       |    Dump  
+                            |                              |  |       Mount Options
+                            |                              |  File System Type
+                            |                              Mount Point
+                            File System
+    
+    UUID=90cdfd2e-67ba-42f4-4f58-9ae67777f894 /mnt/backups ext4 defaults,ro,noexec,noatime 0 2
+```
 
 |Command|Description|Example|
 |:---|:---|:---|
@@ -1092,6 +1110,8 @@ When mounting there are a few options we can use when specifying the  `-o` optio
 
     sudo mount -o {ro,rw,noexec,nosuid,noatime}  # Mounting with options.
      ↪ sudo mount -o ro,noexec,noatime /dev/sdb1 /mnt/backups
+
+    sudo mount -a                                # Used when mounting via /etc/fstab, to mount all filesystems automatically.
 ```
 
 #### umount
