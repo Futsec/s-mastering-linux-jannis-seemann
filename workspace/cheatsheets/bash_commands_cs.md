@@ -48,6 +48,7 @@ _This is an overview of the commands found on this page._
 13. [Integrate and Manage Filesystems on Linux](#integrate-and-manage-filesystems-on-linux)
 14. [❗ Logical Volume Manager](#logical-volume-manager)
 15. [Full Software Upgrade & Troubleshooting](#full-software-upgrade--Troubleshooting)
+16. [Cron Jobs](#cron-jobs)
 
 
 <br>
@@ -1181,9 +1182,18 @@ command, you might have to mount the drive, because the `/dev` folder will be mi
     sudo chroot
 ```
 
+<br>
 
+### Cron Jobs
 
+> ❗ **IMPORTANT**: _Come back to this section of course is completed, this is a bonus section._
 
+|Command|Description|Example|
+|:---|:---|:---|
+|``||[View](#)|
+|``||[View](#)|
+
+<br>
 
 
 
