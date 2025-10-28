@@ -9,7 +9,6 @@
 <br>
 
 ## Command Overview
-###### _Last update of the command overview stops at Job Control on the table of contents list._
 _This is an overview of the commands found on this page._
 
 <br>
@@ -25,6 +24,12 @@ _This is an overview of the commands found on this page._
 |7      |[](#)              |[](#)    |[](#)          |[](#)              |[](#)            |[](#)        |[](#)                |[](#)        |[](#)              |[](#)        |[](#)              |[](#)        |[](#)          |[](#)          |[](#)  |[](#)            |[](#)  |[](#)            |[stty](#stty)      |[type](#type)  |[](#)              |[](#)  |[](#)        |[](#)  |[](#)  |[](#)  |
 |8      |[](#)              |[](#)    |[](#)          |[](#)              |[](#)            |[](#)        |[](#)                |[](#)        |[](#)              |[](#)        |[](#)              |[](#)        |[](#)          |[](#)          |[](#)  |[](#)            |[](#)  |[](#)            |[su](#su)          |[](#)          |[](#)              |[](#)  |[](#)        |[](#)  |[](#)  |[](#)  |
 |9      |[](#)              |[](#)    |[](#)          |[](#)              |[](#)            |[](#)        |[](#)                |[](#)        |[](#)              |[](#)        |[](#)              |[](#)        |[](#)          |[](#)          |[](#)  |[](#)            |[](#)  |[](#)            |[sudo](#sudo)      |[](#)          |[](#)              |[](#)  |[](#)        |[](#)  |[](#)  |[](#)  |
+
+<div align="right">
+    <p>
+        Last update of the command overview stops at Job Control on the table of contents list.
+    </p>
+</div>
 
 <br>
 <br>
