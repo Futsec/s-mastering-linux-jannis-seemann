@@ -47,6 +47,7 @@ _This is an overview of the commands found on this page._
 12. [❗ System Boot Process & Systemd](#system-boot-process--systemd)
 13. [Integrate and Manage Filesystems on Linux](#integrate-and-manage-filesystems-on-linux)
 14. [❗ Logical Volume Manager](#logical-volume-manager)
+15. [Full Software Upgrade & Troubleshooting](#full-software-upgrade--Troubleshooting)
 
 
 <br>
@@ -1132,5 +1133,57 @@ We can edit the `/etc/fstab` to have a more permanent mount based on the UUID of
 |``||[View](#)|
 
 <br>
+
+### Full Software Upgrade & Troubleshooting
+
+Before doing a full upgrade on a system, make sure to do a full backup. Commands such as:
+
+- `sudo apt/apt-get update` & `sudo apt/apt upgrade`.
+or
+- `sudo apt/apt-get full-upgrade/dist-upgrade`
+
+These only upgrade packages, drivers and possibly kernel upgrades, but it does not do a distribution upgrade of your OS. 
+For that we will look into installing and using `update-manager-core` as well as `do-release-upgrade`.
+
+After installing `update-manager-core`, and running the release upgrade there is a chance for something that might go wrong on reboot. 
+So make sure to have your grub set to enable in `etc/default/grub`, if not, then we can take further steps to debug this
+by using a bootable live version of Ubuntu.
+
+> ❗ **IMPORTANT NOTE**: _From now on, make sure to have a copy of your live Ubuntu whenever you install it on a system. This will help you in the future when you can no longer find a copy of that distribution._
+
+#### Debugging Issues after Release Upgrade
+As mentioned you can boot into a live version of the OS by making a live bootable. You can then use this live bootable to access your Linux drive
+and either use `gparted` to check and repair any errors, or check the disk or drive using the `sudo fsck /drive/location` command in your terminal.
+
+If there are no errors, you can change your directory to the drives `/` root folder and use the command `chroot`, which will make it so, that everything
+that folder which has a `/`, will not act as root, instead of the actual root folder. From there you can either fix or enable your GRUB, and do the `update-grub`
+command, you might have to mount the drive, because the `/dev` folder will be missing some configuration files as it wasnt loaded by the initial boot loader.
+
+|Command|Description|Example|
+|:---|:---|:---|
+|`update-manager-core`|Provides the backend tools that manage system and distribution upgrades on Ubuntu, including the do-release-upgrade command.|[View](#update-manager-core)|
+|`do-release-upgrade`|Is the command-line tool that upgrades your entire Ubuntu system to the next available release version.|[View](#do-release-upgrade)|
+|`chroot`|run command or interactive shell with special root directory|[View](#chroot)|
+
+
+#### update-manager-core
+```sh
+    sudo apt install update-manager-core
+```
+
+#### do-release-upgrade
+```sh
+    sudo do-release-upgrade
+```
+
+#### chroot
+```sh
+    sudo chroot
+```
+
+
+
+
+
 
 
