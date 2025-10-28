@@ -27,7 +27,7 @@ _This is an overview of the commands found on this page._
 
 <div align="right">
     <p>
-        Last update of the command overview stops at Job Control on the table of contents list.
+        <em>Last update of the command overview table stops at <strong>Job Control</strong> on the table of contents list.</em>
     </p>
 </div>
 
