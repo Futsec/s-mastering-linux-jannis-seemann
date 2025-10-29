@@ -29,12 +29,13 @@ We do this through the use of packets which gets assigned an IP address.
 
 |Command|Description|Example|
 |:---|:---|:---|
-|`ip`||[View](#ip)|
+|`ip`|A powerful CLI tool for managing and diagnosing network configurations, also used to inspect and modify IP Address, routes and network interfaces. This is replaces the older `ifconfig`, `route` & `netstat` commands, as it can be used on more complex networks.|[View](#ip)|
 
 
 #### ip
 ```sh
-    
+    ip addr show                                 # View our own network
+     ↪ replaces ifconfig -a
 ```
 
 <br>
