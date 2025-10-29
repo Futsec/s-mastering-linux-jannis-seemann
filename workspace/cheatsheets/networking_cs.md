@@ -11,7 +11,7 @@
 ## Table of Contents
 
 1. [What is the Internet](#what-is-the-internet)
-2. [Heading](#)
+2. [The IP Command](#the-ip-command)
 
 <br>
 <br>
@@ -19,7 +19,7 @@
 ### What is the Internet
 
 The _internet_ is a network of networks, an interconnected set of nodes which form a mesh and are able to communicate with each other.
-We can build a connection with pretty much any other computer on a network, without hacing a dedicated connection to the device.
+We can build a connection with pretty much any other computer on a network, without having a dedicated connection to the device.
 We do this through the use of packets which gets assigned an IP address.
 
 <br>
