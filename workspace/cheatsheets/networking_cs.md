@@ -73,11 +73,8 @@ As we already know the OSI model is a conceptual model, its used for understandi
 standardizes the functions and protocols across various different devices.
 
 #### The OSI Model
-> 
+ 
 <div align="center">
-    <p>
-        ❗ <strong>NOTE</strong>: <em>You can use this phrase to help you remember the OSI model.</em> 
-    </p>
     <p>
         <strong>P</strong>lease <strong>D</strong>o <strong>N</strong>ot <strong>T</strong>hrow <strong>S</strong>ausage <strong>P</strong>izza <strong>A</strong>way
     </p>
@@ -85,13 +82,13 @@ standardizes the functions and protocols across various different devices.
 
 |Layer Number|Layer                              |Short Description|
 |:----------:|:----------------------------------|:----------------|
-|7           |**Application Layer**<br>_Layer 7_ ||
-|6           |**Presentation Layer**<br>_Layer 6_||
-|5           |**Session Layer**<br>_Layer 5_     ||
-|4           |**Transport Layer**<br>_Layer 4_   ||
-|3           |**Network Layer**<br>_Layer 3_     ||
-|2           |**Data Link Layer**<br>_Layer 2_   ||
-|1           |**Physical Layer**<br>_Layer 1_    ||
+|7           |**Application Layer**<br>_Layer 7_ |Provides the interface for applications to communicate over the network.<br> ↪ **HTTP**, **FTP**, **SMTP**|
+|6           |**Presentation Layer**<br>_Layer 6_|Translates, encrypts and compresses data for transmission between applications and networks.<br> ↪ **TLS/SSL**|
+|5           |**Session Layer**<br>_Layer 5_     |Manages and controls the establishment, maintenance and termination of sessions between applications.|
+|4           |**Transport Layer**<br>_Layer 4_   |Ensures reliable data between hosts<br> ↪ **TCP**, **UDP**|
+|3           |**Network Layer**<br>_Layer 3_     |Manages data routing and forwarding between networks. ↪ **IP Address**, **Routers**|
+|2           |**Data Link Layer**<br>_Layer 2_   |Provies error-free data transfer between adjacent network nodes.<br> ↪ **Ethernet**, **MAC Address**|
+|1           |**Physical Layer**<br>_Layer 1_    |Handles the transmission of raw data bits over a physical medium.<br> ↪ **Cables**, **Switches**, etc...|
 
 
 
