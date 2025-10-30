@@ -73,19 +73,25 @@ As we already know the OSI model is a conceptual model, its used for understandi
 standardizes the functions and protocols across various different devices.
 
 #### The OSI Model
-> ❗ **NOTE** _You can use this phrase to help you remember the OSI model_.<br>
-     **P**lease **D**o **N**ot **T**hrow **S**ausage **P**izza **A**way
+> 
+<div align="center">
+    <p>
+        ❗ <strong>NOTE</strong>: <em>You can use this phrase to help you remember the OSI model.</em> 
+    </p>
+    <p>
+        <strong>P</strong>lease <strong>D</strong>o <strong>N</strong>ot <strong>T</strong>hrow <strong>S</strong>ausage <strong>P</strong>izza <strong>A</strong>way
+    </p>
+</div>
 
-
-|Layer Number|Layer|Short Description|
-|:----------:|:----|:----------------|
-|7           |**Application Layer**<br>_Layer 7_||
-|6           |****<br>_Layer 6_||
-|5           |****<br>_Layer 5_||
-|4           |****<br>_Layer 4_||
-|3           |****<br>_Layer 3_||
-|2           |****<br>_Layer 2_||
-|1           |**Physical Layer**<br>_Layer 1_||
+|Layer Number|Layer                              |Short Description|
+|:----------:|:----------------------------------|:----------------|
+|7           |**Application Layer**<br>_Layer 7_ ||
+|6           |**Presentation Layer**<br>_Layer 6_||
+|5           |**Session Layer**<br>_Layer 5_     ||
+|4           |**Transport Layer**<br>_Layer 4_   ||
+|3           |**Network Layer**<br>_Layer 3_     ||
+|2           |**Data Link Layer**<br>_Layer 2_   ||
+|1           |**Physical Layer**<br>_Layer 1_    ||
 
 
 
