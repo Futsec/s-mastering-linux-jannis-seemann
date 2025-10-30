@@ -93,7 +93,7 @@ standardizes the functions and protocols across various different devices.
 <br>
 
 <div align="center">
-    <img src="../../assets/imgs/cheatsheats/networking_cs/" alt="Diagram of the OSI model">
+    <img src="../../assets/imgs/cheatsheats/networking_cs/osi_model.png" alt="Diagram of the OSI model">
 </div>
 
 <br>
