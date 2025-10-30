@@ -98,9 +98,44 @@ standardizes the functions and protocols across various different devices.
 
 <br>
 
+### Layer 1, The Physical Layer
+
+The physical layer is what is referred to as the physical medium. This being copper cables, fibre optic cables and 
+wireless among other things. It is responsible for converting digital data to signals, as well as converting signals 
+back to digital data. Basically, layer 1 is a medium by which its able to send bits, or electrical signals.
+
+#### How would we influence a layer 1 or physical layer?
+We can do this by either switching off the hardware, or by unplugging the cable from the device physically, or through 
+the use of software. To do this through the use of software, we first need to find the device name we want to influence.
+
+We can find this out by using `ip addr show`, and this is an example of the output.
+
+```sh
+    1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+        link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+        inet 127.0.0.1/8 scope host lo
+           valid_lft forever preferred_lft forever
+        inet6 ::1/128 scope host 
+           valid_lft forever preferred_lft forever
+    2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+        link/ether 02:42:ac:11:00:02 brd ff:ff:ff:ff:ff:ff
+        inet 192.168.1.10/24 brd 192.168.1.255 scope global dynamic eth0
+            valid_lft 86399sec preferred_lft 86399sec
+        inet6 fe80::42:acff:fe11:2/64 scope link 
+            valid_lft forever preferred_lft forever
+    3: wlan0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+        link/ether 00:1a:2b:3c:4d:5e brd ff:ff:ff:ff:ff:ff
+```
+
+- `lo` &rarr; loopback interface.
+- `eth0` &rarr; wired Ethernet interface with IPv4 and IPv6 addresses.
+- `wlan0` &rarr; wireless interface (currently down).
 
 
+```sh
+    ip addr show
+    ip link set dev [device] down                # Turn device off through software, placing it into sleep mode.
+     ↪ ip link set dev [device] up               # Turn device on, taking it out of sleep mode.
+```
 
-
-
-
+<br>
