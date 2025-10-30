@@ -90,8 +90,13 @@ standardizes the functions and protocols across various different devices.
 |2           |**Data Link Layer**<br>_Layer 2_   |Provies error-free data transfer between adjacent network nodes.<br> ↪ **Ethernet**, **MAC Address**|
 |1           |**Physical Layer**<br>_Layer 1_    |Handles the transmission of raw data bits over a physical medium.<br> ↪ **Cables**, **Switches**, etc...|
 
+<br>
 
+<div align="center">
+    <img src="../../assets/imgs/cheatsheats/networking_cs/" alt="Diagram of the OSI model">
+</div>
 
+<br>
 
 
 
