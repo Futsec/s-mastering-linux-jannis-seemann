@@ -12,7 +12,8 @@
 
 1. [What is the Internet](#what-is-the-internet)
 2. [The IP Command](#the-ip-command)
-2. [The tool Wireshark](#the-tool-wireshark)
+3. [The tool Wireshark](#the-tool-wireshark)
+4. [The Open Systems Interconnection (OSI) Model](#the-open-systems-interconnection--osi--model)
 
 <br>
 <br>
@@ -63,3 +64,35 @@ privileges in order to capture some information.
 
 1. `sudo apt install wireshark`
 2. `sudo wireshark` 
+
+<br>
+
+### The Open Systems Interconnection (OSI) Model
+
+As we already know the OSI model is a conceptual model, its used for understanding and designing computer networks. It
+standardizes the functions and protocols across various different devices.
+
+#### The OSI Model
+> ❗ **NOTE** _You can use this phrase to help you remember the OSI model_.<br>
+**P**lease **D**o **N**ot **T**hrow
+
+
+|Layer Number|Layer|Short Description|
+|:----------:|:----|:----------------|
+|7           |**Application Layer**<br>_Layer 7_||
+|6           |****<br>_Layer 6_||
+|5           |****<br>_Layer 5_||
+|4           |****<br>_Layer 4_||
+|3           |****<br>_Layer 3_||
+|2           |****<br>_Layer 2_||
+|1           |**Physical Layer**<br>_Layer 1_||
+
+
+
+
+
+
+
+
+
+
