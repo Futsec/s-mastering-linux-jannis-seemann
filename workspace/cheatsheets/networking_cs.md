@@ -74,7 +74,7 @@ standardizes the functions and protocols across various different devices.
 
 #### The OSI Model
 > ❗ **NOTE** _You can use this phrase to help you remember the OSI model_.<br>
-**P**lease **D**o **N**ot **T**hrow
+     **P**lease **D**o **N**ot **T**hrow **S**ausage **P**izza **A**way
 
 
 |Layer Number|Layer|Short Description|
