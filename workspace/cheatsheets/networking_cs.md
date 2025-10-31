@@ -262,7 +262,7 @@ This would be represented in binary as:
 <br>
 
 <div align="center">
-    <img src="../../assets/imgs/cheatsheets/networking_cs/subnet_mask.png"
+    <img src="../../assets/imgs/cheatsheets/networking_cs/subnet_mask.png">
 </div>
 
 <br>
