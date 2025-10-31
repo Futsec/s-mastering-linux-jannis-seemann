@@ -96,7 +96,7 @@ standardizes the functions and protocols across various different devices.
 <br>
 
 <div align="center">
-    <img src="../../assets/imgs/cheatsheats/networking_cs/osi_model.png" alt="Diagram of the OSI model">
+    <img src="../../assets/imgs/cheatsheets/networking_cs/osi_model.png" alt="Diagram of the OSI model">
 </div>
 
 <br>
@@ -177,9 +177,23 @@ The MAC Address doesn't identify the computer itself, but the network interface 
 <br>
 
 <div align="center">
-    <img src="../../assets/imgs/cheatsheats/networking_cs/mac.png">
+    <img src="../../assets/imgs/cheatsheets/networking_cs/mac.png">
 </div>
 
 <br>
 
+#### Understanding Layer 2 Hardware, Bridges, Switches and Wireless Access Points.
 
+Typical hardware for this layer are:
+
+- Bridge
+- Switchings (_Ethernet_)
+    - ↪ _Some switches may also work on Layer 3_.
+- Wireless Access Points
+    - ↪ This is completely different from a wifi router, Where as a wireless access point only works on layer 2.
+
+<div align="center">
+    <img src="../../assets/cheatsheets/networking_cs/layer_2_hardware.png"
+</div>
+
+<br>
