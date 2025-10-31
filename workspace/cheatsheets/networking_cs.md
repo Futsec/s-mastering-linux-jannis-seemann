@@ -197,3 +197,74 @@ Typical hardware for this layer are:
 </div>
 
 <br>
+
+### Layer 3, The Network Layer
+
+With layer 2 or Data Link Layer, we could only send frames from one computer to another if the devices were connected 
+directly to each other. If the computers were not directly connected, we would not have been able to send messages 
+through layer 2, This is where the network layer comes into play.
+
+Here we can send packets that can be routed to other networks, whereby **routing** refers to a packet being forwarded.
+The idea is we no longer work with the MAC addresses but with IP addresses. Those packets can be forwarded to other 
+networks.
+
+#### What is a network?
+
+A network is a group of interconnected devices that can communicate and share resources. Said devices can include 
+computers, servers, printers, routers, switches and more. 
+
+There are various types of networks:
+
+- **PAN** _Personal Area Network_
+- **LAN** _Local Area Network_
+    - ↪ **WLAN* _Wireless Local Area Network_
+- **CAN** _Campus Area Network_
+- **MAN** _Metropolitan Area Network_
+- **WAN** _Wide Area Network_
+    - **WWAN** _Wireless Wide Area Network_
+- **VPN** _Virtual Private Network_
+- **GAN** _Global Area Network_
+
+<br>
+
+<div align="center">
+    <img src="../../assets/imgs/cheatsheets/networking_cs/network_overview.png">
+</div>
+
+<br>
+
+#### How can we inspect this information
+
+We can use `ip addr show` to view our IP address information, or `ip route show` to view the route it would take within
+out network.
+
+#### What is a subnet?
+
+A subnet is a network within a network, allowing us to manage more computers at the same time, making large networks 
+more efficient. At home out network is a subnet of the internet, while in a corporate setting we can split out  
+corporate network into multiple subnets and increase the efficiency.
+
+A **Subnet Mask** is what allows us to do this, its how we can differentiate if an IP is part of out network or another
+network. A subnet mask is usually represented as `255.255.255.0` or in a short hand way, `192.168.1.2/24`.
+
+For example is you had the following address:
+- IP Address
+    - 192.168.1.2
+- Subnet Mask
+    - 255.255.255.0
+
+This would be represented in binary as:
+- IP Address
+    - 1100000.10101000.00000001.00000010
+- Subnet Mask
+    - 11111111.11111111.11111111.0000000
+
+<br>
+
+<div align="center">
+    <img src="../../assets/imgs/cheatsheets/networking_cs/subnet_mask.png"
+</div>
+
+<br>
+
+> ❗ **NOTE**: _An IP of 192.168.1.0 is used for the gateway, while 192.168.1.255 is used for broadcasting on the network._
