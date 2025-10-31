@@ -14,6 +14,9 @@
 2. [The IP Command](#the-ip-command)
 3. [The tool Wireshark](#the-tool-wireshark)
 4. [The Open Systems Interconnection (OSI) Model](#the-open-systems-interconnection--osi--model)
+5. [Layer 1, The Physical Layer](#layer-1-the-physical-layer)
+6. [Layer 2, The Data Link Layer](#layer-2-the-data-link-layer)
+
 
 <br>
 <br>
@@ -139,3 +142,44 @@ We can find this out by using `ip addr show`, and this is an example of the outp
 ```
 
 <br>
+
+### Layer 2, The Data Link Layer
+
+Once we have established a physical connection, we need a way to define who should receive the data. The data link 
+layer is responsible for sending frames to specific devices, it does this through frame encapsulation, _its counter part
+being decapsulation_. However, this is where **Logical Link Control** (_LLC_) and **Media Access Control** (_MAC_) comes
+into play.
+
+**LLC** is the interface between the Data Link Layer and the Network Layers. **MAC** gives us a way to identify the 
+sender and receiver of a frame. **Frame Encapsulation** is the organizing of data into frames for transmission, as well
+as adding the source and destination MAC address.
+
+Some common protocols that run on the Data Link Layer, are **Ethernet**(_IEEE802.3_) & **WiFi**(_IEEE802.11_).
+
+**Ethernet** or _IEEE802.3_ is a family of network technologies mostly used in LAN (Local Area Network). Ethernet splits 
+the data into frames. A frame is usually maxed at 1.5kb in size. It contains the actual data that we want to transfer, 
+as well as a checksum, so the destination can verify if it has received the data correctly.
+
+It also contains addressing information, such as the MAC source and MAC destination.
+
+**WiFi** or _IEEE802.11_ is a wireless networking protocol. The frames are identical to that of ethernet, but with WiFi
+having extra data attach to identify the wireless connection. Still both **Ethernet** & **WiFi** are highly compatible 
+with each other.
+
+#### What exactl is a MAC Address?
+
+The MAC address is a unique idenfier for network interfaces. Its a 48 bit (_6 byte_) split within 6 groups of 2 
+hexadecimal digits, seperated by colons, e.g. `01:23:45:67:89:AB`. You can further break up the MAC Address between
+**OUI** and **DSI**, Where the first 3 groups are the OUI and the last 3 groups DSI.
+
+The MAC Address doesn't identify the computer itself, but the network interface card.
+
+<br>
+
+<div align="center">
+    <img src="../../assets/imgs/cheatsheats/networking_cs/mac.png">
+</div>
+
+<br>
+
+
