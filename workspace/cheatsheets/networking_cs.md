@@ -193,7 +193,7 @@ Typical hardware for this layer are:
     - ↪ This is completely different from a wifi router, Where as a wireless access point only works on layer 2.
 
 <div align="center">
-    <img src="../../assets/cheatsheets/networking_cs/layer_2_hardware.png"
+    <img src="../../assets/imgs/cheatsheets/networking_cs/layer_2_hardware.png"
 </div>
 
 <br>
