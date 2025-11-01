@@ -16,7 +16,11 @@
 4. [The Open Systems Interconnection (OSI) Model](#the-open-systems-interconnection--osi--model)
 5. [Layer 1, The Physical Layer](#layer-1-the-physical-layer)
 6. [Layer 2, The Data Link Layer](#layer-2-the-data-link-layer)
-
+7. [Layer 3, The Network Layer](#layer-3-the-network-layer)
+7. [Layer](#)
+7. [Layer](#)
+7. [Layer](#)
+7. [Layer](#)
 
 <br>
 <br>
@@ -268,3 +272,7 @@ This would be represented in binary as:
 <br>
 
 > ❗ **NOTE**: _An IP of 192.168.1.0 is used for the gateway, while 192.168.1.255 is used for broadcasting on the network._
+
+<br>
+
+#### The Address Resolution Protocol.<br>The Dynamics of IP Packet Transmission
