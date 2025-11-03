@@ -320,3 +320,27 @@ cache.
 - ARP Request
 - ARP Reply
 - ARP Cache
+
+#### Managing IP Addresses with the `ip` Command
+##### Listing, Adding & Removing
+  
+#### Navigating Network Routing
+##### Inspecting Routing Tables & Adding Routes
+
+#### Dynamic Host Configuration Protocol (DHCP)
+##### Managing IP Addresses on Networks
+ 
+#### Inspecting DHCP Logs with `systemd-networkd`
+##### Troubleshooting IP Address Issues
+
+#### Inspecting DHCP Logs with `NetworkManager`
+##### Troubleshooting IP Address Issues
+ 
+#### The Program `ping`
+##### Inspecting Network Connectivity by ICMP
+
+#### Exploring Network Routes with `traceroute`
+##### Diagnosing Latency and Routing
+
+#### How `traceroute` Works
+##### Mapping Internet Packet Paths & TTL 
