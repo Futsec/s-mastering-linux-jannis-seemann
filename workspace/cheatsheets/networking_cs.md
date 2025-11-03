@@ -312,11 +312,12 @@ default gateway (router), as shown in the top-right of the diagram.
 <br>
 
 ARP exists to bridge the gap between Layer 3 (_IP Addresses_) and Layer 2 (_MAC Addresses_), If within the ARP Cache
-there is no associated MAC Address for a said IP address, it will braodcast to the network, sedning out an **ARP Request**.
-The **ARP Request** asks all devices on the network who has this IP Address, and only the device that has said IP Address
+there is no associated MAC Address for a said IP address, it will braodcast to the network, sending out an **ARP Request**.
+The **ARP Request** asks all devices on the network "_who has this IP Address?_", and only the device that has said IP Address
 will respond with an **ARP Reply**, all other devices will ignore this broadcast. The device would then update its ARP
 cache.
 
+##### Stages of the ARP Protocol
 - ARP Request
 - ARP Reply
 - ARP Cache
