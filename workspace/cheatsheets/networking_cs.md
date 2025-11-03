@@ -326,9 +326,9 @@ cache.
 ##### Listing, Adding & Removing
 
 If we want to add an IP address to an interface, we can use, 
-- `ip addr add <ip_address>/<prefix_length> dev <interface>`
+- `ip addr add <ip_address>/<prefix_length> dev <interface>`<br>
  ↪ _To add an IP_
-- `ip addr del <ip_address>/<prefix_length> dev <interface>`
+- `ip addr del <ip_address>/<prefix_length> dev <interface>`<br>
  ↪ _To remove an IP_
 
 ##### Example
@@ -346,9 +346,10 @@ We can inspect and modify our routes by using the `ip route show` command. We ca
 how or through which route a packet would be sent using, `ip route get <destination>`, example, `ip route get 8.8.8.8`.
 
 We use:
-- `ip route add <destination> via <gateway> dev <interface>`
+- `ip route add <destination> via <gateway> dev <interface>`<br>
  ↪ _To add a route_
-- `ip route del <destination> via <gateway> dev <interface>`
+- `ip route del <destination> via <gateway> dev <interface>`<br>
+ ↪ _To remove a route_
 
 ##### Example
 ```sh
