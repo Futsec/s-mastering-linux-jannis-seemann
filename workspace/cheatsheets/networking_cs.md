@@ -305,7 +305,7 @@ default gateway (router), as shown in the top-right of the diagram.
 
 <br>
 
-<div align="center">
+<div align="center" width="50%">
     <img src="../../assets/imgs/cheatsheets/networking_cs/arp_protocol.png"
 </div>
 
