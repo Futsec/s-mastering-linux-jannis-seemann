@@ -275,4 +275,12 @@ This would be represented in binary as:
 
 <br>
 
-#### The Address Resolution Protocol.<br>The Dynamics of IP Packet Transmission
+#### The Address Resolution Protocol & Dynamics of IP Packet Transmission
+
+<br>
+
+<div align="center">
+    <img src="../../assets/imgs/cheatsheets/networking_cs/arp.png">
+</div>
+
+<br>
