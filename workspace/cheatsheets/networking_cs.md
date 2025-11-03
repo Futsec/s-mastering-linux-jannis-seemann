@@ -324,9 +324,37 @@ cache.
 
 #### Managing IP Addresses with the `ip` Command
 ##### Listing, Adding & Removing
+
+If we want to add an IP address to an interface, we can use, 
+- `ip addr add <ip_address>/<prefix_length> dev <interface>`
+ ↪ _To add an IP_
+- `ip addr del <ip_address>/<prefix_length> dev <interface>`
+ ↪ _To remove an IP_
+
+##### Example
+```sh
+    sudo ip addr add 192.168.1.10/24 dev enp0s5
+    sudo ip addr del 192.168.1.10/24 dev enp0s5
+```
+
+> ❗ **NOTE**: _In most LAN Networks, the router is managing the IP Address, this process is known as DHCP, and it might be better to configure a MAC - IP Address in our routers backend_.
   
 #### Navigating Network Routing
 ##### Inspecting Routing Tables & Adding Routes
+
+We can inspect and modify our routes by using the `ip route show` command. We can also display specific details to see 
+how or through which route a packet would be sent using, `ip route get <destination>`, example, `ip route get 8.8.8.8`.
+
+We use:
+- `ip route add <destination> via <gateway> dev <interface>`
+ ↪ _To add a route_
+- `ip route del <destination> via <gateway> dev <interface>`
+
+##### Example
+```sh
+    sudo ip route add 10.0.0.0/24 via 192.168.1.1 dev enp0s5
+    sudo ip route del 10.0.0.0/24 via 192.168.1.1 dev enp0s5
+```
 
 #### Dynamic Host Configuration Protocol (DHCP)
 ##### Managing IP Addresses on Networks
