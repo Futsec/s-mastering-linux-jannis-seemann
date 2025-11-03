@@ -277,6 +277,9 @@ This would be represented in binary as:
 
 #### The Address Resolution Protocol & Dynamics of IP Packet Transmission
 
+One of the questions that ARP helps us understand is, **How do we know where to send the frame to**?. We will be using 
+the diagrams below to somewhat visualize how this works. 
+
 <br>
 
 <div align="center">
@@ -284,3 +287,36 @@ This would be represented in binary as:
 </div>
 
 <br>
+
+Looking at the diagram and focusing on encapsulation and not the ARP protocol, how does User A’s computer know 
+where to send an IP packet? Before an IP packet can be sent, it must first be encapsulated inside an Ethernet frame,
+which contains the MAC Address both of the source and destination.
+
+If we’re sending this IP packet to another device within our own LAN, the Ethernet frame’s destination MAC address will 
+be that of the target computer.Of course, the computer doesn’t magically know the destination MAC address, it uses the 
+Address Resolution Protocol (ARP) to find it first. 
+We’ll cover that part later, since for now we’re focusing on encapsulation itself.
+
+If, however, the IP packet is destined for a device outside the local network, the source computer will not find a 
+matching MAC address within the LAN. In that case, the Ethernet frame’s destination MAC address will be that of the 
+default gateway (router), as shown in the top-right of the diagram.
+
+#### ARP, the ARP Request & ARP Reply
+
+<br>
+
+<div align="center">
+    <img src="../../assets/imgs/cheatsheets/networking_cs/arp_protocol.png"
+</div>
+
+<br>
+
+ARP exists to bridge the gap between Layer 3 (_IP Addresses_) and Layer 2 (_MAC Addresses_), If within the ARP Cache
+there is no associated MAC Address for a said IP address, it will braodcast to the network, sedning out an **ARP Request**.
+The **ARP Request** asks all devices on the network who has this IP Address, and only the device that has said IP Address
+will respond with an **ARP Reply**, all other devices will ignore this broadcast. The device would then update its ARP
+cache.
+
+- ARP Request
+- ARP Reply
+- ARP Cache
