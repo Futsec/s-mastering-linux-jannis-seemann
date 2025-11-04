@@ -392,13 +392,13 @@ network.
 
 #### The **DHCP** Process
 
-- DHCP Discover
+- **DHCP Discover**
     - A DHCP client would braodcast a **Discover** message to a DHCP server, and only the DHCP relay or server will respond with an offer.
-- DHCP Offer
+- **DHCP Offer**
     - The DHCP server/relay responds with a **DHCP Offer** message. The message contains IP address and lease information.
-- DHCP Request
+- **DHCP Request**
     - The DHCP Client sends a **DHCP Request** message, accepting the OP address and lease terms.
-- DHCP ACK
+- **DHCP ACK**
     - The DHCP Server will respond with an **Acknowledge** message and confirms the IP assignment and lease duration.
  
 #### Inspecting DHCP Logs with `systemd-networkd`
