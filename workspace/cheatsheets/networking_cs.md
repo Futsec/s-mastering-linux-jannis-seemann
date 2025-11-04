@@ -244,7 +244,7 @@ There are various types of networks:
 
 - **PAN** _Personal Area Network_
 - **LAN** _Local Area Network_
-    - ↪ **WLAN** _Wireless Local Area Network_
+    - **WLAN** _Wireless Local Area Network_
 - **CAN** _Campus Area Network_
 - **MAN** _Metropolitan Area Network_
 - **WAN** _Wide Area Network_
