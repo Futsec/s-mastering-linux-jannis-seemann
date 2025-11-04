@@ -423,4 +423,27 @@ This allows us to measure the roundtrip time to a remote server.
 
 ### Layer 4, The Transport Layer
 
+<br>
+
+---
+
+<br>
+
+### Layer 5, The Session Layer
+
+<br>
+
+---
+
+<br>
+
+### Layer 6, The Presentation Layer
+
+<br>
+
+---
+
+<br>
+
+### Layer 7, The Application Layer
 
