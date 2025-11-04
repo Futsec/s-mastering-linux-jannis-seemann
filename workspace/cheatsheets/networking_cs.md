@@ -25,11 +25,19 @@
 <br>
 <br>
 
+---
+
+<br>
+
 ### What is the Internet
 
 The _internet_ is a network of networks, an interconnected set of nodes which form a mesh and are able to communicate 
 with each other. We can build a connection with pretty much any other computer on a network, without having a dedicated 
 connection to the device. We do this through the use of packets which gets assigned an IP address.
+
+<br>
+
+---
 
 <br>
 
@@ -46,6 +54,10 @@ connection to the device. We do this through the use of packets which gets assig
     ip addr show                                 # View our own network
      ↪ replaces ifconfig -a
 ```
+
+<br>
+
+---
 
 <br>
 
@@ -71,6 +83,10 @@ privileges in order to capture some information.
 
 1. `sudo apt install wireshark`
 2. `sudo wireshark` 
+
+<br>
+
+---
 
 <br>
 
@@ -102,6 +118,10 @@ standardizes the functions and protocols across various different devices.
 <div align="center">
     <img src="../../assets/imgs/cheatsheets/networking_cs/osi_model.png" alt="Diagram of the OSI model">
 </div>
+
+<br>
+
+---
 
 <br>
 
@@ -144,6 +164,10 @@ We can find this out by using `ip addr show`, and this is an example of the outp
     ip link set dev [device] down                # Turn device off through software, placing it into sleep mode.
      ↪ ip link set dev [device] up               # Turn device on, taking it out of sleep mode.
 ```
+
+<br>
+
+---
 
 <br>
 
@@ -199,6 +223,10 @@ Typical hardware for this layer are:
 <div align="center">
     <img src="../../assets/imgs/cheatsheets/networking_cs/layer_2_hardware.png">
 </div>
+
+<br>
+
+---
 
 <br>
 
@@ -391,6 +419,12 @@ protocol known as **ICMP**, or  **Internet Control Message Protocol**. `ping`, w
 destination supports it, will reply with a **echo reply**.
 
 This allows us to measure the roundtrip time to a remote server.
+
+<br>
+
+---
+
+<br>
 
 ### Layer 4, The Transport Layer
 
