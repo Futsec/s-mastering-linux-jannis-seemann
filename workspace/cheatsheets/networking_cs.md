@@ -17,10 +17,10 @@
 5. [Layer 1, The Physical Layer](#layer-1-the-physical-layer)
 6. [Layer 2, The Data Link Layer](#layer-2-the-data-link-layer)
 7. [Layer 3, The Network Layer](#layer-3-the-network-layer)
-7. [Layer](#)
-7. [Layer](#)
-7. [Layer](#)
-7. [Layer](#)
+7. [Layer 4, The Transport Layer](#layer-4-the-transport-layer)
+7. [Layer 5, The Session Layer](#layer-5-the-session-layer)
+7. [Layer 6, The Presentation Layer](#layer-6-the-presentation-layer)
+7. [Layer 7, The Application Layer](#layer-7-the-application-layer)
 
 <br>
 <br>
@@ -359,18 +359,39 @@ We use:
 
 #### Dynamic Host Configuration Protocol (DHCP)
 ##### Managing IP Addresses on Networks
+
+As mentioned before, clients on a network are usually given a IP address automatically through a process which is 
+handled by your router known as **DHCP**. The router usually has a **DHCP Server** which stores the IP address pool,
+as well as manages IP address leases. 
+
+Then we have a DHCP client which requests an IP address and configuration, this happens whenever a client joins a 
+network.
+
+#### The **DHCP** Process
+
+- DHCP Discover
+    - A DHCP client would braodcast a **Discover** message to a DHCP server, and only the DHCP relay or server will respond with an offer.
+- DHCP Offer
+    - The DHCP server/relay responds with a **DHCP Offer** message. The message contains IP address and lease information.
+- DHCP Request
+    - The DHCP Client sends a **DHCP Request** message, accepting the OP address and lease terms.
+- DHCP ACK
+    - The DHCP Server will respond with an **Acknowledge** message and confirms the IP assignment and lease duration.
  
 #### Inspecting DHCP Logs with `systemd-networkd`
 ##### Troubleshooting IP Address Issues
 
-#### Inspecting DHCP Logs with `NetworkManager`
-##### Troubleshooting IP Address Issues
- 
+We can inspect the DHCP Logs, using `journalctl -u systemd-networkd` to trouble shoot any issues that might arise.
+
 #### The Program `ping`
 ##### Inspecting Network Connectivity by ICMP
 
-#### Exploring Network Routes with `traceroute`
-##### Diagnosing Latency and Routing
+Sometimes we want to inspect out connection to another computer using `ping`, example, `ping 8.8.8.8`. This uses a 
+protocol known as **ICMP**, or  **Internet Control Message Protocol**. `ping`, will send a **Echo Request** and if the
+destination supports it, will reply with a **echo reply**.
 
-#### How `traceroute` Works
-##### Mapping Internet Packet Paths & TTL 
+This allows us to measure the roundtrip time to a remote server.
+
+### Layer 4, The Transport Layer
+
+
