@@ -423,6 +423,39 @@ This allows us to measure the roundtrip time to a remote server.
 
 ### Layer 4, The Transport Layer
 
+Until Layer 3, we still had various problems which needed solving, Although not demonstrated in the notes, packets 
+being sent over a network is subjust to packet loss or being dropped. When a packet is dropped is dropped it is usually 
+becuase the router is being overloaded with data and therefor the router will say, "_Hey, I cant handle this! So I'm just going to drop the packet/s_".
+
+This is the problem we need to still solve and where there are two main protocols that come into play, which are 
+**UDP** (_User Datagram Protocol_) & **TCP** (_Transmission Control Protocol_). 
+
+In short, **UDP** says we want the **Application** Layer to handle out-of-order packets, or re-transmissions. This can 
+be good for some application use such as Streaming or Video calling, where packet loss, out-of-order or re-transmissions 
+is not a big issue. You can imagine how this would affect video calls, if it were to handle packet loss, the latency 
+would be very high and the application would be unbareable to use.
+
+On the flipside there is **TCP**, where it doesnt give over the packet loss, or out-of-order responsibility to the 
+**Application** Layer, but rather deals with it on Layer 4 itself. This means that packets loss will be ordered by the 
+receiver and re-transmitted, in order before transferring it back to the **Application** Layer.
+
+Given the short summary of these protocols, we will now take a deep dive into **TCP** as this is the base for many 
+protocols on the internet.
+
+#### Diving Deeper into **TCP**
+
+**TCP** is the base for many protocol on the internet today, **TCP** is a connection orientated protocol, whereby it
+provides reliable, ordered and error checking data transmission. This is opperates on the **Transport** Layer of the 
+OSI Model and allows us to write applications more easily.
+
+This is because we can see the data stream, which contains the data in a correctly ordered way, without any parts 
+missing. This costs us a bit of latency but ensures we receive or send data correctly. An example, some packets might 
+be smaller or transmit daster than others, even though out-of-order, **TCP**, will wait for the slowst packet and
+then start releasing the other packets again at the cost of a bit of latency.
+
+It also ensures we utulize the bandwidth the receiver can handle or our connection can handle. These are known as 
+**Flow Control** & **Congestion Control**
+
 <br>
 
 ---
