@@ -456,6 +456,76 @@ then start releasing the other packets again at the cost of a bit of latency.
 It also ensures we utulize the bandwidth the receiver can handle or our connection can handle. These are known as 
 **Flow Control** & **Congestion Control**
 
+#### Ports in TCP & UDP
+
+Ports are **16 bit** numbers assigned to specific process or services. Ports range from **0 - 65535** and  allow us to 
+differentiate between multiple connections. There are different kinds of TCP ports:
+
+- **Well Known Ports**
+    - _These range between **0 - 1023**_
+- **Reserved Ports**
+    - _HTTP(80), HTTPS(443), FTP(20,21), SSH(22)..._ 
+- **Registered Ports** _These are assigned to specific applications by IANA_
+    - _MySQL(3306), PostgreSQL(5432), VNC(5900)_
+- **Dynamic / Private Ports** _Not controlled by IANA, available for any application to use on as needed basis_
+    - _These range between **49152 - 65535**_
+
+#### TCP Port Communication
+
+To help differentiate between ports, we have what is known **Source Ports** and **Destination Ports**. The Source port
+is randomly assigned from the dynamic or private range and identifies the sending application of the client. While,
+the Destination port identifies the receiving application on the server, this typically a well-known port or registered
+port.
+
+Then we have **Port Combination**, which is a unique combination of **Source IP**, **Source Port**, **Destination IP** 
+& **Destination Port**. This helps us differentiate multiple connections between the same devices, allowing multiple 
+connections to exist without conflicts.
+
+#### Most Used Ports
+
+|TCP Ports|Protocol|Port  |Name                                |
+|:-------:|:-------|:-----|:-----------------------------------|
+|         |HTTP    |80    |Web Server Communication            |
+|         |HTTPS   |443   |Secure Web Server Communication     |
+|         |FTP     |20, 21|File Transfer Protocol              |
+|         |SSH     |22    |Secure Shell Remote Access          |
+|         |Telnet  |23    |Remote Terminal Access (Unencrypted)|
+|         |SMTP    |25    |Simple Mail Transfer Protocol       |
+|         |IMAP    |143   |Internet Message Access Protocol    |
+|         |POP3    |110   |Post Office Protocol _Version 3_    |
+
+|UDP Ports|Protocol|Port      |Name                                                              |
+|:-------:|:-------|:---------|:-----------------------------------------------------------------|
+|         |DNS     |53        |Domain Name System                                                |
+|         |DHCP    |67, 68    |Dynamic Host Configuration Protocol                               |
+|         |SNMP    |161, 162  |Simple Network Manager Protocol                                   |
+|         |TFTP    |69        |Trivial File Transfer Protocol                                    |
+|         |NTP     |123       |Network Time Protocol                                             |
+|         |RTP     |5004, 5005|Real-time Transfer Protocol<br> ↪ Used for Audio / Video Streaming|
+
+#### The TCP Handshake Process, Establishing Reliable Connections
+
+In order to find potential vulnerabilities in your network using port scanning, we need to understand the TCP Handshake
+Process, or otherwise known as the **Three-way Handshake**.
+
+The goal of a three-way handshake is that both computers need to know the the other side responds. Bother will later 
+need to know how much data has already been received by ther other side using or exchanging sequence numbers, this is 
+a randomly generated number which is usually incremented by the amount of bytes in the packet.
+
+#### How does the Handshake work?
+
+<div align='center'>
+    <img src="../../assets/imgs/cheatsheets/networking_cs/three-way_handshake.png"
+</div>
+
+1. First, our computer will send a **SYN** packet to the remote computer.
+2. The remote computer will send **SYN/ACK** packet back to us.
+3. Then, we will respond with a **ACK** packet.
+
+Thus a  connection would be established.
+
+#### Port Scanning with Nmap
+
 <br>
 
 ---
