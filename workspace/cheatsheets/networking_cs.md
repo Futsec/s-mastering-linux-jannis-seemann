@@ -514,9 +514,13 @@ a randomly generated number which is usually incremented by the amount of bytes 
 
 #### How does the Handshake work?
 
+<br>
+
 <div align='center'>
     <img src="../../assets/imgs/cheatsheets/networking_cs/three-way_handshake.png">
 </div>
+
+<br>
 
 1. First, our computer will send a **SYN** packet to the remote computer.
 2. The remote computer will send **SYN/ACK** packet back to us.
