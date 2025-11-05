@@ -515,7 +515,7 @@ a randomly generated number which is usually incremented by the amount of bytes 
 #### How does the Handshake work?
 
 <div align='center'>
-    <img src="../../assets/imgs/cheatsheets/networking_cs/three-way_handshake.png"
+    <img src="../../assets/imgs/cheatsheets/networking_cs/three-way_handshake.png">
 </div>
 
 1. First, our computer will send a **SYN** packet to the remote computer.
