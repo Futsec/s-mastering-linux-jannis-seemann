@@ -526,9 +526,128 @@ a randomly generated number which is usually incremented by the amount of bytes 
 2. The remote computer will send **SYN/ACK** packet back to us.
 3. Then, we will respond with a **ACK** packet.
 
-Thus a  connection would be established.
+Thus, a  connection would be established.
 
 #### Port Scanning with Nmap
+
+---
+    
+> ❗ **IMPORTANT**: _There are some legal implications to port scanning_.
+
+Port scanners, like **nmap** are used quite often by attackers but also by security professionals to help them find
+vulnarabilities in systems. Therefor we should know how a port scanner works, as it will us to detect open ports on our 
+own system. This will also allow us to test our own firewall in an upcoming lecture.
+
+However, be sure you can do this even for  your own system, as this can be illegal in some countries to even install
+such software on your system. Not only this, scanning the wrong device by mistake, intrusion detection systems can 
+potentially flag you, alerting system administrators.
+
+---
+
+Now that, that is out of the way, A port scanner is a program to allow us to see which ports are open on our own system 
+or another. The idea behind port scanning is we can try to connect through all possible ports. If a port is open, we 
+will get a message back from the server and this allows us to identify open ports and services that are available on 
+the target system.
+
+**nmap** is such a program, its a powerful, yet flexible open source tool, used for **network discovery and security 
+auditing**. It can also efficiently scan single hosts or even larger networks.
+
+We can install nmap using, `sudo apt install nmap`, once installed, we can use it for the following:
+
+1. Scanning a specific host
+    - _By default, it will scan the most common 1000 TCP ports_.
+
+```sh
+    sudo nmap [hostname/IP]
+     ↪ sudo nmap localhost
+```
+
+2. Scanning specific ports manually
+
+```sh
+    sudo nmap -p [port] [hostname/IP]            # Scan a specific port.
+    sudo nmap -p [port1],[port2] [hostname/IP]   # Scan multiple ports.
+    sudo nmap -p [port1]-[port10] [hostname/IP]  # Scan a range of ports.
+```
+
+3. Scanning all ports
+
+```sh
+    sudo nmap -p - [hostname/IP]                 # The `-` means all/every port.
+```
+
+4. Scan a range of IP Addresses
+
+```sh
+    sudo nmap [first-IP]-[last-IP(last_number)]
+     ↪ sudo nmap 192.168.1.1-100
+```
+
+#### Scan types in Nmap<br> ↪ TCP-SYN-SCAN | TCP-CONNECT SCAN | UDP-SCAN
+
+There are different scan types in nmap:
+
+- sS &rarr; TCP-SYN-SCAN
+    - _This is the default scan method, Nmap builds the packets and sends a SYN packet to establish a TCPconnection but doesn't follw through with the full connection, this is relatively fast_.
+    - If we receive the following:.
+        - **SYN/ACK** &rarr; _The port is open_.
+        - **RST** &rarr; _The port is closed_.
+        - **No Message** &rarr; _This port is blocked or filtered_.
+
+```sh
+    sudo nmap -sS [hostname/IP]
+     ↪ sudo nmap -sS localhost
+```
+
+- sT - TCP-CONNECTION-SCAN
+    - _The default, if **TCP-SYN-SCAN** is not possible, such as a user doesn't have enough permissions to do a **TCP-SYN-SCAN**, or, We trying to scan an IPv6 network_.
+    - _Here, nmap is ising functionality of the operating system to create a connection. This means we do a full handshake with a remote machine. (SYN, SYN/ACK, ACK), then it just closes the connection, so this is slower as we building a full connection_.
+    - _This can causing crashing on the otherside, as well as is more prone to create logs on the remote machine, This doesnt mean `-sS` doesnt create logs as well, just this is more prone for that to happen_.
+
+- sU &rarr; UDP-SCAN
+    - _Used to scan for open UDP ports, UDP scanning is extremely slow and we need to test each port multiple times much like with TCP, packets can also ways be lost or dropped._
+    - If we receive the following:
+        - **A reply** &rarr; _Port is open_.
+        - **Error** &rarr; _Port is filtered_.
+        - **No Reply** &rarr; _Port is filtered/open_.
+
+#### Network Address Translation (NAT)
+
+<br>
+
+<div align="center">
+    <img src="../../assets/imgs/cheatsheets/networking_cs/nat.png">
+</div>
+
+<br>
+
+The IP 192.168.1.1/2/3 are known as **internal IP** or **Private IP** addresses, these are IP Addresses found within
+your local network before **Network Address Translation** or **NAT** happens. Public IP could look like this, 
+**79.83.67.170** as an example. The reason for this, is that IP addresses are rather limited, this being IPv4, so if we
+can combine multiple devices IP on a network to a single Public IP, this helps.
+
+In the above diagram, We see User A, sending a packet to a specific destination, the headers on the packet have the 
+internal or private IP written, however the router sees this and says, I cant really use this IP as this is Private IP,
+and goes into the packet and rewrites the headers to include the public IP. The router will remember for which device 
+this is for when it gets a response back. This is important to us because, lets say you want to make a service 
+available to the internet, and you are behind NAT.
+
+How can we still make a service availble?
+
+NAT is only responsible for network translation going from our network to an outside destination. So if some outside 
+device wanted to connect to out service, the router will not know where to send the information and therefor discard it.
+
+How do we solve this?
+
+This is where port forwarding comes into play, if you have access to your router, you should be able to port forward to
+a specific device. So, lets say you receive a request on port 80, that it should be forwarding that to one of our devices.
+Example of this, port 80 should be forwarded to 192.168.1.3 on port 80 or 8080 dpeending one what you have set up.
+
+You should also then reserve an **IP addr &mdash; MAC addr** combination, so that no other **DHCP** client will get 
+assigned this IP. This goes hand in hand with your home IP address, that if this changes over time, depending on your 
+ISP, you will need a service for accessing dynamic IP's, such as **dyndns** or others.
+
+You can then use a domain such as myhost.dyndns.com to access your local computer from the internet.
 
 <br>
 
