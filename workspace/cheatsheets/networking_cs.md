@@ -255,7 +255,7 @@ There are various types of networks:
 <br>
 
 <div align="center">
-    <img src="../../assets/imgs/cheatsheets/networking_cs/network_overview.png">
+    <img src="../../assets/imgs/cheatsheets/networking_cs/network_overview_new.png">
 </div>
 
 <br>
